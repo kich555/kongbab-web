@@ -23,7 +23,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <MantineProvider theme={BASIC_THEME}>
+        <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
           <Outlet />
           <ScrollRestoration />
           <Scripts />
