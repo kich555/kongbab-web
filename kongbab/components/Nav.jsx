@@ -1,8 +1,9 @@
 import { Burger, Button, Container, Header, Transition } from '@mantine/core';
 import { HeaderLogo } from './Logo';
 import NavMenu from './NavMenu';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useBooleanToggle, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/useNavStyles';
+import useDetectTopNav from '~/hooks/useDetectTopNav';
 
 const menus = [
   {
@@ -28,12 +29,17 @@ const menus = [
 ];
 
 export default function Nav(params) {
+  // const { isTop } = useDetectTopNav();
   const [opened, setOpened] = useBooleanToggle(false);
+  const scroll = useWindowScroll()[0];
   const { classes, cx } = useNavStyles();
-  const { header, container, menuWrapper, button } = classes;
-
+  const { header, headerActive, container, menuWrapper, button } = classes;
+  console.log('scroll.y', scroll.y);
   return (
-    <Header className={header} height={100}>
+    <Header
+      className={cx(header, { [headerActive]: scroll.y !== 0 })}
+      height={scroll.y === 0 ? 100 : 80}
+    >
       <Container className={container}>
         <HeaderLogo />
         <div className={menuWrapper}>
