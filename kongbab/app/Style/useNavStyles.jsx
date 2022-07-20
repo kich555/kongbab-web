@@ -4,7 +4,23 @@ const useNavStyles = createStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
+    position: 'fixed',
+    left: '0',
+    top: '0',
     width: '100%',
+    height: '100px',
+    borderBottom: 'none',
+    backgroundColor: `transparent`,
+    transition: 'all 0.25s ease-in-out 0s',
+    cursor: 'pointer',
+    '&:hover': {
+      backgroundColor: '#fff',
+    },
+  },
+  headerActive: {
+    height: '80px',
+    backgroundColor: '#fff',
+    // backgroundColor: theme.colors.cyan,
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)',
   },
   container: {
@@ -28,17 +44,14 @@ const useNavStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: '8px 10px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
     color: 'black',
     '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+      backgroundColor: '#F2F4F7',
     },
 
     [theme.fn.smallerThan('sm')]: {
