@@ -5,22 +5,23 @@ import useNavStyles from '~/Style/useNavStyles';
 export default function NavMenu({ menus, setOpened }) {
   const [active, setActive] = useState(menus[0].link);
   const { classes, cx, theme } = useNavStyles();
-  console.log(theme);
-  const { links, link, linkActive } = classes;
-  console.log('active', active);
+  const { links, linkBox, link, linkActive } = classes;
+
   const items = menus.map((menu) => (
-    <a
-      className={cx(link, { [linkActive]: active === menu.link })}
-      key={menu.label}
-      href={menu.link}
-      onClick={(e) => {
-        e.preventDefault();
-        setActive(menu.link);
-        setOpened(false);
-      }}
-    >
-      {menu.label}
-    </a>
+    <div className={linkBox}>
+      <a
+        className={cx(link, { [linkActive]: active === menu.link })}
+        key={menu.label}
+        href={menu.link}
+        onClick={(e) => {
+          e.preventDefault();
+          setActive(menu.link);
+          setOpened(false);
+        }}
+      >
+        {menu.label}
+      </a>
+    </div>
   ));
 
   return (
