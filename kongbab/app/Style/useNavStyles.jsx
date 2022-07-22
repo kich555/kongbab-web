@@ -41,19 +41,22 @@ const useNavStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
-  link: {
-    display: 'block',
-    lineHeight: 1,
+  linkBox: {
+    height: '35px',
     padding: '8px 10px',
-    borderRadius: theme.radius.sm,
-    textDecoration: 'none',
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-    color: 'black',
+    borderRadius: '6px',
     '&:hover': {
       backgroundColor: '#F2F4F7',
     },
-
+  },
+  link: {
+    display: 'block',
+    borderRadius: theme.radius.sm,
+    lineHeight: 1,
+    textDecoration: 'none',
+    fontSize: theme.fontSizes.md,
+    fontWeight: 500,
+    color: 'black',
     [theme.fn.smallerThan('sm')]: {
       borderRadius: 0,
       padding: theme.spacing.md,
@@ -66,7 +69,13 @@ const useNavStyles = createStyles((theme) => ({
   },
 
   button: {
+    width: '128px',
+    height: '44px',
+    // padding: '12px 20px 12px 20px',
     marginLeft: '50px',
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '19px',
   },
 }));
 
