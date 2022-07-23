@@ -43,9 +43,13 @@ const useFooterStyles = createStyles((theme) => ({
   },
   menuItem: {
     fontWeight: 500,
-    //   fontSize: '13px',
-    //   lineHeight: '150%',
-    // color: theme.colors.blue[0],
+    '&:nth-child(2)': {
+      '&::before': {
+        content: "'|'",
+        paddingRight: '6px',
+        paddingLeft: '6px',
+      },
+    },
   },
 }));
 

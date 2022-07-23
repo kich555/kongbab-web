@@ -1,7 +1,7 @@
-import { Container } from '@mantine/core';
+import { Center, Container, Divider } from '@mantine/core';
 import Kakao from '~/asset/icon/Kakao';
 import Naver from '~/asset/icon/Naver';
-import useFooterStyles from '~/Style/useFooterStyles';
+import useFooterStyles from '~/Style/component/useFooterStyles';
 
 export default function Footer(params) {
   // const { isTop } = useDetectTopNav();
