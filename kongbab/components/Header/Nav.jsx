@@ -3,7 +3,6 @@ import { HeaderLogo } from '../Logo';
 import NavMenu from './NavMenu';
 import { useBooleanToggle, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/component/useNavStyles';
-import useDetectTopNav from '~/hooks/useDetectTopNav';
 
 export default function Nav(params) {
   // const { isTop } = useDetectTopNav();
