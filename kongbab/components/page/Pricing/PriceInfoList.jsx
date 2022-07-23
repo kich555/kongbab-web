@@ -2,7 +2,7 @@ import { Center, Container, Text } from '@mantine/core';
 import usePriceInfoListStyles from '~/Style/page/Pricing/usePriceInfoListStyles';
 import PriceInfo from './PriceInfo';
 
-export default function PriceInfoContainer({ plans }) {
+export default function PriceInfoList({ plans }) {
   const { classes, theme } = usePriceInfoListStyles();
   const { colors } = theme;
   const {
@@ -26,7 +26,7 @@ export default function PriceInfoContainer({ plans }) {
   ));
 
   return (
-    <Container size={1080} className={wrapper}>
+    <Container className={wrapper}>
       <div style={{ display: 'flex' }}>
         <div className={list}>
           <Center className={`${title} ${listTitle}`}>
