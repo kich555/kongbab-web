@@ -1,7 +1,12 @@
 import useTitleStyles from '~/Style/component/useTitleStyles';
 
-export default function Title({ title }) {
+export default function Title({ title, style }) {
   const { classes } = useTitleStyles();
   const { section } = classes;
-  return <section className={section}>{title}</section>;
+
+  return (
+    <section style={style} className={section}>
+      {title}
+    </section>
+  );
 }
