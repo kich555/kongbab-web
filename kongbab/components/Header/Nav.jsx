@@ -2,31 +2,8 @@ import { Burger, Button, Container, Header, Transition } from '@mantine/core';
 import { HeaderLogo } from '../Logo';
 import NavMenu from './NavMenu';
 import { useBooleanToggle, useWindowScroll } from '@mantine/hooks';
-import useNavStyles from '~/Style/useNavStyles';
+import useNavStyles from '~/Style/component/useNavStyles';
 import useDetectTopNav from '~/hooks/useDetectTopNav';
-
-const menus = [
-  {
-    link: '/',
-    label: '콩밥 소개',
-  },
-  {
-    link: '/process',
-    label: '진행 방법',
-  },
-  {
-    link: '/pricing',
-    label: '요금 안내',
-  },
-  {
-    link: '/faq',
-    label: '자주 묻는 질문',
-  },
-  {
-    link: '/blog',
-    label: '블로그',
-  },
-];
 
 export default function Nav(params) {
   // const { isTop } = useDetectTopNav();
@@ -43,7 +20,7 @@ export default function Nav(params) {
       <Container className={container}>
         <HeaderLogo />
         <div className={menuWrapper}>
-          <NavMenu menus={menus} setOpened={setOpened} />
+          <NavMenu setOpened={setOpened} />
           <Button
             sx={(theme) => ({
               backgroundColor: theme.colors.dark[1],
