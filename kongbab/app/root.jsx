@@ -1,4 +1,5 @@
 import { MantineProvider } from '@mantine/core';
+import styles from '~/Style/reset.css';
 import {
   Links,
   LiveReload,
@@ -8,12 +9,22 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import BASIC_THEME from './constants/theme';
+import Layout from 'components/Layout';
 
 export const meta = () => ({
   charset: 'utf-8',
   title: 'New Remix App',
   viewport: 'width=device-width,initial-scale=1',
 });
+
+export function links() {
+  return [
+    {
+      rel: 'stylesheet',
+      href: styles,
+    },
+  ];
+}
 
 export default function App() {
   return (
@@ -24,7 +35,9 @@ export default function App() {
       </head>
       <body>
         <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
-          <Outlet />
+          {/* <Layout>
+            <Outlet />
+          </Layout> */}
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
