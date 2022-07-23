@@ -34,7 +34,22 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
+        <MantineProvider
+          theme={BASIC_THEME}
+          withGlobalStyles
+          withNormalizeCSS
+          defaultProps={{
+            Container: {
+              sizes: {
+                xs: 540,
+                sm: 720,
+                md: 960,
+                lg: 1200,
+                xl: 1320,
+              },
+            },
+          }}
+        >
           <Layout>
             <Outlet />
           </Layout>
