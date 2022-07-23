@@ -1,9 +1,11 @@
 import { Container, List } from '@mantine/core';
 import FeatureInfo from './FeatureInfo';
+import Title from 'components/Title';
 import useFeatureListStyles from '~/Style/page/Pricing/useFeatureListStyles';
+
 export default function FeatureList({ features }) {
   const { classes } = useFeatureListStyles();
-  const { root, item } = classes;
+  const { warpper, root, item } = classes;
   const items = features.map((feature, idx) => (
     <FeatureInfo
       key={feature.title}
@@ -13,9 +15,9 @@ export default function FeatureList({ features }) {
       desc={feature.desc}
     />
   ));
-  console.log('features', features);
   return (
-    <Container>
+    <Container className={warpper}>
+      <Title title='요금 안내' style={{ marginTop: '200px' }} />
       <List classNames={{ root, item }}>{items}</List>
     </Container>
   );

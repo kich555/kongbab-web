@@ -14,10 +14,14 @@ const usePriceInfoListStyles = createStyles((theme) => ({
     overflow: 'hidden',
     paddingLeft: 0,
     paddingRight: 0,
+    boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
+    backgroundColor: theme.white,
   },
   another: {
     width: '252px',
     marginLeft: '6px',
+    boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
+    backgroundColor: theme.white,
   },
   box: {
     display: 'flex',
