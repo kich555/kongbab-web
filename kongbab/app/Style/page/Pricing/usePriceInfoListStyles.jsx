@@ -2,11 +2,11 @@ import { createStyles } from '@mantine/core';
 
 const usePriceInfoListStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: '120px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '120px 0 0 0',
   },
   listWrapper: {
     display: 'flex',

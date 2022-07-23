@@ -16,7 +16,6 @@ const useFooterStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
-    maxWidth: '1200px',
     marginBottom: '52px',
     fontSize: '13px',
     lineHeight: '150%',

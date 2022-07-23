@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 const useFeatureListStyles = createStyles((theme) => ({
   warpper: {
-    paddingTop: '200px',
+    padding: '200px 0 150px 0 ',
   },
   root: {
     listStyle: 'none',
@@ -11,7 +11,6 @@ const useFeatureListStyles = createStyles((theme) => ({
     flexWrap: 'wrap',
     gap: '24px',
     paddingTop: '100px',
-    paddingBottom: '150px',
   },
   item: {
     overflow: 'hidden',

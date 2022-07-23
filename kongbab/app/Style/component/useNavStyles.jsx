@@ -28,7 +28,6 @@ const useNavStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
-    maxWidth: theme.breakpoints.lg,
   },
   menuWrapper: {
     display: 'flex',
