@@ -1,12 +1,11 @@
-import useTitleStyles from '~/Style/component/useTitleStyles';
+import { Center, Text } from '@mantine/core';
 
-export default function Title({ title, style }) {
-  const { classes } = useTitleStyles();
-  const { section } = classes;
-
+export default function Title({ title }) {
   return (
-    <section style={style} className={section}>
-      {title}
-    </section>
+    <Center>
+      <Text size='xl' weight={700}>
+        {title}
+      </Text>
+    </Center>
   );
 }
