@@ -1,14 +1,12 @@
-import Nav from 'components/Header/Nav';
-
 export default function Index() {
   return (
     <>
-      <Nav />
       <div
         style={{
           fontFamily: 'system-ui, sans-serif',
           lineHeight: '1.4',
-          marginTop: '100px',
+          // position: 'relative',
+          // marginTop: '100px',
         }}
       >
         <h1>Welcome to Remix</h1>
