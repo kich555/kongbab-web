@@ -46,7 +46,7 @@ const useNavStyles = createStyles((theme) => ({
     padding: '8px 10px',
     borderRadius: '6px',
     '&:hover': {
-      backgroundColor: '#F2F4F7',
+      backgroundColor: theme.colors.gray[0],
     },
   },
   link: {
