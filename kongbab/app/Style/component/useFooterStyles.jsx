@@ -1,6 +1,10 @@
 import { createStyles } from '@mantine/core';
 
 const useFooterStyles = createStyles((theme) => ({
+  marginTop20: {
+    marginTop: '20px',
+  },
+
   footer: {
     height: '240px',
     width: '100%',
@@ -25,12 +29,11 @@ const useFooterStyles = createStyles((theme) => ({
   title: {
     fontWeight: 700,
   },
-  description: {
-    marginTop: '20px',
-  },
 
-  companyHistory: {
-    marginTop: '20px',
+  links: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
   },
   iconWrapper: {
     display: 'flex',
@@ -39,7 +42,7 @@ const useFooterStyles = createStyles((theme) => ({
   },
   menuItems: {
     display: 'flex',
-    marginTop: '20px',
+    // marginTop: '20px',
   },
   menuItem: {
     fontWeight: 500,

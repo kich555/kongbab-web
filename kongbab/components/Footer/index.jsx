@@ -13,11 +13,11 @@ export default function Footer(params) {
     container,
     InfoWarpper,
     title,
-    description,
-    companyHistory,
+    marginTop20,
+    links,
+    iconWrapper,
     menuItems,
     menuItem,
-    iconWrapper,
   } = classes;
   console.log('theme.y', theme);
   return (
@@ -25,7 +25,7 @@ export default function Footer(params) {
       <Container className={container}>
         <div className={InfoWarpper}>
           <span className={title}>법률사무소 이소</span>
-          <div className={description}>
+          <div className={marginTop20}>
             대표 김서영 | 서울 강남구 테헤란로2길 27, 11층 (역삼동)
             |광고책임변호사 김서영
             <br />
@@ -33,16 +33,16 @@ export default function Footer(params) {
             <br />
             문의/제휴 team@esolaw.com | 상담 10:00~18:00 (평일)
           </div>
-          <span className={companyHistory}>
+          <div className={marginTop20}>
             © 2016-2022. ESO LAW. All rights reserved.
-          </span>
+          </div>
         </div>
-        <div>
+        <div className={links}>
           <div className={iconWrapper}>
             <Kakao />
             <Naver />
           </div>
-          <ul className={menuItems}>
+          <ul className={`${menuItems} ${marginTop20}`}>
             <li className={menuItem}>개인정보처리방침</li>
             <li className={menuItem}>면책약관</li>
           </ul>
