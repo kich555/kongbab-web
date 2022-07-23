@@ -1,12 +1,14 @@
 import { Center, Container, Text } from '@mantine/core';
 import usePriceInfoListStyles from '~/Style/page/Pricing/usePriceInfoListStyles';
 import PriceInfo from './PriceInfo';
+import Title from 'components/Title';
 
 export default function PriceInfoList({ plans }) {
   const { classes, theme } = usePriceInfoListStyles();
   const { colors } = theme;
   const {
     wrapper,
+    listWrapper,
     list,
     another,
     box,
@@ -27,7 +29,8 @@ export default function PriceInfoList({ plans }) {
 
   return (
     <Container className={wrapper}>
-      <div style={{ display: 'flex' }}>
+      <Title title='요금 안내' />
+      <div className={listWrapper}>
         <div className={list}>
           <Center className={`${title} ${listTitle}`}>
             <Text size='md' color='white' weight={700}>
