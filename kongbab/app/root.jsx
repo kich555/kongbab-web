@@ -35,9 +35,9 @@ export default function App() {
       </head>
       <body>
         <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
-          {/* <Layout>
+          <Layout>
             <Outlet />
-          </Layout> */}
+          </Layout>
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
