@@ -2,7 +2,6 @@ import { createStyles } from '@mantine/core';
 
 const usePriceInfoListStyles = createStyles((theme) => ({
   wrapper: {
-    display: 'flex',
     marginTop: '80px',
   },
   list: {
@@ -32,6 +31,11 @@ const usePriceInfoListStyles = createStyles((theme) => ({
     marginTop: '24px',
     padding: '0 16px 0 16px',
     textAlign: 'center',
+    lineHeight: '150%',
+  },
+  notification: {
+    maxWidth: '719px',
+    marginTop: '30px',
     lineHeight: '150%',
   },
 }));
