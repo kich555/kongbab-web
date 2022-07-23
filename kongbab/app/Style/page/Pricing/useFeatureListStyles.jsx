@@ -3,11 +3,11 @@ import { createStyles } from '@mantine/core';
 const useFeatureListStyles = createStyles((theme) => ({
   warpper: {
     paddingTop: '200px',
-    backgroundColor: theme.colors.gray[0],
   },
   root: {
     listStyle: 'none',
     display: 'flex',
+    justifyContent: 'center',
     flexWrap: 'wrap',
     gap: '24px',
     paddingTop: '100px',

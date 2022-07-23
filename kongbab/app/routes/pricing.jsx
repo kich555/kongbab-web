@@ -6,9 +6,9 @@ export default function pricing(params) {
   const { RATE_PLANS, FEATURES } = PRICING_CONSTANTS;
 
   return (
-    <>
+    <section style={{ backgroundColor: '#F2F4F7' }}>
       <PriceInfoList plans={RATE_PLANS} />
       <FeatureList features={FEATURES} />
-    </>
+    </section>
   );
 }
