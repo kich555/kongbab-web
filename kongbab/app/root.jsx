@@ -43,8 +43,8 @@ export default function App() {
               sizes: {
                 xs: 540,
                 sm: 720,
-                md: 960,
-                lg: 1200,
+                md: 1200,
+                lg: 1440,
                 xl: 1320,
               },
             },
