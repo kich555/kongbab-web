@@ -10,6 +10,8 @@ const usePriceInfoListStyles = createStyles((theme) => ({
   },
   listWrapper: {
     display: 'flex',
+    flexWrap: 'wrap',
+    gap: '6px',
     marginTop: '80px',
   },
   list: {
@@ -22,7 +24,7 @@ const usePriceInfoListStyles = createStyles((theme) => ({
   },
   another: {
     width: '252px',
-    marginLeft: '6px',
+    height: '488px',
     boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
     backgroundColor: theme.white,
   },
