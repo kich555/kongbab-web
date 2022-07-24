@@ -42,7 +42,7 @@ export default function App() {
             Container: {
               sizes: {
                 xs: 540,
-                sm: 720,
+                sm: 712,
                 md: 1080,
                 lg: 1200,
                 xl: 1440,
