@@ -54,7 +54,6 @@ export default function PriceInfo({ title, price, options }) {
       <Text size='xs' color={colors['blue'][3]} className={marginTop20}>
         카드 결제 가능, 부가세 별도
       </Text>
-
       <Divider
         my='sm'
         style={{
