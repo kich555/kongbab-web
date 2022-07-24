@@ -10,6 +10,8 @@ const useFooterStyles = createStyles((theme) => ({
     width: '100%',
     display: 'flex',
     alignItems: 'end',
+
+    backgroundColor: theme.colors.gray[0],
   },
 
   container: {
@@ -33,6 +35,7 @@ const useFooterStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
+    justifyContent: 'end',
   },
   iconWrapper: {
     display: 'flex',
