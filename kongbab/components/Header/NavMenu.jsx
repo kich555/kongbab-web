@@ -1,8 +1,10 @@
-import { Group, Menu } from '@mantine/core';
+import { useNavigate } from '@remix-run/react';
+import { Group } from '@mantine/core';
 import { useState } from 'react';
 import useNavStyles from '~/Style/component/useNavStyles';
 
 export default function NavMenu({ setOpened }) {
+  const navigate = useNavigate();
   const menus = [
     {
       link: '/',
@@ -28,27 +30,27 @@ export default function NavMenu({ setOpened }) {
 
   const [active, setActive] = useState(menus[0].link);
   const { classes, cx, theme } = useNavStyles();
+
   const { links, linkBox, link, linkActive } = classes;
 
   const items = menus.map((menu) => (
-    <div className={linkBox}>
-      <a
+    <div className={linkBox} key={menu.label}>
+      <div
         className={cx(link, { [linkActive]: active === menu.link })}
-        key={menu.label}
-        href={menu.link}
         onClick={(e) => {
           e.preventDefault();
           setActive(menu.link);
           setOpened(false);
+          navigate(menu.link);
         }}
       >
         {menu.label}
-      </a>
+      </div>
     </div>
   ));
 
   return (
-    <Group className={links} spacing={5}>
+    <Group className={links} spacing={10}>
       {items}
     </Group>
   );
