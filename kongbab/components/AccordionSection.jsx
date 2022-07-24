@@ -2,7 +2,7 @@ import { Accordion, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useAccordianStyles from '../app/Style/component/useAccordianStyles';
 
-export default function AccordionSection({ questions }) {
+export default function AccordionSection({ questions, style }) {
   const { classes, theme } = useAccordianStyles();
   const { colors, primaryColor } = theme;
   const { root, control, content, contentInner, item, itemOpened } = classes;
@@ -21,7 +21,6 @@ export default function AccordionSection({ questions }) {
       >
         {question.desc}
       </Text>
-      {/* <Divider my='sm' color={colors['gray'][1]} /> */}
     </Accordion.Item>
   ));
   return (
