@@ -1,4 +1,4 @@
-import { Container, Center } from '@mantine/core';
+import { Container, Center, Button } from '@mantine/core';
 import AccordionSection from 'components/AccordionSection';
 import Title from 'components/Title';
 import useFeaturedFAQStyles from '~/Style/page/Pricing/useFeaturedFAQStyles';
@@ -14,9 +14,11 @@ export default function FeaturedFAQSection({ questions }) {
       <AccordionSection questions={questions} />
       <Center>
         <DefaultButton
-          backgroundColor={{ backgroundColor: 'none' }}
           className={button}
           label='문의 전체보기'
+          sx={(theme) => ({
+            backgroundColor: 'none',
+          })}
         />
       </Center>
     </Container>

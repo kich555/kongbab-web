@@ -16,10 +16,6 @@ const useEventSectionStyles = createStyles((theme) => ({
     display: 'flex',
     marginTop: '38px',
   },
-  button: {
-    width: '140px',
-    height: '42px',
-  },
 }));
 
 export default useEventSectionStyles;
