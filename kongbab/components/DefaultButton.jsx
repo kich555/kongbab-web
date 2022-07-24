@@ -1,14 +1,12 @@
 import { Button, Text } from '@mantine/core';
 import useDefaultButtonStyles from '../app/Style/component/useDefaultButtonStyles';
 
-export default function DefaultButton({ backgroundColor, className, label }) {
+export default function DefaultButton({ className = '', label, sx }) {
   const { classes } = useDefaultButtonStyles();
   const { defaultBtn } = classes;
   return (
     <Button
-      sx={(theme) => ({
-        backgroundColor,
-      })}
+      sx={sx}
       variant='filled'
       radius={8}
       className={`${defaultBtn} ${className}`}
