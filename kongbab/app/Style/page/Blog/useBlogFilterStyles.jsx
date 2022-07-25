@@ -1,0 +1,22 @@
+import { createStyles } from '@mantine/core';
+
+const useBlogFilterStyles = createStyles((theme) => ({
+  category: {
+    height: '44px',
+    padding: '12px 20px',
+    borderRadius: '6px',
+    fontSize: '20px',
+    color: theme.colors.blue[0],
+    cursor: 'pointer',
+    '&:hover': {
+      backgroundColor: theme.colors.gray[0],
+    },
+  },
+  categoryActive: {
+    backgroundColor: theme.colors.gray[0],
+    fontWeight: 500,
+    color: theme.black,
+  },
+}));
+
+export default useBlogFilterStyles;
