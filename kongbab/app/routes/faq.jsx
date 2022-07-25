@@ -1,8 +1,8 @@
 import { Container } from '@mantine/core';
 import Title from 'components/Title';
 import AccordionSection from 'components/AccordionSection';
-import FAQ_CONSTANTS from '../constants/page/faqPageData';
-import ConsultationSection from 'components/page/FAQ/ConsultationSection';
+import FAQ_CONSTANTS from '~/constants/page/faqPageData';
+import FAQConsultationSection from 'components/page/FAQ/FAQConsultationSection';
 
 export default function faq(params) {
   const { SERVICE_FAQ, PRICE_FAQ } = FAQ_CONSTANTS;
@@ -20,7 +20,7 @@ export default function faq(params) {
         </Container>
       </section>
       <section style={{ padding: '0 26px 0 26px' }}>
-        <ConsultationSection />
+        <FAQConsultationSection />
       </section>
     </>
   );
