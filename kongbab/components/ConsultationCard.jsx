@@ -1,10 +1,11 @@
-import useConsultationSectionStyles from '~/Style/component/useConsultationSectionStyles';
-import { Center, Container, Text } from '@mantine/core';
+import useConsultationCardStyles from '~/Style/component/useConsultationCardStyles';
+import { Center, Container } from '@mantine/core';
 import DefaultButton from 'components/DefaultButton';
+
 export default function ConsultationCard({ asset, children }) {
-  const { classes, theme } = useConsultationSectionStyles();
-  const { white } = theme;
-  const { warpper, center, content, button } = classes;
+  const { classes } = useConsultationCardStyles();
+  const { warpper, center, button } = classes;
+
   return (
     <Container
       className={warpper}
