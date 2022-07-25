@@ -13,6 +13,8 @@ const useBlogCardListStyles = createStyles((theme) => ({
   },
   list: {
     display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     flexWrap: 'wrap',
     columnGap: '24px',
     rowGap: '50px',
