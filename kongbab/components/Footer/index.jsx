@@ -1,8 +1,9 @@
-import { Center, Container, Divider } from '@mantine/core';
+import { Center, Container, Divider, Image } from '@mantine/core';
 import Kakao from '~/asset/icon/Kakao';
 import Naver from '~/asset/icon/Naver';
 import useFooterStyles from '~/Style/component/useFooterStyles';
-
+import KakaoSvg from '~/asset/icon/Kakao.svg';
+import NaverSvg from '~/asset/icon/Naver.svg';
 export default function Footer(params) {
   // const { isTop } = useDetectTopNav();
   // const [opened, setOpened] = useBooleanToggle(false);
@@ -39,8 +40,10 @@ export default function Footer(params) {
         </div>
         <div className={links}>
           <div className={iconWrapper}>
+            {/* <Image src={NaverSvg} /> */}
             <Kakao />
-            <Naver />
+            {/* <Naver /> */}
+            <Image src={KakaoSvg} />
           </div>
           <ul className={`${menuItems} ${marginTop20}`}>
             <li className={menuItem}>개인정보처리방침</li>
