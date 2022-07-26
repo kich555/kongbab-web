@@ -1,6 +1,10 @@
 import { createStyles } from '@mantine/core';
 
 const useBlogFilterStyles = createStyles((theme) => ({
+  filter: {
+    flexWrap: 'nowrap',
+    minWidth: '534px',
+  },
   category: {
     height: '44px',
     padding: '12px 20px',

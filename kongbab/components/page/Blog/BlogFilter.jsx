@@ -3,7 +3,7 @@ import useBlogFilterStyles from '~/Style/page/Blog/useBlogFilterStyles';
 
 export default function BlogFilter({ options, setActive, active }) {
   const { classes, cx } = useBlogFilterStyles();
-  const { category, categoryActive } = classes;
+  const { filter, category, categoryActive } = classes;
   const items = options.map((option) => (
     <div
       key={option}
@@ -18,7 +18,7 @@ export default function BlogFilter({ options, setActive, active }) {
   ));
 
   return (
-    <Group style={{ marginTop: '80px' }} spacing={10}>
+    <Group style={{ marginTop: '80px' }} className={filter} spacing={10}>
       {items}
     </Group>
   );
