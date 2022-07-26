@@ -1,4 +1,3 @@
-import asset from '~/asset/image/Process_image.png';
 import { Container, Center, Badge, Group, Text } from '@mantine/core';
 import { Logo } from '../../Logo';
 
