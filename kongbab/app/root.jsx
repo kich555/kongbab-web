@@ -41,8 +41,8 @@ export default function App() {
           defaultProps={{
             Container: {
               sizes: {
-                xs: 540,
-                sm: 712,
+                xs: 428,
+                sm: 980,
                 md: 1080,
                 lg: 1200,
                 xl: 1440,
