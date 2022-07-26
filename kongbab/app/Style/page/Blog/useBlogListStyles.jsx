@@ -1,25 +1,24 @@
 import { createStyles } from '@mantine/core';
 
 const useBlogCardListStyles = createStyles((theme) => ({
-  center: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '0',
-  },
   listWrapper: {
     display: 'inline-block',
     paddingLeft: '26px',
     paddingRight: '26px',
   },
   list: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexWrap: 'wrap',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3,1fr)',
     columnGap: '24px',
     rowGap: '50px',
-    margin: 'auto',
     padding: '50px 0 200px 0 ',
+    [theme.fn.smallerThan('lg')]: {
+      gridTemplateColumns: 'repeat(2,1fr)',
+    },
+    [theme.fn.smallerThan('sm')]: {
+      gridTemplateColumns: 'repeat(1,1fr)',
+      rowGap: '40px',
+    },
   },
 }));
 

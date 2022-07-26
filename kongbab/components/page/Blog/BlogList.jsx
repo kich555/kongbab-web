@@ -14,7 +14,7 @@ export default function BlogList(params) {
   const items = LIST.map((card) => (
     <BlogCard
       key={card.title}
-      image={card.thumbnail}
+      imageSrc={card.thumbnail}
       link={card.link}
       category={card.category}
       title={card.title}
@@ -22,15 +22,15 @@ export default function BlogList(params) {
     />
   ));
   const { classes } = useBlogCardListStyles();
-  const { center, listWrapper, list } = classes;
+  const { listWrapper, list } = classes;
   return (
     <>
-      <Container>
-        <Center className={center}>
-          <Title title='콩밥 블로그' style={{ marginTop: '120px' }} />
-          <BlogFilter options={MENUS} active={active} setActive={setActive} />
-        </Center>
-      </Container>
+      <Center>
+        <Title title='콩밥 블로그' style={{ marginTop: '120px' }} />
+      </Center>
+      <Center style={{ overflowX: 'auto' }}>
+        <BlogFilter options={MENUS} active={active} setActive={setActive} />
+      </Center>
       <Center>
         <div className={listWrapper}>
           <Container className={list}>{items}</Container>
