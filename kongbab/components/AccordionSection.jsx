@@ -32,7 +32,10 @@ export default function AccordionSection({ questions, style }) {
     <>
       <MediaQuery
         smallerThan='sm'
-        styles={{ margin: '60px 0 15px 0', fontSize: theme.fontSizes.md }}
+        styles={{
+          margin: '60px 0 15px 0 !important',
+          fontSize: theme.fontSizes.md,
+        }}
       >
         <Text
           weight={700}
