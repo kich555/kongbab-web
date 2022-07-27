@@ -23,7 +23,7 @@ export default function LitigationInfo(params) {
         소송입니다.{' '}
       </Text>
       <Space h={60} />
-      <Group spacing={24}>
+      <Group position='center' spacing={24}>
         <Container size={252} className={cx(box, backgroundGreen)}>
           <Text align='center' weight={700} className={font40}>
             🏦
