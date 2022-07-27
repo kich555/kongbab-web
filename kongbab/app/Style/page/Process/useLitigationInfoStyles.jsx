@@ -12,19 +12,18 @@ const useLitigationInfoStyles = createStyles((theme) => ({
     borderRadius: '24px',
     padding: '0 36px',
     margin: 0,
-  },
-  backgroundGreen: {
-    backgroundColor: '#EEFBEF',
-  },
-  backgroundRed: {
-    backgroundColor: '#FFF8F8',
-  },
-  backgroundBlue: {
-    backgroundColor: '#EDF2FB',
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'row-reverse',
+      maxWidth: '324px',
+    },
   },
   content: {
     lineHeight: '150%',
     fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+      margin: '0',
+    },
     margin: '0 42px',
   },
   lineHeight150: { lineHeight: '150%' },
