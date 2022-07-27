@@ -19,6 +19,7 @@ const BASIC_THEME = {
     blue: ['#364B60', '#B8C8D5', '#EDF2FB', '#93A4B4', '#6F8396'],
     gray: ['#F2F4F7', '#EDF0F4'],
     green: ['#075554', '#4BC5C3', '#3EAEAD', '#EFFAFA'],
+    magenta: ['#6F2D44', '#FDE9F0'],
   },
   primaryColor: 'carrot',
 };
