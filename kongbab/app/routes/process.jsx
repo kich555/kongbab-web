@@ -1,19 +1,24 @@
 import { Container, Divider, Space } from '@mantine/core';
 import ProcessConsultationSection from 'components/page/Process/ProcessConsultationSection';
-import LitigationProcedureTitle from 'components/page/Process/LitigationProcedureTitle';
-import LitigationProcedure from 'components/page/Process/LitigationProcedure';
+import LitigationProcedureTitle from 'components/page/Process/Procedure/LitigationProcedureTitle';
+import LitigationProcedure from 'components/page/Process/Procedure/LitigationProcedure';
+import KakaoSection from 'components/page/Process/Kakaosection';
+import LitigationInfo from 'components/page/Process/LitigationInfo';
+import Title from 'components/Title';
 
 export default function process() {
   return (
     <section>
-      <LitigationProcedureTitle />
-      <Container>
-        <Space h={40} />
-        <Divider size='xs' color='#EDF0F4' />
+      <Container style={{ padding: '0 26px' }}>
+        <LitigationInfo />
+        <Space h={180} />
+        <KakaoSection />
+        <Space h={200} />
+        <LitigationProcedureTitle />
+        
+        <LitigationProcedure />
+        <ProcessConsultationSection />
       </Container>
-      <Space h={80} />
-      <LitigationProcedure />
-      <ProcessConsultationSection />
     </section>
   );
 }
