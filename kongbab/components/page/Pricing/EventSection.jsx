@@ -1,19 +1,21 @@
-import { Container, Text, Center } from '@mantine/core';
+import { Container, Text, Center, Space } from '@mantine/core';
 import useEventSectionStyles from '~/Style/page/Pricing/useEventSectionStyles';
 import DefaultButton from 'components/DefaultButton';
 
 export default function EventSection(params) {
   const { classes, theme } = useEventSectionStyles();
   const { colors } = theme;
-  const { warpper, title, buttonWrapper } = classes;
+  const { warpper, font30, buttonWrapper } = classes;
   return (
     <Container className={warpper}>
       <Text color={colors['green'][2]} weight={700}>
         콩밥이 당신의 부동산을 지켜드립니다
       </Text>
-      <Text className={title} weight={700}>
+      <Space h={19} />
+      <Text className={font30} weight={700}>
         2번째부터 10% 할인된 요금으로 만나세요.
       </Text>
+      <Space h={38} />
       <div className={buttonWrapper}>
         <DefaultButton
           label='10% 할인 받기'
