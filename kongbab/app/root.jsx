@@ -57,6 +57,7 @@ export default function App() {
           <Scripts />
           <LiveReload />
         </MantineProvider>
+        <script src='//developers.kakao.com/sdk/js/kakao.min.js'></script>
       </body>
     </html>
   );
