@@ -34,8 +34,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -59,8 +58,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -84,8 +82,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -109,8 +106,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -134,8 +130,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -159,8 +154,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -184,9 +178,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        v
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -210,8 +202,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -235,8 +226,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -260,8 +250,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -285,8 +274,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -310,8 +298,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -335,8 +322,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -360,8 +346,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -385,8 +370,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -410,8 +394,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -435,8 +418,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -460,8 +442,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'
@@ -485,8 +466,7 @@ export default function Index() {
               Remix Docs
             </a>
           </li>
-        </ul>
-        <ul>
+
           <li>
             <a
               target='_blank'

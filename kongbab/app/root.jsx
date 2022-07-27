@@ -13,7 +13,7 @@ import Layout from 'components/Layout';
 
 export const meta = () => ({
   charset: 'utf-8',
-  title: 'New Remix App',
+  title: 'cong-bab',
   viewport: 'width=device-width,initial-scale=1',
 });
 
