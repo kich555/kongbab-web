@@ -2,8 +2,8 @@ import { Container, Center, Space, Divider } from '@mantine/core';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import BranchArrow from '~/asset/icon/procedure/BranchArrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import Consultation from './Procedure/Consultation';
-import Procedure from './Procedure/Procedure';
+import Consultation from './Consultation';
+import Procedure from './Procedure';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 
 export default function LitigationProcedure(params) {
