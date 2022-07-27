@@ -7,10 +7,10 @@ export default function PriceInfo({ title, price, options }) {
   const { box, list, listItem, marginTop20 } = classes;
   const { colors } = theme;
 
-  const optionList = options.map((option) => {
+  const optionList = options.map((option, idx) => {
     if (option === '') {
       return (
-        <li key={option} className={listItem}>
+        <li key={idx} className={listItem}>
           {' '}
         </li>
       );
@@ -19,7 +19,7 @@ export default function PriceInfo({ title, price, options }) {
       const firstWord = option.split(' ')[0];
       const secondWord = option.split(' ')[1];
       return (
-        <li key={option} className={listItem}>
+        <li key={idx} className={listItem}>
           <CheckIcon style={{ marginRight: '15px' }} />
           <Text weight={700} component='span'>
             {firstWord}
@@ -29,14 +29,13 @@ export default function PriceInfo({ title, price, options }) {
       );
     }
     return (
-      <li key={option} className={listItem}>
+      <li key={idx} className={listItem}>
         <CheckIcon style={{ marginRight: '15px' }} />
         {option}
       </li>
     );
   });
 
-  console.log('optionList', optionList);
   return (
     <li className={box}>
       <Text size='lg' weight={700}>
