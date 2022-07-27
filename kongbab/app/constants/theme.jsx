@@ -5,6 +5,7 @@ const BASIC_THEME = {
   breakpoints: {
     lg: 1132,
     sm: 764,
+    xs: 375,
   },
   fontSizes: {
     xs: '12px',
