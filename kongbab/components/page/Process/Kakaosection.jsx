@@ -3,10 +3,9 @@ import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
 
 export default function KakaoSection(params) {
-  const { classes, theme, cx } = useKakaoSectionStyles();
+  const { classes, cx } = useKakaoSectionStyles();
   const { wrapper, phone, font20, titleFont, lineHeight150, underLine } =
     classes;
-  const { breakpoints, colors } = theme;
   const mobile = useResponsive();
 
   return (
