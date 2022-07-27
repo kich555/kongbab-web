@@ -1,7 +1,7 @@
 import { Text, Container, Space } from '@mantine/core';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
 
-export default function Kakaosection(params) {
+export default function KakaoSection(params) {
   const { classes, cx } = useKakaoSectionStyles();
   const { wrapper, phone, font20, lineHeight150, underLine } = classes;
   return (
