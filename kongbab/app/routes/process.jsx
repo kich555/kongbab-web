@@ -1,10 +1,9 @@
-import { Container, Divider, Space } from '@mantine/core';
+import { Container, Space } from '@mantine/core';
 import ProcessConsultationSection from 'components/page/Process/ProcessConsultationSection';
 import LitigationProcedureTitle from 'components/page/Process/Procedure/LitigationProcedureTitle';
 import LitigationProcedure from 'components/page/Process/Procedure/LitigationProcedure';
-import KakaoSection from 'components/page/Process/Kakaosection';
+import KakaoSection from 'components/page/Process/KakaoSection';
 import LitigationInfo from 'components/page/Process/LitigationInfo';
-import Title from 'components/Title';
 
 export default function process() {
   return (
@@ -15,7 +14,6 @@ export default function process() {
         <KakaoSection />
         <Space h={200} />
         <LitigationProcedureTitle />
-        
         <LitigationProcedure />
         <ProcessConsultationSection />
       </Container>
