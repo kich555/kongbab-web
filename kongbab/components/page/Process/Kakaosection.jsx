@@ -1,11 +1,17 @@
 import { Text, Container, Space } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
 
 export default function KakaoSection(params) {
-  const { classes, cx } = useKakaoSectionStyles();
-  const { wrapper, phone, font20, lineHeight150, underLine } = classes;
+  const { classes, theme, cx } = useKakaoSectionStyles();
+  const { wrapper, phone, font20, titleFont, lineHeight150, underLine } =
+    classes;
+  const { breakpoints, colors } = theme;
+  const mobile = useResponsive();
+
   return (
     <Container px={0}>
+      <Space h={mobile ? 100 : 180} />
       <Text
         className={font20}
         variant='gradient'
@@ -15,20 +21,23 @@ export default function KakaoSection(params) {
       >
         더이상 기다리지 마세요
       </Text>
-      <Space h={20} />
-      <Text size='xl' weight={700} align='center'>
+      <Space h={mobile ? 12 : 20} />
+      <Text className={titleFont} weight={700} align='center'>
         실시간 진행사항을 카카오 알림톡으로 발송
       </Text>
-      <Space h={60} />
+      <Space h={mobile ? 40 : 60} />
       <div className={wrapper}>
         <Space h={40} />
         <div className={phone}></div>
       </div>
-      <Space h={40} />
-      <Container size={920} px={0}>
+      <Space h={mobile ? 30 : 40} />
+      <Container size={920} px={mobile ? 30 : 0}>
         <Text className={cx(font20, lineHeight150)} align='center'>
-          매번 법률사무실에 연락드려서 진행사항 확인하기 번거롭지 않으신가요?
+          매번 법률사무실에 연락드려서
+          {mobile && <br />}
+          진행사항 확인하기 번거롭지 않으신가요?
           <br />
+          {mobile && <br />}
           콩밥은 고객님의{' '}
           <Text
             className={cx(font20, underLine)}
