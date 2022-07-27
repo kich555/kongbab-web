@@ -34,16 +34,17 @@ export default function NavMenu({ setOpened }) {
   const { links, linkBox, link, linkActive } = classes;
 
   const items = menus.map((menu) => (
-    <div className={linkBox} key={menu.label}>
-      <div
-        className={cx(link, { [linkActive]: active === menu.link })}
-        onClick={(e) => {
-          e.preventDefault();
-          setActive(menu.link);
-          setOpened(false);
-          navigate(menu.link);
-        }}
-      >
+    <div
+      className={linkBox}
+      key={menu.label}
+      onClick={(e) => {
+        e.preventDefault();
+        setActive(menu.link);
+        setOpened(false);
+        navigate(menu.link);
+      }}
+    >
+      <div className={cx(link, { [linkActive]: active === menu.link })}>
         {menu.label}
       </div>
     </div>
