@@ -11,8 +11,6 @@ const useBlogCardStyles = createStyles((theme) => ({
     transition: 'transform 250ms',
     '&:hover': {
       transform: 'translateY(-5px)',
-      //   boxShadow: '0 4px 24px rgba(0, 0, 0, 0.4)',
-      boxShadow: 'rgb(2 80 89 / 34%) 0px 5px 20px',
     },
   },
   cardSection: { margin: '0px' },
