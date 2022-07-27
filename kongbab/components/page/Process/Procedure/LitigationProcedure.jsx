@@ -7,7 +7,8 @@ import Procedure from './Procedure';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 
 export default function LitigationProcedure(params) {
-  const { classes } = useProcedureStyles();
+  const { classes, theme } = useProcedureStyles();
+  const { colors } = theme;
   const { wrapper } = classes;
   const { PROCEDURE } = PROCESS_CONSTANTS;
   const { CONSULTATION, PROHIBITE_TRANSFER_OWNERSHIP, DETINUE } = PROCEDURE;
@@ -27,8 +28,10 @@ export default function LitigationProcedure(params) {
   } = DETINUE;
   return (
     <Container size='sm' px={0} className={wrapper}>
+      <Space h={40} />
+      <Divider size='xs' color={colors.gray[1]} />
+      <Space h={80} />
       <Consultation procedureForm={CONSULTATION} />
-
       <Center>
         <BranchArrow />
       </Center>
@@ -66,10 +69,6 @@ export default function LitigationProcedure(params) {
             <Procedure procedureForm={EXECUTE_JUDGEMENT} />
           </Container>
         </div>
-      </Container>
-      <Container>
-        <Space h={40} />
-        <Divider size='xs' color='#EDF0F4' />
       </Container>
     </Container>
   );
