@@ -7,17 +7,15 @@ const useProcedureStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  basic: { border: '1px solid #CBD1D8' },
-  gradient: {},
-  miniIcon: {
-    position: 'absolute',
-    right: '26px',
-    top: '36.5%',
+  centerColumn: {
+    flexDirection: 'column',
+    maxWidth: '428px',
+    textAlign: 'center',
   },
-  basicFont: {
-    width: '100%',
-    fontSize: '18px',
-  },
+
+  lineHeight150: { lineHeight: '150%' },
+  font18: { fontSize: '18px' },
+  pointer: { cursor: 'pointer' },
 }));
 
 export default useProcedureStyles;
