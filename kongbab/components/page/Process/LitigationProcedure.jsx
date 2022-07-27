@@ -2,9 +2,7 @@ import { Container, Center, Space, Divider } from '@mantine/core';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import BranchArrow from '~/asset/icon/procedure/BranchArrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import ComplaintSubmission from './Procedure/UnauthorizedPossession/ComplaintSubmission';
 import Consultation from './Procedure/Consultation';
-import ProhibitionEstateTransfer from './Procedure/ProhibiteTransferOwnership/ProhibitionEstateTransfer';
 import Procedure from './Procedure/Procedure';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 
@@ -43,20 +41,29 @@ export default function LitigationProcedure(params) {
             style={{ margin: 0, width: '100%', textAlign: 'center' }}
           >
             <Procedure procedureForm={PROHIBITION_ESTATE_TRANSFER} />
-            <Space h={30} />
             <Arrow />
-            <Space h={45} />
             <Procedure procedureForm={MORTAGE_ORDER} />
-            <Space h={30} />
             <Arrow />
-            <Space h={45} />
+            <Procedure procedureForm={SENTENCE_INJUNCTION} />
+            <Arrow />
+            <Procedure procedureForm={EXCUTE_INJUNCTION} />
           </Container>
           <Container
             size='xs'
             px={0}
             style={{ margin: 0, width: '100%', textAlign: 'center' }}
           >
-            {/* <ComplaintSubmission /> */}
+            <Procedure procedureForm={LODGING_COMPLAINT} />
+            <Arrow />
+            <Procedure procedureForm={SERVE_TO_DEFENDANT} />
+            <Arrow />
+            <Procedure procedureForm={CHECK_DEFENDANT_ANSWER} />
+            <Arrow />
+            <Procedure procedureForm={NOTICE_ARGUMENT_DATE} />
+            <Arrow />
+            <Procedure procedureForm={SENTENCE_JUDGEMENT} />
+            <Arrow />
+            <Procedure procedureForm={EXECUTE_JUDGEMENT} />
           </Container>
         </div>
       </Container>
