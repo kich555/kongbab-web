@@ -1,4 +1,30 @@
 const PROCESS_CONSTANTS = {
+  LITIGATION_INFO: [
+    {
+      icon: '🏦',
+      title: '상가',
+      desc: '상가임대차보호법이 적용되는 상가는 월세가 3기 이상 연체시 명도소송 가능',
+      backGround: {
+        backgroundColor: '#EEFBEF',
+      },
+    },
+    {
+      icon: '🏠',
+      title: '주택',
+      desc: '주택임대차보호법이 적용되는 주택은 월세가 2기 이상 연체시 명도소송 가능',
+      backGround: {
+        backgroundColor: '#FFF8F8',
+      },
+    },
+    {
+      icon: '🏢',
+      title: '기타',
+      desc: '일반 건물, 토지 등',
+      backGround: {
+        backgroundColor: '#EDF2FB',
+      },
+    },
+  ],
   PROCEDURE: {
     CONSULTATION: {
       title: '상담 및 수임 의뢰',
