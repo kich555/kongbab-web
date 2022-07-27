@@ -1,5 +1,5 @@
 import { Container, Text, Group, Space } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import useResponsive from '~/hooks/useResponsive';
 import useLitigationInfoStyles from '~/Style/page/Process/useLitigationInfoStyles';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Title from 'components/Title';
@@ -7,9 +7,9 @@ import Title from 'components/Title';
 export default function LitigationInfo(params) {
   const { LITIGATION_INFO } = PROCESS_CONSTANTS;
   const { classes, theme } = useLitigationInfoStyles();
-  const { breakpoints, colors } = theme;
+  const { colors } = theme;
   const { lineHeight150, box, maxWidth, font40, content } = classes;
-  const mobile = useMediaQuery(`(max-width: ${breakpoints.sm}px)`, false);
+  const mobile = useResponsive();
 
   const items = LITIGATION_INFO.map((item) => (
     <Container
