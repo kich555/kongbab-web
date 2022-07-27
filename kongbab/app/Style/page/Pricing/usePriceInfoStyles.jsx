@@ -10,7 +10,7 @@ const usePriceInfoStyles = createStyles((theme) => ({
     width: '246px',
     padding: '30px 14px 25px 14px',
     textAlign: 'center',
-    '&:nth-child(-n+2)': {
+    '&:nth-of-type(-n+2)': {
       borderRight: '1px solid #EDF0F4',
     },
   },

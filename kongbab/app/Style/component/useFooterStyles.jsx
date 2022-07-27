@@ -48,7 +48,7 @@ const useFooterStyles = createStyles((theme) => ({
   },
   menuItem: {
     fontWeight: 500,
-    '&:nth-child(2)': {
+    '&:nth-of-type(2)': {
       '&::before': {
         content: "'|'",
         paddingRight: '6px',
