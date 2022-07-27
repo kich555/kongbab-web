@@ -7,15 +7,15 @@ import Title from 'components/Title';
 export default function LitigationInfo(params) {
   const { LITIGATION_INFO } = PROCESS_CONSTANTS;
   const { classes, theme } = useLitigationInfoStyles();
-  const { breakpoints } = theme;
-  const { lineHeight150, box, font40, content } = classes;
+  const { breakpoints, colors } = theme;
+  const { lineHeight150, box, maxWidth, font40, content } = classes;
   const mobile = useMediaQuery(`(max-width: ${breakpoints.sm}px)`, false);
 
   const items = LITIGATION_INFO.map((item) => (
     <Container
       key={item.title}
       size={252}
-      px={mobile ? 20 : 36}
+      px={mobile ? 30 : 36}
       className={box}
       style={item.backGround}
     >
@@ -23,15 +23,16 @@ export default function LitigationInfo(params) {
         {item.icon}
       </Text>
       {mobile ? <Space w={36} /> : <Space h={20} />}
-      <div>
+      <div className={maxWidth}>
         <Text size='lg' align={mobile ? 'left' : 'center'} weight={700}>
           {item.title}
         </Text>
         <Space h={12} />
         <Text
-          size='xs'
           align={mobile ? 'left' : 'center'}
           className={lineHeight150}
+          size='xs'
+          color={colors.blue[0]}
         >
           {item.desc}
         </Text>

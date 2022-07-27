@@ -28,6 +28,7 @@ const useLitigationInfoStyles = createStyles((theme) => ({
   },
   lineHeight150: { lineHeight: '150%' },
   font40: { fontSize: '40px' },
+  maxWidth: { width: '100%' },
 }));
 
 export default useLitigationInfoStyles;
