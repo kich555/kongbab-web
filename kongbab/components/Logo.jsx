@@ -40,7 +40,7 @@ export function HeaderLogo({ width = 150, ...others }) {
 
 export function Logo({ variant = 'default', width = 30, ...others }) {
   const theme = useMantineTheme();
-  console.log('?', theme.colors[theme.primaryColor]);
+
   return (
     <svg
       {...others}
