@@ -37,6 +37,7 @@ const useProcedureStyles = createStyles((theme) => ({
   badgeWrapper: {
     position: 'relative',
   },
+
   badge: {
     display: 'inline',
     position: 'absolute',
@@ -48,7 +49,14 @@ const useProcedureStyles = createStyles((theme) => ({
     fontWeight: 600,
     color: theme.colors.magenta[0],
     backgroundColor: theme.colors.magenta[1],
+    [theme.fn.smallerThan('sm')]: {
+      position: 'relative',
+      display: 'block',
+      marginLeft: 0,
+      marginTop: '16px',
+    },
   },
+  maxWidth: { width: '100%' },
   lineHeight150: { lineHeight: '150%' },
   font18: { fontSize: '18px' },
   font11: { fontSize: '11px' },
