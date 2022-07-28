@@ -6,7 +6,7 @@ import StickerList from './Sticker/StickerList';
 export default function Procedure({ procedureForm }) {
   const { title, desc, condition, procedureList, badgeContent } = procedureForm;
   const { classes, theme } = useProcedureStyles();
-  const { lineHeight150, badge, badgeWrapper } = classes;
+  const { lineHeight150, badge, badgeWrapper, maxWidth } = classes;
   const { colors } = theme;
   return (
     <>
@@ -29,7 +29,7 @@ export default function Procedure({ procedureForm }) {
         </>
       )}
       <Space h={29} />
-      <Group position='center' spacing={24}>
+      <Group position='center' spacing={24} className={maxWidth}>
         <StickerList procedureList={procedureList} />
       </Group>
     </>
