@@ -9,6 +9,7 @@ export default function Consultation({ procedureForm }) {
   const { centerColumn, lineHeight150, pointer } = classes;
   const { title, desc, link, procedureList } = procedureForm;
   const mobile = useResponsive();
+
   const handleClick = () => {
     console.log('window', window.Kakao);
     window.Kakao.Channel.addChannel({
@@ -24,6 +25,7 @@ export default function Consultation({ procedureForm }) {
       <Text size='sm' className={lineHeight150}>
         {desc}
       </Text>
+      <Space h={4} />
       <Text
         onClick={handleClick}
         component='button'
@@ -33,6 +35,7 @@ export default function Consultation({ procedureForm }) {
       >
         {link}
       </Text>
+
       <Space h={mobile ? 40 : 50} />
       <Group position='center' spacing={24}>
         <StickerList procedureList={procedureList} />
