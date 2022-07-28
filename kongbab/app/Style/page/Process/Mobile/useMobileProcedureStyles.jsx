@@ -8,24 +8,17 @@ const useMobileProcedureStyles = createStyles((theme) => ({
     position: 'relative',
     width: '100%',
     height: '1030px',
-    overflow: 'hidden',
+    overflowY: 'hidden',
     textAlign: 'center',
   },
-  button: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  openedWrapper: {
+    height: '100%',
+  },
+
+  shadowButton: {
     position: 'absolute',
     bottom: 0,
-    height: '55px',
-    width: '100%',
-    border: '1px solid',
-    borderRadius: '3px',
-    borderColor: theme.black,
-    backgroundColor: theme.white,
-    fontSize: '18px',
-    fontWeight: 700,
-    boxShadow: '0 10px -10px #666',
+    transition: 'ease-in-out 1s',
     '&::before': {
       content: '" "',
       position: 'absolute',
@@ -39,31 +32,21 @@ const useMobileProcedureStyles = createStyles((theme) => ({
     },
   },
 
-  phone: {
-    width: '287px',
-    [theme.fn.smallerThan('sm')]: {
-      width: '165px',
-    },
-    height: '100%',
-    borderRadius: '24px 24px 0 0 ',
-    backgroundColor: theme.colors.blue[1],
+  button: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '55px',
+    width: '100%',
+    border: '1px solid',
+    borderRadius: '3px',
+    borderColor: theme.black,
+    backgroundColor: theme.white,
+    fontSize: '18px',
+    fontWeight: 700,
   },
-  font20: {
-    fontSize: '20px',
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: theme.fontSizes.md,
-    },
-  },
-  lineHeight150: { lineHeight: '150%' },
-  titleFont: {
-    fontSize: theme.fontSizes.xl,
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: '28px',
-    },
-  },
-  underLine: {
-    textDecorationColor: '#fbea53',
-    textDecorationThickness: '5px',
+  maxWidth: {
+    width: '100%',
   },
 }));
 
