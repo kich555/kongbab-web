@@ -1,4 +1,4 @@
-import { Container, Space } from '@mantine/core';
+import { Container } from '@mantine/core';
 import ProcessConsultationSection from 'components/page/Process/ProcessConsultationSection';
 import LitigationProcedureTitle from 'components/page/Process/Procedure/LitigationProcedureTitle';
 import LitigationProcedure from 'components/page/Process/Procedure/LitigationProcedure';
@@ -10,9 +10,7 @@ export default function process() {
     <section>
       <Container style={{ padding: '0 26px' }}>
         <LitigationInfo />
-        <Space h={180} />
         <KakaoSection />
-        <Space h={200} />
         <LitigationProcedureTitle />
         <LitigationProcedure />
         <ProcessConsultationSection />
