@@ -1,20 +1,21 @@
-import { Container, Center, Badge, Group, Text } from '@mantine/core';
+import { Container, Center, Badge, Group, Text, Space } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
+import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import { Logo } from '../../../Logo';
 
 export default function LitigationProcedureTitle() {
+  const { classes } = useProcedureStyles();
+  const { titleFont, titleWrapper, group } = classes;
+  const mobile = useResponsive();
   return (
     <Container>
-      <Center style={{ position: 'relative', paddingTop: '120px' }}>
-        <Text size='xl' weight={700}>
+      <Space h={mobile ? 100 : 200} />
+      <Center className={titleWrapper}>
+        <Text weight={700} className={titleFont}>
           소송진행 절차
         </Text>
-        <Group
-          spacing={8}
-          style={{
-            position: 'absolute',
-            right: 0,
-          }}
-        >
+        {mobile && <Space h={30} />}
+        <Group spacing={mobile ? 12 : 8} className={group}>
           <Badge
             size='xl'
             variant='outline'

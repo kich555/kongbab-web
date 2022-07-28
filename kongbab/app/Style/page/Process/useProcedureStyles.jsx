@@ -1,6 +1,27 @@
 import { createStyles } from '@mantine/core';
 
 const useProcedureStyles = createStyles((theme) => ({
+  //Procedure List Title
+  titleFont: {
+    fontSize: theme.fontSizes.xl,
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '28px',
+    },
+  },
+  titleWrapper: {
+    position: 'relative',
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  group: {
+    [theme.fn.largerThan('sm')]: {
+      position: 'absolute',
+      right: 0,
+    },
+  },
+
+  // Procedure
   warpper: {
     display: 'flex',
     flexDirection: 'column',
