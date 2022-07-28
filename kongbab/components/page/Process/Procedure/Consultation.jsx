@@ -1,7 +1,8 @@
-import { Container, Text, Center, Space, Group } from '@mantine/core';
+import { Text, Center, Space, Group } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import StickerList from './Sticker/StickerList';
+import Arrow from '~/asset/icon/procedure/Arrow';
 
 export default function Consultation({ procedureForm }) {
   const { classes, cx } = useProcedureStyles();
@@ -36,7 +37,7 @@ export default function Consultation({ procedureForm }) {
       <Group position='center' spacing={24}>
         <StickerList procedureList={procedureList} />
       </Group>
-      <Space h={mobile ? 20 : 30} />
+      {mobile ? <Arrow /> : <Space h={30} />}
     </Center>
   );
 }
