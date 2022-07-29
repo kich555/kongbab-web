@@ -1,10 +1,12 @@
 import { useMantineTheme } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
 
 export function HeaderLogo({ width = 150, ...others }) {
+  const { tablet } = useResponsive();
   return (
     <svg
       {...others}
-      width={width}
+      width={tablet ? 120 : width}
       height='60'
       viewBox='0 0 150 60'
       fill='none'
