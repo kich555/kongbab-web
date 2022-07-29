@@ -48,7 +48,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
         <Text
           className={descText}
           size='sm'
-          color={colors['blue'][0]}
+          color={colors.blue[0]}
           lineClamp={2}
         >
           {desc}

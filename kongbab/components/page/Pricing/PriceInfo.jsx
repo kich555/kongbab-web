@@ -67,7 +67,7 @@ export default function PriceInfo({ title, price, options }) {
           </Text>
         </Text>
         <Space h={20} />
-        <Text size='xs' color={colors['blue'][3]}>
+        <Text size='xs' color={colors.blue[3]}>
           카드 결제 가능, 부가세 별도
         </Text>
         <Space h={8} />
