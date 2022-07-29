@@ -11,6 +11,7 @@ import { HeaderLogo } from '../Logo';
 import NavItems from './NavItems';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/component/useNavStyles';
+import { useNavigate } from '@remix-run/react';
 
 export default function Nav(params) {
   const [opened, { toggle, close }] = useDisclosure(false);
@@ -29,14 +30,14 @@ export default function Nav(params) {
   } = classes;
   const items = NavItems({ close });
   const deskTopItems = items.slice(1);
-
+  const navigate = useNavigate();
   return (
     <Header
       className={cx(header, { [headerActive]: scroll.y !== 0 })}
       height={scroll.y === 0 ? 100 : 80}
     >
       <Container className={container} px={26}>
-        {!opened && <HeaderLogo />}
+        {!opened && <HeaderLogo onClick={() => navigate('/')} />}
         <div className={menuWrapper}>
           <Group className={links} spacing={10}>
             {deskTopItems}

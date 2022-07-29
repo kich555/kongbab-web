@@ -89,6 +89,9 @@ const useNavStyles = createStyles((theme, opened) => ({
       marginLeft: '0px',
       fontSize: theme.fontSizes.sm,
     },
+    [theme.fn.smallerThan('xs')]: {
+      display: 'none',
+    },
   },
   burger: {
     [theme.fn.largerThan('md')]: {
