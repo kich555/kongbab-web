@@ -20,7 +20,7 @@ const useNavStyles = createStyles((theme) => ({
   headerActive: {
     height: '80px',
     backgroundColor: '#fff',
-    // backgroundColor: theme.colors.cyan,
+
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)',
   },
   container: {
@@ -70,7 +70,6 @@ const useNavStyles = createStyles((theme) => ({
   button: {
     width: '128px',
     height: '44px',
-    // padding: '12px 20px 12px 20px',
     marginLeft: '50px',
     fontSize: '16px',
     fontWeight: '500',
