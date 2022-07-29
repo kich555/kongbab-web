@@ -1,19 +1,16 @@
 import { createStyles } from '@mantine/core';
 
 const useFooterStyles = createStyles((theme) => ({
-  marginTop20: {
-    marginTop: '20px',
-  },
-
   footer: {
-    height: '240px',
+    minHeight: '240px',
+    height: '100%',
     width: '100%',
     display: 'flex',
     alignItems: 'end',
 
     backgroundColor: theme.colors.gray[0],
   },
-
+  lineHeight150: { lineHeight: '150%' },
   container: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -22,13 +19,9 @@ const useFooterStyles = createStyles((theme) => ({
     fontSize: '13px',
     lineHeight: '150%',
     color: theme.colors.blue[0],
-  },
-  InfoWarpper: {
-    fontWeight: 500,
-    textAlign: 'left',
-  },
-  title: {
-    fontWeight: 700,
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'column',
+    },
   },
 
   links: {
@@ -36,6 +29,10 @@ const useFooterStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'end',
     justifyContent: 'end',
+    [theme.fn.smallerThan('sm')]: {
+      alignItems: 'start',
+      justifyContent: 'start',
+    },
   },
   iconWrapper: {
     display: 'flex',
