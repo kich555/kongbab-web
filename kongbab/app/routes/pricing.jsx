@@ -15,9 +15,7 @@ export default function pricing(params) {
         <FeatureList features={FEATURES} />
       </section>
       <EventSection />
-      <section>
-        <FeaturedFAQSection questions={FEATURED_FAQ} />
-      </section>
+      <FeaturedFAQSection questions={FEATURED_FAQ} />
     </>
   );
 }
