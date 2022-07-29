@@ -7,18 +7,28 @@ const usePriceInfoListStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  mobileWrapper: {
+    gap: '30px',
+    width: '100%',
+  },
 
   list: {
+    maxWidth: '822px',
+    width: '100%',
     borderRadius: '24px',
     overflow: 'hidden',
     boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
     backgroundColor: theme.white,
   },
   another: {
-    width: '252px',
+    maxWidth: '252px',
+    width: '100%',
     height: '443px',
     boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
     backgroundColor: theme.white,
+    [theme.fn.smallerThan('sm')]: {
+      maxWidth: '325px',
+    },
   },
   box: {
     display: 'flex',
@@ -42,7 +52,12 @@ const usePriceInfoListStyles = createStyles((theme) => ({
   footer: {
     alignSelf: 'flex-start',
     marginLeft: '24px',
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '325px',
+      marginLeft: 0,
+    },
   },
+  maxWidth: { width: '100%' },
 }));
 
 export default usePriceInfoListStyles;
