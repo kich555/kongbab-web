@@ -1,46 +1,77 @@
-import { Burger, Button, Container, Header, Transition } from '@mantine/core';
+import {
+  Burger,
+  Button,
+  Container,
+  Header,
+  Transition,
+  Group,
+  Paper,
+} from '@mantine/core';
 import { HeaderLogo } from '../Logo';
-import NavMenu from './NavMenu';
-import { useBooleanToggle, useWindowScroll } from '@mantine/hooks';
+import NavItems from './NavItems';
+import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/component/useNavStyles';
 
 export default function Nav(params) {
-  // const { isTop } = useDetectTopNav();
-  const [opened, setOpened] = useBooleanToggle(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const scroll = useWindowScroll()[0];
-  const { classes, cx, theme } = useNavStyles();
-  const { header, headerActive, container, menuWrapper, button } = classes;
-  console.log('theme.y', theme);
+  const { classes, cx, theme } = useNavStyles(opened);
+  const {
+    header,
+    headerActive,
+    container,
+    menuWrapper,
+    button,
+    burger,
+    links,
+    dropdown,
+    outer,
+  } = classes;
+  const items = NavItems({ close });
+  const deskTopItems = items.slice(1);
+
   return (
     <Header
       className={cx(header, { [headerActive]: scroll.y !== 0 })}
       height={scroll.y === 0 ? 100 : 80}
     >
-      <Container className={container}>
-        <HeaderLogo />
+      <Container className={container} px={26}>
+        {!opened && <HeaderLogo />}
         <div className={menuWrapper}>
-          <NavMenu setOpened={setOpened} />
-          <Button
-            sx={(theme) => ({
-              backgroundColor: theme.colors.dark[1],
-            })}
-            className={button}
-            variant='filled'
-            radius={36}
-            onClick={() => console.log('test')}
-          >
-            카톡 상담 신청
-          </Button>
-        </div>
-        {/* <Burger
-            opened={opened}
-            onClick={() => setOpened()}
-            // className={burger}
-            size='sm'
-          />
-          <Transition>
+          <Group className={links} spacing={10}>
+            {deskTopItems}
+          </Group>
+          <Group spacing={20}>
+            {!opened && (
+              <Button
+                sx={(theme) => ({
+                  backgroundColor: theme.colors.dark[1],
+                })}
+                className={button}
+                variant='filled'
+                radius={36}
+                onClick={() => console.log('test')}
+              >
+                카톡 상담 신청
+              </Button>
+            )}
 
-          </Transition> */}
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              className={burger}
+              size='md'
+            />
+          </Group>
+        </div>
+        <Transition transition='pop-top-right' duration={200} mounted={opened}>
+          {(styles) => (
+            <Paper className={dropdown} withBorder style={styles}>
+              {items}
+              <div onClick={close} className={outer} />
+            </Paper>
+          )}
+        </Transition>
       </Container>
     </Header>
   );

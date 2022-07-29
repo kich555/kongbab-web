@@ -3,9 +3,13 @@ import { Group } from '@mantine/core';
 import { useState } from 'react';
 import useNavStyles from '~/Style/component/useNavStyles';
 
-export default function NavMenu({ setOpened }) {
+export default function NavMenu({ close }) {
   const navigate = useNavigate();
   const menus = [
+    {
+      link: '/',
+      label: '홈',
+    },
     {
       link: '/',
       label: '콩밥 소개',
@@ -31,7 +35,7 @@ export default function NavMenu({ setOpened }) {
   const [active, setActive] = useState(menus[0].link);
   const { classes, cx, theme } = useNavStyles();
 
-  const { links, linkBox, link, linkActive } = classes;
+  const { linkBox, link, linkActive } = classes;
 
   const items = menus.map((menu) => (
     <div
@@ -40,7 +44,7 @@ export default function NavMenu({ setOpened }) {
       onClick={(e) => {
         e.preventDefault();
         setActive(menu.link);
-        setOpened(false);
+        close();
         navigate(menu.link);
       }}
     >
@@ -50,9 +54,5 @@ export default function NavMenu({ setOpened }) {
     </div>
   ));
 
-  return (
-    <Group className={links} spacing={10}>
-      {items}
-    </Group>
-  );
+  return items;
 }

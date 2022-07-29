@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-const useNavStyles = createStyles((theme) => ({
+const useNavStyles = createStyles((theme, opened) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -9,6 +9,9 @@ const useNavStyles = createStyles((theme) => ({
     top: '0',
     width: '100%',
     height: '100px',
+    [theme.fn.smallerThan('md')]: {
+      height: '80px',
+    },
     borderBottom: 'none',
     backgroundColor: `transparent`,
     transition: 'all 0.25s ease-in-out 0s',
@@ -19,14 +22,16 @@ const useNavStyles = createStyles((theme) => ({
   },
   headerActive: {
     height: '80px',
+    [theme.fn.smallerThan('md')]: {
+      height: '60px',
+    },
     backgroundColor: '#fff',
-
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)',
   },
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: opened ? 'flex-end' : 'space-between',
     width: '100%',
   },
   menuWrapper: {
@@ -36,7 +41,7 @@ const useNavStyles = createStyles((theme) => ({
   },
 
   links: {
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('md')]: {
       display: 'none',
     },
   },
@@ -47,6 +52,10 @@ const useNavStyles = createStyles((theme) => ({
     '&:hover': {
       backgroundColor: theme.colors.gray[0],
     },
+    [theme.fn.smallerThan('md')]: {
+      height: 'auto',
+      padding: '13px 0 13px 36px',
+    },
   },
   link: {
     display: 'block',
@@ -56,9 +65,9 @@ const useNavStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.md,
     fontWeight: 500,
     color: 'black',
-    [theme.fn.smallerThan('sm')]: {
-      borderRadius: 0,
-      padding: theme.spacing.md,
+    [theme.fn.smallerThan('md')]: {
+      fontSize: '20px',
+      lineHeight: '24px',
     },
   },
   linkActive: {
@@ -71,9 +80,38 @@ const useNavStyles = createStyles((theme) => ({
     width: '128px',
     height: '44px',
     marginLeft: '50px',
-    fontSize: '16px',
+    fontSize: theme.fontSizes.md,
     fontWeight: '500',
     lineHeight: '19px',
+    [theme.fn.smallerThan('md')]: {
+      width: '95px',
+      height: '32px',
+      marginLeft: '0px',
+      fontSize: theme.fontSizes.sm,
+    },
+  },
+  burger: {
+    [theme.fn.largerThan('md')]: {
+      display: 'none',
+    },
+  },
+
+  dropdown: {
+    position: 'absolute',
+    top: 80,
+    left: 0,
+    right: 0,
+    width: '100vw',
+    height: '100vh',
+    padding: '24px 0',
+    zIndex: 0,
+    [theme.fn.largerThan('md')]: {
+      display: 'none',
+    },
+  },
+  outer: {
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
 }));
 
