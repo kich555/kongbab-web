@@ -1,17 +1,34 @@
 import { createStyles } from '@mantine/core';
-import common from '~/constants/commonStyle';
-
-const { ...marginTop20 } = common;
 
 const usePriceInfoStyles = createStyles((theme) => ({
+  header: {
+    [theme.fn.smallerThan('md')]: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      height: '45px',
+      width: '100%',
+      backgroundColor: theme.black,
+      borderRadius: '20px 20px 0 0 ',
+    },
+  },
   box: {
     display: 'flex',
     flexDirection: 'column',
-    width: '246px',
-    padding: '30px 14px 25px 14px',
+    position: 'relative',
+    width: '100%',
     textAlign: 'center',
+    backgroundColor: theme.white,
+  },
+
+  deskTopBox: {
+    maxWidth: '276px',
+    padding: '30px 14px 25px 14px',
     '&:nth-of-type(-n+2)': {
       borderRight: '1px solid #EDF0F4',
+      [theme.fn.smallerThan('sm')]: {
+        borderRight: 'none',
+      },
     },
   },
   list: {
@@ -22,9 +39,10 @@ const usePriceInfoStyles = createStyles((theme) => ({
     textAlign: 'left',
   },
   listItem: {
+    display: 'flex',
+    width: '100%',
     height: '16px',
   },
-  ...marginTop20,
 }));
 
 export default usePriceInfoStyles;
