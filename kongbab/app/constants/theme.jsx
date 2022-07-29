@@ -4,6 +4,7 @@ const BASIC_THEME = {
   black: '#0A1C2D',
   breakpoints: {
     lg: 1132,
+    md: 974,
     sm: 764,
     xs: 375,
   },
