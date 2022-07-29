@@ -8,7 +8,7 @@ export default function Consultation({ procedureForm }) {
   const { classes, cx } = useProcedureStyles();
   const { centerColumn, lineHeight150, pointer } = classes;
   const { title, desc, link, procedureList } = procedureForm;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
 
   const handleClick = () => {
     console.log('window', window.Kakao);

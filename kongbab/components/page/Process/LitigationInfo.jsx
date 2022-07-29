@@ -9,7 +9,7 @@ export default function LitigationInfo(params) {
   const { classes, theme } = useLitigationInfoStyles();
   const { colors } = theme;
   const { lineHeight150, box, maxWidth, font40, content } = classes;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
 
   const items = LITIGATION_INFO.map((item) => (
     <Container

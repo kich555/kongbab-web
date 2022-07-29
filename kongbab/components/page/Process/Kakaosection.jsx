@@ -6,7 +6,7 @@ export default function KakaoSection(params) {
   const { classes, cx } = useKakaoSectionStyles();
   const { wrapper, phone, font20, titleFont, lineHeight150, underLine } =
     classes;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
 
   return (
     <Container px={0}>

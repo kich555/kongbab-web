@@ -13,7 +13,7 @@ export default function LitigationProcedure(params) {
   const { wrapper } = classes;
   const { PROCEDURE } = PROCESS_CONSTANTS;
   const { CONSULTATION } = PROCEDURE;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
   return (
     <Container size='sm' px={0} className={wrapper}>
       <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>

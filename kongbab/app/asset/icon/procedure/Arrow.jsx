@@ -3,7 +3,7 @@ import { Space } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function Arrow({ ...options }) {
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
 
   return (
     <>

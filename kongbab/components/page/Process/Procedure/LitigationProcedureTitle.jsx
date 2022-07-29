@@ -6,7 +6,7 @@ import { Logo } from '../../../Logo';
 export default function LitigationProcedureTitle() {
   const { classes } = useProcedureStyles();
   const { titleFont, titleWrapper, group } = classes;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
   return (
     <Container>
       <Space h={mobile ? 100 : 200} />

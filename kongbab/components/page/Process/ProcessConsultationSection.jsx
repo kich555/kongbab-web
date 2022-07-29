@@ -6,7 +6,7 @@ import ConsultationCard from 'components/ConsultationCard';
 export default function ProcessConsultationSection() {
   const theme = useMantineTheme();
   const { white } = theme;
-  const mobile = useResponsive();
+  const { mobile } = useResponsive();
   return (
     <ConsultationCard asset={asset}>
       <Text color={white} size={mobile ? 'lg' : 'xl'} weight={700}>
