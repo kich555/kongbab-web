@@ -1,9 +1,9 @@
 import FeatureList from 'components/page/Pricing/FeatureList';
-import PriceInfoList from 'components/page/Pricing/PriceInfoList';
 import EventSection from 'components/page/Pricing/EventSection';
 import FeaturedFAQSection from 'components/page/Pricing/FeaturedFAQSection';
 import PRICING_CONSTANTS from '~/constants/page/pricingPageData';
 import { Space } from '@mantine/core';
+import PriceInfoListSection from 'components/page/Pricing/PriceInfoListSection';
 
 export default function pricing(params) {
   const { RATE_PLANS, FEATURES, FEATURED_FAQ } = PRICING_CONSTANTS;
@@ -11,7 +11,7 @@ export default function pricing(params) {
   return (
     <>
       <section style={{ backgroundColor: '#F2F4F7' }}>
-        <PriceInfoList plans={RATE_PLANS} />
+        <PriceInfoListSection plans={RATE_PLANS} />
         <FeatureList features={FEATURES} />
       </section>
       <section>

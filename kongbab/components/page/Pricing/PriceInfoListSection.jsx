@@ -12,7 +12,7 @@ export default function PriceInfoListSection({ plans }) {
   const { box, lineHeight150, footer } = classes;
   const { tablet } = useResponsive();
   return (
-    <Container px={0}>
+    <Container px={tablet ? 26 : 0}>
       <Title title='요금 안내' />
       {tablet ? (
         <MobilePriceInfoList box={box} plans={plans} />
