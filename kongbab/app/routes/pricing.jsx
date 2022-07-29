@@ -2,7 +2,7 @@ import FeatureList from 'components/page/Pricing/FeatureList';
 import EventSection from 'components/page/Pricing/EventSection';
 import FeaturedFAQSection from 'components/page/Pricing/FeaturedFAQSection';
 import PRICING_CONSTANTS from '~/constants/page/pricingPageData';
-import { Space } from '@mantine/core';
+
 import PriceInfoListSection from 'components/page/Pricing/PriceInfoListSection';
 
 export default function pricing(params) {
@@ -14,10 +14,7 @@ export default function pricing(params) {
         <PriceInfoListSection plans={RATE_PLANS} />
         <FeatureList features={FEATURES} />
       </section>
-      <section>
-        <Space h={150} />
-        <EventSection />
-      </section>
+      <EventSection />
       <section>
         <FeaturedFAQSection questions={FEATURED_FAQ} />
       </section>
