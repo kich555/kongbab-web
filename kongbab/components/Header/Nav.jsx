@@ -12,6 +12,7 @@ import NavItems from './NavItems';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/component/useNavStyles';
 import { useNavigate } from '@remix-run/react';
+import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 
 export default function Nav(params) {
   const [opened, { toggle, close }] = useDisclosure(false);
@@ -31,6 +32,8 @@ export default function Nav(params) {
   const items = NavItems({ close });
   const deskTopItems = items.slice(1);
   const navigate = useNavigate();
+
+  const { addChannel } = useAddKakaoChannel();
   return (
     <Header
       className={cx(header, { [headerActive]: scroll.y !== 0 })}
@@ -51,7 +54,7 @@ export default function Nav(params) {
                 className={button}
                 variant='filled'
                 radius={36}
-                onClick={() => console.log('test')}
+                onClick={addChannel}
               >
                 카톡 상담 신청
               </Button>

@@ -1,6 +1,6 @@
-import { useNavigate } from '@remix-run/react';
-import { Group } from '@mantine/core';
 import { useState } from 'react';
+import { useNavigate } from '@remix-run/react';
+
 import useNavStyles from '~/Style/component/useNavStyles';
 
 export default function NavMenu({ close }) {
