@@ -8,8 +8,20 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { json } from '@remix-run/node';
 import BASIC_THEME from './constants/theme';
 import Layout from 'components/Layout';
+
+// export function loader() {
+//   // process.env is available here because loader runs only on the server side
+//   return {
+//     KAKAO_KEY: process.env.REACT_APP_KEY,
+//   };
+// }
+
+export async function loader() {
+  return json({ KAKAO_KEY: process.env.REACT_APP_KEY });
+}
 
 export const meta = () => ({
   charset: 'utf-8',
@@ -34,6 +46,19 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <>
+          <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
+          <script
+            async
+            id='gtag-init'
+            dangerouslySetInnerHTML={{
+              __html: `
+              Kakao.init('JAVASCRIPT_KEY');
+              console.log(Kakao.isInitialized());
+              `,
+            }}
+          />
+        </>
         <MantineProvider
           theme={BASIC_THEME}
           withGlobalStyles
@@ -57,7 +82,6 @@ export default function App() {
           <Scripts />
           <LiveReload />
         </MantineProvider>
-        <script src='//developers.kakao.com/sdk/js/kakao.min.js'></script>
       </body>
     </html>
   );
