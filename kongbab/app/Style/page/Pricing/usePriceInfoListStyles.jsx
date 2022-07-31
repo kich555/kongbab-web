@@ -30,7 +30,9 @@ const usePriceInfoListStyles = createStyles((theme) => ({
       maxWidth: '325px',
     },
   },
-
+  box: {
+    display: 'flex',
+  },
   title: {
     paddingTop: '14px',
     paddingBottom: '14px',
