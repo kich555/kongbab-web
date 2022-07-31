@@ -50,7 +50,7 @@ export default function App() {
           <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
           <script
             async
-            id='gtag-init'
+            id='kakao-init'
             dangerouslySetInnerHTML={{
               __html: `
               Kakao.init('JAVASCRIPT_KEY');
