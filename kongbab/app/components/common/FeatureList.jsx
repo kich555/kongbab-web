@@ -1,9 +1,10 @@
 import { Container, Group, Text, Space, MediaQuery } from '@mantine/core';
 import Title from '~/components/common/Title';
+import FEATURED_LIST from '~/constants/common/featuredListData';
 import useResponsive from '~/hooks/useResponsive';
 import useFeatureListStyles from '~/Style/components/useFeatureListStyles';
 
-export default function FeatureList({ features }) {
+export default function FeatureList() {
   const { classes, theme } = useFeatureListStyles();
   const { primaryColor, colors } = theme;
   const { item, lineHeight150 } = classes;
@@ -15,7 +16,7 @@ export default function FeatureList({ features }) {
     padding: '30px 25px',
   };
 
-  const items = features.map((feature, idx) => (
+  const items = FEATURED_LIST.map((feature, idx) => (
     <MediaQuery key={feature.title} smallerThan='md' styles={mobileItem}>
       <Container className={item}>
         <Text size='xl' color={colors[primaryColor]} weight={700}>
