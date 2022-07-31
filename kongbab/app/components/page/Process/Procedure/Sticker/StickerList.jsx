@@ -1,6 +1,6 @@
 import { Text, Space } from '@mantine/core';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import Sticker from './Sticker';
+import Sticker from '~/components/page/Process/Procedure/Sticker/Sticker';
 
 export default function StickerList({ procedureList }) {
   const { classes, theme } = useProcedureStyles();

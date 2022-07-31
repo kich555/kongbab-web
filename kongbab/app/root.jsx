@@ -1,5 +1,4 @@
-import { MantineProvider } from '@mantine/core';
-import styles from '~/Style/reset.css';
+
 import {
   Links,
   LiveReload,
@@ -9,7 +8,9 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { json } from '@remix-run/node';
-import BASIC_THEME from './constants/theme';
+import styles from '~/Style/reset.css';
+import { MantineProvider } from '@mantine/core';
+import BASIC_THEME from '~/constants/theme';
 import Layout from '~/components/common/Layout';
 
 // export function loader() {

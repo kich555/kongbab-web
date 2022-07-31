@@ -1,11 +1,11 @@
-import { Container, UnstyledButton, Space, Divider } from '@mantine/core';
 import { useState } from 'react';
+import { Container, UnstyledButton, Space, Divider } from '@mantine/core';
+import { useScrollIntoView } from '@mantine/hooks';
 import Arrow from '~/asset/icon/procedure/Arrow';
-import Procedure from '../Procedure';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import useMobileProcedureStyles from '~/Style/page/Process/Mobile/useMobileProcedureStyles';
-import Consultation from '../Consultation';
-import { useScrollIntoView } from '@mantine/hooks';
+import Consultation from '~/components/page/Process/Procedure/Consultation';
+import Procedure from '~/components/page/Process/Procedure/Procedure';
 
 export default function MobileProcedureList() {
   const [activeInjunction, setActiveInjunction] = useState(false);

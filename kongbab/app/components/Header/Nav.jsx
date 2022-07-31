@@ -1,3 +1,4 @@
+import { useNavigate } from '@remix-run/react';
 import {
   Burger,
   Button,
@@ -7,17 +8,16 @@ import {
   Group,
   Paper,
 } from '@mantine/core';
-import { HeaderLogo } from '~/components/common/Logo';
-import NavItems from './NavItems';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
-import useNavStyles from '~/Style/components/useNavStyles';
-import { useNavigate } from '@remix-run/react';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
+import useNavStyles from '~/Style/components/useNavStyles';
+import { HeaderLogo } from '~/components/common/Logo';
+import NavItems from '~/components/Header/NavItems';
 
-export default function Nav(params) {
+export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const scroll = useWindowScroll()[0];
-  const { classes, cx, theme } = useNavStyles(opened);
+  const { classes, cx } = useNavStyles(opened);
   const {
     header,
     headerActive,

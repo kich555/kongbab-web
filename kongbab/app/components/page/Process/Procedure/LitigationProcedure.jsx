@@ -1,11 +1,11 @@
 import { Container, Center, Space, Divider, MediaQuery } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
 import BranchArrow from '~/asset/icon/procedure/BranchArrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import Consultation from './Consultation';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
-import MobileProcedureList from './Mobile/MobileProcedureList';
-import useResponsive from '~/hooks/useResponsive';
-import ProcedureList from './Desktop/ProcedureList';
+import Consultation from '~/components/page/Process/Procedure/Consultation';
+import MobileProcedureList from '~/components/page/Process/Procedure/Mobile/MobileProcedureList';
+import ProcedureList from '~/components/page/Process/Procedure/Desktop/ProcedureList';
 
 export default function LitigationProcedure(params) {
   const { classes, theme } = useProcedureStyles();

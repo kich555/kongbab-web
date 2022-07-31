@@ -1,8 +1,8 @@
 import { Text, Center, Space, Group } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import StickerList from './Sticker/StickerList';
 import Arrow from '~/asset/icon/procedure/Arrow';
+import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 
 export default function Consultation({ procedureForm }) {
   const { classes, cx } = useProcedureStyles();

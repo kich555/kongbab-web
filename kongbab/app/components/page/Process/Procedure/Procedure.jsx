@@ -1,7 +1,6 @@
 import { Text, Space, Group } from '@mantine/core';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-
-import StickerList from './Sticker/StickerList';
+import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 
 export default function Procedure({ procedureForm }) {
   const { title, desc, condition, procedureList, badgeContent } = procedureForm;

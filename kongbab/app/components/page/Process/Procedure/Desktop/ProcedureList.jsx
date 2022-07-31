@@ -1,7 +1,7 @@
 import { Container } from '@mantine/core';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
-import Procedure from '../Procedure';
+import Procedure from '~/components/page/Process/Procedure/Procedure';
 
 export default function ProcedureList(params) {
   const { PROCEDURE } = PROCESS_CONSTANTS;
