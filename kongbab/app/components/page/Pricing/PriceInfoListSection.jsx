@@ -1,7 +1,7 @@
 import { Container, Space, Text, Center } from '@mantine/core';
 import usePriceInfoListStyles from '~/Style/page/Pricing/usePriceInfoListStyles';
 
-import Title from 'components/Title';
+import Title from '~/components/common/Title';
 import PriceInfoList from './PriceInfoList';
 import MobilePriceInfoList from './Mobile/MobilePriceInfoList';
 import useResponsive from '~/hooks/useResponsive';

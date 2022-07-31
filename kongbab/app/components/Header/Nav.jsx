@@ -7,7 +7,7 @@ import {
   Group,
   Paper,
 } from '@mantine/core';
-import { HeaderLogo } from '../Logo';
+import { HeaderLogo } from '~/components/common/Logo';
 import NavItems from './NavItems';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import useNavStyles from '~/Style/component/useNavStyles';

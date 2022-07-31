@@ -1,6 +1,6 @@
 import { Container, Text, Center, Space } from '@mantine/core';
 import useEventSectionStyles from '~/Style/page/Pricing/useEventSectionStyles';
-import DefaultButton from 'components/DefaultButton';
+import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function EventSection(params) {

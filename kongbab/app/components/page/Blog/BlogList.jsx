@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Center, Container } from '@mantine/core';
-import Title from 'components/Title';
-import BlogFilter from 'components/page/Blog/BlogFilter';
+import Title from '~/components/common/Title';
+import BlogFilter from '~/components/page/Blog/BlogFilter';
 import BLOG_CONSTANTS from '~/constants/page/blogPageData';
-import asset from '~/asset/image/Process_image.png';
 import BlogCard from './BlogCard';
 import useBlogCardListStyles from '~/Style/page/Blog/useBlogListStyles';
 

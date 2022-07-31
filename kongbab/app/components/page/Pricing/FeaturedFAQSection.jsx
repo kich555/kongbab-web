@@ -1,8 +1,8 @@
 import { Container, Center, Space } from '@mantine/core';
-import AccordionSection from 'components/AccordionSection';
-import Title from 'components/Title';
+import AccordionSection from '~/components/common/AccordionSection';
+import Title from '~/components/common/Title';
 import useFeaturedFAQStyles from '~/Style/page/Pricing/useFeaturedFAQStyles';
-import DefaultButton from 'components/DefaultButton';
+import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function FeaturedFAQSection({ questions }) {

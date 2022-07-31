@@ -1,6 +1,6 @@
 import { Text, MediaQuery, useMantineTheme } from '@mantine/core';
 import asset from '~/asset/image/FAQ_image.png';
-import ConsultationCard from '../../ConsultationCard';
+import ConsultationCard from '~/components/common/ConsultationCard';
 
 export default function FAQConsultationSection(params) {
   const theme = useMantineTheme();

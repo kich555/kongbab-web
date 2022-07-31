@@ -10,7 +10,7 @@ import {
 } from '@remix-run/react';
 import { json } from '@remix-run/node';
 import BASIC_THEME from './constants/theme';
-import Layout from 'components/Layout';
+import Layout from '~/components/common/Layout';
 
 // export function loader() {
 //   // process.env is available here because loader runs only on the server side

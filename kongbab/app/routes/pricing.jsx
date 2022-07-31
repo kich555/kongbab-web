@@ -1,9 +1,9 @@
-import FeatureList from 'components/page/Pricing/FeatureList';
-import EventSection from 'components/page/Pricing/EventSection';
-import FeaturedFAQSection from 'components/page/Pricing/FeaturedFAQSection';
+import FeatureList from '~/components/page/Pricing/FeatureList';
+import EventSection from '~/components/page/Pricing/EventSection';
+import FeaturedFAQSection from '~/components/page/Pricing/FeaturedFAQSection';
 import PRICING_CONSTANTS from '~/constants/page/pricingPageData';
 
-import PriceInfoListSection from 'components/page/Pricing/PriceInfoListSection';
+import PriceInfoListSection from '~/components/page/Pricing/PriceInfoListSection';
 
 export default function pricing(params) {
   const { RATE_PLANS, FEATURES, FEATURED_FAQ } = PRICING_CONSTANTS;

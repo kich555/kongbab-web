@@ -1,6 +1,6 @@
 import useConsultationCardStyles from '~/Style/component/useConsultationCardStyles';
 import { Center, Container } from '@mantine/core';
-import DefaultButton from 'components/DefaultButton';
+import DefaultButton from '~/components/common/DefaultButton';
 
 export default function ConsultationCard({ asset, children }) {
   const { classes } = useConsultationCardStyles();

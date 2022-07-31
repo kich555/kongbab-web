@@ -1,6 +1,6 @@
 import { Container, Space, MediaQuery } from '@mantine/core';
-import Title from 'components/Title';
-import AccordionSection from 'components/AccordionSection';
+import Title from '~/components/common/Title';
+import AccordionSection from '~/components/common/AccordionSection';
 import FAQ_CONSTANTS from '~/constants/page/faqPageData';
 
 export default function FAQAccordionSection(params) {

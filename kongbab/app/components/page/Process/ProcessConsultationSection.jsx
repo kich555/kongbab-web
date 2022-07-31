@@ -1,7 +1,7 @@
 import { Space, Text, useMantineTheme } from '@mantine/core';
 import asset from '~/asset/image/Process_footer_image.png';
 import useResponsive from '~/hooks/useResponsive';
-import ConsultationCard from 'components/ConsultationCard';
+import ConsultationCard from '~/components/common/ConsultationCard';
 
 export default function ProcessConsultationSection() {
   const theme = useMantineTheme();

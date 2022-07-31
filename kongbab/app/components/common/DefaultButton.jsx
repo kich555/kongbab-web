@@ -1,5 +1,5 @@
 import { Button, Text } from '@mantine/core';
-import useDefaultButtonStyles from '../app/Style/component/useDefaultButtonStyles';
+import useDefaultButtonStyles from '~/Style/component/useDefaultButtonStyles';
 
 export default function DefaultButton({ className = '', label, sx }) {
   const { classes } = useDefaultButtonStyles();

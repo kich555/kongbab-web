@@ -1,7 +1,7 @@
 import { Container, Center, Badge, Group, Text, Space } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
-import { Logo } from '../../../Logo';
+import { Logo } from '~/components/common/Logo';
 
 export default function LitigationProcedureTitle() {
   const { classes } = useProcedureStyles();
