@@ -20,16 +20,6 @@ const usePriceInfoListStyles = createStyles((theme) => ({
     boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
     backgroundColor: theme.white,
   },
-  another: {
-    maxWidth: '252px',
-    width: '100%',
-    height: '443px',
-    boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
-    backgroundColor: theme.white,
-    [theme.fn.smallerThan('sm')]: {
-      maxWidth: '325px',
-    },
-  },
   box: {
     display: 'flex',
   },
@@ -40,12 +30,7 @@ const usePriceInfoListStyles = createStyles((theme) => ({
   listTitle: {
     background: 'linear-gradient(90deg, #FF4545 0%, #FF9D66 100%)',
   },
-  anotherTitle: {
-    background: theme.colors.blue[0],
-  },
-  anotherDesc: {
-    padding: '0 16px 0 16px',
-  },
+
   lineHeight150: {
     lineHeight: '150%',
   },
