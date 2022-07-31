@@ -6,19 +6,15 @@ import PriceInfoList from './PriceInfoList';
 import MobilePriceInfoList from './Mobile/MobilePriceInfoList';
 import useResponsive from '~/hooks/useResponsive';
 
-export default function PriceInfoListSection({ plans }) {
+export default function PriceInfoListSection() {
   const { classes, cx } = usePriceInfoListStyles();
 
-  const { box, lineHeight150, footer } = classes;
+  const { lineHeight150, footer } = classes;
   const { tablet } = useResponsive();
   return (
     <Container px={tablet ? 26 : 0}>
       <Title title='요금 안내' />
-      {tablet ? (
-        <MobilePriceInfoList box={box} plans={plans} />
-      ) : (
-        <PriceInfoList plans={plans} />
-      )}
+      {tablet ? <MobilePriceInfoList /> : <PriceInfoList />}
       <Space h={30} />
       <Center>
         <Text size='sm' align='left' className={cx(footer, lineHeight150)}>

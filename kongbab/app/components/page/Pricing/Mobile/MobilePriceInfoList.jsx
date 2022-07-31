@@ -1,12 +1,13 @@
 import PriceInfo from '../PriceInfo';
 import usePriceInfoListStyles from '~/Style/page/Pricing/usePriceInfoListStyles';
 import { Space } from '@mantine/core';
+import PRICE_INFO from '~/constants/common/priceInfoData';
 
-export default function MobilePriceInfoList({ box, plans }) {
+export default function MobilePriceInfoList() {
   const { classes, cx } = usePriceInfoListStyles();
   const { wrapper, mobileWrapper } = classes;
 
-  const items = plans.map((plan) => (
+  const items = PRICE_INFO.map((plan) => (
     <PriceInfo
       key={plan.title}
       title={plan.title}

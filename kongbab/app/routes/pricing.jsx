@@ -12,7 +12,7 @@ export default function pricing(params) {
     <>
       <section style={{ backgroundColor: '#F2F4F7' }}>
         <PriceInfoListSection plans={RATE_PLANS} />
-        <FeatureList features={FEATURES} />
+        <FeatureList />
       </section>
       <EventSection />
       <FeaturedFAQSection questions={FEATURED_FAQ} />

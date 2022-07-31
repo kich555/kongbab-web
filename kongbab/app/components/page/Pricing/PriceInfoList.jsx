@@ -1,8 +1,9 @@
 import { Center, Space, Text, Group } from '@mantine/core';
+import PRICE_INFO from '~/constants/common/priceInfoData';
 import usePriceInfoListStyles from '~/Style/page/Pricing/usePriceInfoListStyles';
 import PriceInfo from './PriceInfo';
 
-export default function PriceInfoList({ plans }) {
+export default function PriceInfoList() {
   const { classes, theme, cx } = usePriceInfoListStyles();
   const { colors } = theme;
   const { maxWidth } = classes;
@@ -17,7 +18,7 @@ export default function PriceInfoList({ plans }) {
     lineHeight150,
   } = classes;
 
-  const items = plans.map((plan) => (
+  const items = PRICE_INFO.map((plan) => (
     <PriceInfo
       key={plan.title}
       title={plan.title}
