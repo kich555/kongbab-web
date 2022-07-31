@@ -1,4 +1,4 @@
-import useConsultationCardStyles from '~/Style/component/useConsultationCardStyles';
+import useConsultationCardStyles from '~/Style/components/useConsultationCardStyles';
 import { Center, Container } from '@mantine/core';
 import DefaultButton from '~/components/common/DefaultButton';
 

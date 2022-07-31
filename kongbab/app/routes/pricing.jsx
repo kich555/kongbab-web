@@ -1,4 +1,4 @@
-import FeatureList from '~/components/page/Pricing/FeatureList';
+import FeatureList from '~/components/common/FeatureList';
 import EventSection from '~/components/page/Pricing/EventSection';
 import FeaturedFAQSection from '~/components/page/Pricing/FeaturedFAQSection';
 import PRICING_CONSTANTS from '~/constants/page/pricingPageData';

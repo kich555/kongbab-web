@@ -1,6 +1,6 @@
 import { Accordion, MediaQuery, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
-import useAccordianStyles from '~/Style/component/useAccordianStyles';
+import useAccordianStyles from '~/Style/components/useAccordianStyles';
 
 export default function AccordionSection({ questions, style }) {
   const { classes, theme } = useAccordianStyles();

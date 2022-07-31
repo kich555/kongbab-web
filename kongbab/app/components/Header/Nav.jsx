@@ -10,7 +10,7 @@ import {
 import { HeaderLogo } from '~/components/common/Logo';
 import NavItems from './NavItems';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
-import useNavStyles from '~/Style/component/useNavStyles';
+import useNavStyles from '~/Style/components/useNavStyles';
 import { useNavigate } from '@remix-run/react';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 

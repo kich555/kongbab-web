@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from '@remix-run/react';
 
-import useNavStyles from '~/Style/component/useNavStyles';
+import useNavStyles from '~/Style/components/useNavStyles';
 
 export default function NavMenu({ close }) {
   const navigate = useNavigate();

@@ -9,7 +9,7 @@ import {
 } from '@mantine/core';
 import Kakao from '~/asset/icon/Kakao';
 import Naver from '~/asset/icon/Naver';
-import useFooterStyles from '~/Style/component/useFooterStyles';
+import useFooterStyles from '~/Style/components/useFooterStyles';
 import KakaoSvg from '~/asset/icon/Kakao.svg';
 import NaverSvg from '~/asset/icon/Naver.svg';
 import useResponsive from '~/hooks/useResponsive';
