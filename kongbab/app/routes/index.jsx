@@ -1,11 +1,11 @@
-import MainFourthSection from '~/components/page/Main/MainFourthSection';
 import MainThirdSection from '~/components/page/Main/MainThirdSection';
+import CommonFooterSection from '~/components/common/CommonFooterSection';
 
 export default function Index() {
   return (
     <>
       <MainThirdSection />
-      <MainFourthSection />
+      <CommonFooterSection />
     </>
   );
 }
