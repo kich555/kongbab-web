@@ -41,6 +41,10 @@ const INTRODUCE_CONSTANTS = {
       advantage: '카톡으로<br/>부담없이 상담',
     },
   ],
+  LAWER_PROFILE: {
+    name: '김 서 영',
+    desc: '한국 변호사 (제47회 사법시험, 2005)<br/>미국 뉴욕주 변호사<br/><br/>현) 법률사무소 이소 대표변호사<br/>현) 서울창업허브 법률분야 전문위원<br/>전) 홈플러스 사내변호사<br/>전) LG그룹 사내변호사<br/>전) 법무법인 가율 변호사<br/>University of California, Los Angeles, 법학석사<br/>제38기 사법연수원 수료<br/>연세대학교 법과대학 졸업',
+  },
 };
 
 export default INTRODUCE_CONSTANTS;
