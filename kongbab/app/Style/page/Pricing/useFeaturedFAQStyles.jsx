@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 const useFeaturedFAQStyles = createStyles((theme) => ({
   button: {
-    border: '1px solid #EDF0F4',
+    border: '1px solid #EEEEEE',
     color: theme.black,
     '&:hover': {
       backgroundColor: theme.colors.gray[0],

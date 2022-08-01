@@ -40,7 +40,7 @@ export default function Footer(params) {
             법률사무소 이소
           </Text>
           <Space h={20} />
-          <Text size='sm' color={colors.blue[0]} className={lineHeight150}>
+          <Text size='sm' color={colors.gray[3]} className={lineHeight150}>
             대표 김서영 | 서울 강남구 테헤란로2길 27, 11층 (역삼동)
             |광고책임변호사 김서영
             <br />

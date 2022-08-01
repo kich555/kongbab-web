@@ -20,7 +20,7 @@ export default function AccordionSection({ questions, style }) {
     >
       <MediaQuery smallerThan='sm' styles={{ fontSize: theme.fontSizes.md }}>
         <Text
-          color={colors.blue[0]}
+          color={colors.gray[3]}
           style={{ fontSize: '20px', lineHeight: '150%' }}
         >
           {question.desc}

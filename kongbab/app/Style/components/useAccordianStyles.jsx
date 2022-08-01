@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 const useAccordianStyles = createStyles((theme) => ({
-  item: { borderBottom: '1px solid #EDF0F4', borderTop: '1px solid #EDF0F4' },
+  item: { borderBottom: '1px solid #EEEEEE', borderTop: '1px solid #EEEEEE' },
   itemOpened: { borderBottom: 'none' },
   control: {
     padding: '38px 0',
@@ -14,7 +14,7 @@ const useAccordianStyles = createStyles((theme) => ({
   },
   content: {
     padding: '0 0 38px 0',
-    borderBottom: '1px solid #EDF0F4',
+    borderBottom: '1px solid #EEEEEE',
   },
   contentInner: { padding: '0px' },
 }));

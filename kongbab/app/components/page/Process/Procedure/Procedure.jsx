@@ -22,7 +22,7 @@ export default function Procedure({ procedureForm }) {
       {condition && (
         <>
           <Space h={15} />
-          <Text size='sm' weight={700} color={colors.blue[0]}>
+          <Text size='sm' weight={700} color={colors.gray[3]}>
             {condition}
           </Text>
         </>

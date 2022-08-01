@@ -9,7 +9,7 @@ const useStickerStyles = createStyles((theme) => ({
     borderRadius: '36px',
     padding: '0 26px',
   },
-  basic: { border: '1px solid #CBD1D8' },
+  basic: { border: '1px solid #DADADA' },
   gradient: {},
   miniIcon: {
     position: 'absolute',

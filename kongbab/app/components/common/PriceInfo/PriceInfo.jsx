@@ -74,7 +74,7 @@ export default function PriceInfo({ title, price, options }) {
         <Divider
           my='sm'
           style={{
-            borderTopColor: '#EDF0F4',
+            borderTopColor: colors.gray[1],
           }}
         />
         <Space h={8} />

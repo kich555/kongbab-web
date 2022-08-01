@@ -17,12 +17,13 @@ const BASIC_THEME = {
   },
   colors: {
     carrot: '#FF4500',
-    dark: ['#040000', '#0A1C2D'],
+    dark: ['#040000', '#000000'],
+    gray: ['#F7F7F7', '#EEEEEE', '#DADADA', '#666666'],
     blue: ['#364B60', '#B8C8D5', '#EDF2FB', '#93A4B4', '#6F8396'],
-    gray: ['#F2F4F7', '#EDF0F4'],
     green: ['#075554', '#4BC5C3', '#3EAEAD', '#EFFAFA'],
     magenta: ['#6F2D44', '#FDE9F0'],
   },
+
   primaryColor: 'carrot',
 };
 

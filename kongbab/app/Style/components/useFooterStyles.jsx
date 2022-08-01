@@ -18,7 +18,7 @@ const useFooterStyles = createStyles((theme) => ({
     marginBottom: '52px',
     fontSize: '13px',
     lineHeight: '150%',
-    color: theme.colors.blue[0],
+    color: theme.colors.gray[3],
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },

@@ -32,7 +32,7 @@ export default function LitigationInfo(params) {
           align={mobile ? 'left' : 'center'}
           className={lineHeight150}
           size='xs'
-          color={colors.blue[0]}
+          color={colors.gray[3]}
         >
           {item.desc}
         </Text>

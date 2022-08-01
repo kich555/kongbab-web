@@ -20,7 +20,7 @@ const useOtherItemStyles = createStyles((theme) => ({
   title: {
     paddingTop: '14px',
     paddingBottom: '14px',
-    background: theme.colors.blue[0],
+    background: theme.colors.gray[3],
   },
   desc: { padding: '0 16px 0 16px', lineHeight: '150%' },
 }));

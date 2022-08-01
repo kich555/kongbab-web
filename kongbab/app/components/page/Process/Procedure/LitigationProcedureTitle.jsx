@@ -19,7 +19,7 @@ export default function LitigationProcedureTitle() {
           <Badge
             size='xl'
             variant='outline'
-            style={{ border: '1px solid #CBD1D8' }}
+            style={{ border: '1px solid #DADADA' }}
           >
             <Text size='sm'>고객님 진행</Text>
           </Badge>

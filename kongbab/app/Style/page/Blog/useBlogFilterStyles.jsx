@@ -10,7 +10,7 @@ const useBlogFilterStyles = createStyles((theme) => ({
     padding: '12px 20px',
     borderRadius: '6px',
     fontSize: '20px',
-    color: theme.colors.blue[0],
+    color: theme.colors.gray[3],
     cursor: 'pointer',
     '&:hover': {
       backgroundColor: theme.colors.gray[0],

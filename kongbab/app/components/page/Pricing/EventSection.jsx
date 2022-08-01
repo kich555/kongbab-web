@@ -14,7 +14,7 @@ export default function EventSection(params) {
         <Space h={tablet ? 60 : 150} />
         <Container className={warpper}>
           <Space h={tablet ? 10 : 8} />
-          <Text color={colors.blue[0]} weight={700}>
+          <Text color={colors.gray[3]} weight={700}>
             콩밥이 당신의 부동산을 지켜드립니다
           </Text>
           <Space h={tablet ? 15 : 19} />
@@ -30,7 +30,7 @@ export default function EventSection(params) {
               })}
             />
             {tablet ? <Space h={15} /> : <Space w={20} />}
-            <Text size='sm' color={colors.blue[0]} className={sticker}>
+            <Text size='sm' color={colors.gray[3]} className={sticker}>
               베이직 요금 제외, 부동산 명의자 기준
             </Text>
           </div>

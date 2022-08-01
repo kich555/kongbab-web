@@ -25,7 +25,7 @@ export default function StickerList({ procedureList }) {
             {sticker.title}
           </Text>
           <Space h={7} />
-          <Text size='sm' color={colors.blue[0]}>
+          <Text size='sm' color={colors.gray[3]}>
             {sticker.subtitle}
           </Text>
         </Sticker>

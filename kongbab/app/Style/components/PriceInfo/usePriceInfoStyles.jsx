@@ -25,7 +25,7 @@ const usePriceInfoStyles = createStyles((theme) => ({
     maxWidth: '276px',
     padding: '30px 14px 25px 14px',
     '&:nth-of-type(-n+2)': {
-      borderRight: '1px solid #EDF0F4',
+      borderRight: '1px solid #EEEEEE',
       [theme.fn.smallerThan('sm')]: {
         borderRight: 'none',
       },
