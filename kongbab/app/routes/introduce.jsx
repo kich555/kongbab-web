@@ -1,5 +1,5 @@
 import IntroduceSection from '~/components/page/Introduce/IntroduceSection';
-import VideoHeader from '~/components/page/Introduce/VideoHeader';
+import IntroduceBanner from '~/components/page/Introduce/IntroduceBanner';
 import INTRODUCE_CONSTANTS from '~/constants/page/introducePageData';
 
 export default function introduce() {
@@ -7,7 +7,7 @@ export default function introduce() {
 
   return (
     <>
-      <VideoHeader />
+      <IntroduceBanner />
       {INTRODUCE_SECTION.map((section) => (
         <IntroduceSection
           key={section.title}
