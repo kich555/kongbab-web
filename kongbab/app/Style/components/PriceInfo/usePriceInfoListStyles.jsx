@@ -36,7 +36,6 @@ const usePriceInfoListStyles = createStyles((theme) => ({
   },
   footer: {
     alignSelf: 'flex-start',
-    marginLeft: '24px',
     [theme.fn.smallerThan('md')]: {
       maxWidth: '325px',
       marginLeft: 0,

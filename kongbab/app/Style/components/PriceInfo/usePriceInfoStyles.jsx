@@ -1,6 +1,14 @@
 import { createStyles } from '@mantine/core';
 
 const usePriceInfoStyles = createStyles((theme) => ({
+  box: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    width: '100%',
+    textAlign: 'center',
+    backgroundColor: theme.white,
+  },
   header: {
     [theme.fn.smallerThan('md')]: {
       position: 'absolute',
@@ -12,15 +20,6 @@ const usePriceInfoStyles = createStyles((theme) => ({
       borderRadius: '20px 20px 0 0 ',
     },
   },
-  box: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    width: '100%',
-    textAlign: 'center',
-    backgroundColor: theme.white,
-  },
-
   deskTopBox: {
     maxWidth: '276px',
     padding: '30px 14px 25px 14px',
@@ -30,6 +29,12 @@ const usePriceInfoStyles = createStyles((theme) => ({
         borderRight: 'none',
       },
     },
+  },
+  subTitleTextBox: {
+    height: '14px',
+  },
+  titleText: {
+    fontSize: '20px',
   },
   list: {
     display: 'flex',
@@ -42,6 +47,9 @@ const usePriceInfoStyles = createStyles((theme) => ({
     display: 'flex',
     width: '100%',
     height: '16px',
+  },
+  row: {
+    display: 'flex',
   },
 }));
 
