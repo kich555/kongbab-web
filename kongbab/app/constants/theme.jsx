@@ -1,7 +1,7 @@
 const BASIC_THEME = {
   fontFamily: 'Pretendard',
   lineHeight: '100%',
-  black: '#0A1C2D',
+  black: '#000000',
   breakpoints: {
     lg: 1132,
     md: 974,
