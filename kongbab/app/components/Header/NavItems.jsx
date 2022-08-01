@@ -11,7 +11,7 @@ export default function NavMenu({ close }) {
       label: '홈',
     },
     {
-      link: '/',
+      link: '/introduce',
       label: '콩밥 소개',
     },
     {
