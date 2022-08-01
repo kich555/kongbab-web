@@ -76,7 +76,7 @@ const useNavStyles = createStyles((theme, opened) => ({
     },
   },
 
-  button: {
+  buttonWrapper: {
     width: '128px',
     height: '44px',
     marginLeft: '50px',

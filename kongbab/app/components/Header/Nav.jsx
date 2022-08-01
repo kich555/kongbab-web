@@ -23,7 +23,7 @@ export default function Nav() {
     headerActive,
     container,
     menuWrapper,
-    button,
+    buttonWrapper,
     burger,
     links,
     dropdown,
@@ -51,7 +51,7 @@ export default function Nav() {
                 sx={(theme) => ({
                   backgroundColor: theme.colors.dark[1],
                 })}
-                className={button}
+                className={buttonWrapper}
                 variant='filled'
                 radius={36}
                 onClick={addChannel}
