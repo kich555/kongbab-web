@@ -8,7 +8,7 @@ const useFeatureListStyles = createStyles((theme) => ({
     margin: 0,
     padding: '35px 35px 50px 35px',
     borderRadius: '20px',
-    boxShadow: '0px 4px 10px #2D2D2D 5%',
+    boxShadow: '0px 4px 10px #2D2D2D0D',
     backgroundColor: theme.white,
   },
   lineHeight150: {
