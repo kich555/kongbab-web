@@ -18,7 +18,7 @@ export default function OtherItem() {
           별도 문의
         </Text>
         <Space h={24} />
-        <Text size='sm' align='center' color={colors.blue[3]} className={desc}>
+        <Text size='sm' align='center' color={colors.gray[3]} className={desc}>
           기타 사유, 특수한 건물, 토지와 같은 부동산은 상담 후 견적을
           받아보세요.
         </Text>
