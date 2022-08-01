@@ -1,11 +1,9 @@
-import FeatureList from '~/components/common/FeatureList';
-import PriceInfoListSection from '~/components/common/PriceInfo/PriceInfoListSection';
+import MainThirdSection from '~/components/page/Main/MainThirdSection';
 
 export default function Index() {
   return (
     <>
-      <FeatureList />
-      <PriceInfoListSection />
+      <MainThirdSection />
     </>
   );
 }
