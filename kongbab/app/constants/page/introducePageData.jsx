@@ -31,6 +31,23 @@ const INTRODUCE_CONSTANTS = {
       backgroundColor: '#FFFFFF',
     },
   ],
+  PROBLEMS: [
+    {
+      title: '높은 소송비용',
+      desc: '명도소송의 변호사 수임료는<br/>평균 300만원 이상 소요됩니다.',
+      advantage: '정액 수임료<br/>성공보수 없음',
+    },
+    {
+      title: '불투명한 진행',
+      desc: '소송 진행상황에 대하여<br/>친절하게 연락해주지 않습니다.',
+      advantage: '진행상황<br/>실시간 메시지 발송',
+    },
+    {
+      title: '어려운 커뮤니케이션',
+      desc: '많은 사람들은 변호사와의 소통에<br/>어려움을 겪습니다.',
+      advantage: '카톡으로<br/>부담없이 상담',
+    },
+  ],
 };
 
 export default INTRODUCE_CONSTANTS;
