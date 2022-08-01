@@ -28,7 +28,7 @@ const usePriceInfoListStyles = createStyles((theme) => ({
     paddingBottom: '14px',
   },
   listTitle: {
-    background: 'linear-gradient(90deg, #FF4545 0%, #FF9D66 100%)',
+    background: theme.colors.carrot,
   },
 
   lineHeight150: {
