@@ -4,8 +4,7 @@ import useIntroduceSectionStyles from '~/Style/page/Introduce/useIntroduceSectio
 export default function IntroduceSection({
   subTitle,
   title,
-  desc1,
-  desc2,
+  desc,
   backgroundColor,
 }) {
   const { classes, theme } = useIntroduceSectionStyles();
@@ -29,9 +28,7 @@ export default function IntroduceSection({
           weight={500}
           className={lineHeight150}
         >
-          {desc1}
-          <br />
-          {desc2}
+          {desc}
         </Text>
         <Space h={subTitle === '그럼에도 불구하고' ? 168 : 186} />
       </Container>
