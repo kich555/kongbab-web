@@ -2,21 +2,19 @@ import { createStyles } from '@mantine/core';
 
 const useFooterStyles = createStyles((theme) => ({
   footer: {
+    display: 'flex',
+    alignItems: 'end',
     minHeight: '240px',
     height: '100%',
     width: '100%',
-    display: 'flex',
-    alignItems: 'end',
-
-    backgroundColor: theme.colors.gray[0],
+    borderTop: '1px solid #666666',
+    backgroundColor: theme.black,
   },
-  lineHeight150: { lineHeight: '150%' },
   container: {
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
     marginBottom: '52px',
-    fontSize: '13px',
     lineHeight: '150%',
     color: theme.colors.gray[3],
     [theme.fn.smallerThan('sm')]: {
@@ -25,23 +23,20 @@ const useFooterStyles = createStyles((theme) => ({
   },
 
   links: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'end',
-    justifyContent: 'end',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // alignItems: 'end',
+    // justifyContent: 'end',
     [theme.fn.smallerThan('sm')]: {
       alignItems: 'start',
       justifyContent: 'start',
     },
   },
-  iconWrapper: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '10px',
+  alignSelfStart: {
+    alignSelf: 'start',
   },
-  menuItems: {
+  flexRow: {
     display: 'flex',
-    // marginTop: '20px',
   },
   menuItem: {
     fontWeight: 500,
@@ -52,6 +47,10 @@ const useFooterStyles = createStyles((theme) => ({
         paddingLeft: '6px',
       },
     },
+  },
+  lineHeight150: { lineHeight: '150%' },
+  wrapReverse: {
+    flexWrap: 'wrapReverse',
   },
 }));
 
