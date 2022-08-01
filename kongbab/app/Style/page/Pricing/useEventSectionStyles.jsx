@@ -2,9 +2,12 @@ import { createStyles } from '@mantine/core';
 
 const useEventSectionStyles = createStyles((theme) => ({
   warpper: {
-    padding: '50px 50px 29px 50px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '42px 80px 28px 50px',
     borderRadius: '20px',
-    backgroundColor: theme.colors.green[3],
+    backgroundColor: '#FF45000D',
+
     overflow: 'hidden',
     [theme.fn.smallerThan('md')]: {
       padding: '30px',
@@ -22,12 +25,18 @@ const useEventSectionStyles = createStyles((theme) => ({
       flexDirection: 'column',
     },
   },
-  sticker: {
-    display: 'flex',
-    alignItems: 'center',
-  },
+
   horizontal: {
     padding: '0 26px',
+  },
+  justifyBetween: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  imageBox: {
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none',
+    },
   },
 }));
 
