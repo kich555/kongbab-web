@@ -2,7 +2,7 @@ import { Text, Divider, Space, MediaQuery } from '@mantine/core';
 
 import CheckIcon from '~/asset/icon/CheckIcon';
 import useResponsive from '~/hooks/useResponsive';
-import usePriceInfo from '~/Style/page/Pricing/usePriceInfoStyles';
+import usePriceInfo from '~/Style/components/PriceInfo/usePriceInfoStyles';
 
 export default function PriceInfo({ title, price, options }) {
   const { classes, theme, cx } = usePriceInfo();
