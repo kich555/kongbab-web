@@ -8,6 +8,7 @@ export default function MobileCompanyInfo() {
   const { colors, white } = theme;
   return (
     <div>
+      <Space h={45} />
       <Text size='sm' color={white} weight={700}>
         법률사무소 이소
       </Text>

@@ -3,8 +3,9 @@ import Kakao from '~/asset/icon/Kakao';
 import useFooterStyles from '~/Style/components/useFooterStyles';
 import KakaoSvg from '~/asset/icon/Kakao.svg';
 import useResponsive from '~/hooks/useResponsive';
-import MobileCompanyInfo from './Mobile/MobileCompanyInfo';
-import CompanyInfo from './companyInfo';
+import MobileCompanyInfo from '~/components/Footer/Mobile/MobileCompanyInfo';
+import CompanyInfo from '~/components/Footer/CompanyInfo';
+
 export default function Footer() {
   const { classes, theme } = useFooterStyles();
   const { footer, container, lineHeight150, links, alignSelfStart } = classes;
