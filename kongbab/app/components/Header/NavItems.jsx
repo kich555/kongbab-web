@@ -7,27 +7,27 @@ export default function NavMenu({ close }) {
   const navigate = useNavigate();
   const menus = [
     {
-      link: '/',
+      link: '/md',
       label: '홈',
     },
     {
-      link: '/introduce',
+      link: '/md/introduce',
       label: '콩밥 소개',
     },
     {
-      link: '/process',
+      link: '/md/process',
       label: '진행 방법',
     },
     {
-      link: '/pricing',
+      link: '/md/pricing',
       label: '요금 안내',
     },
     {
-      link: '/faq',
+      link: '/md/faq',
       label: '자주 묻는 질문',
     },
     {
-      link: '/blog',
+      link: '/md/blog',
       label: '블로그',
     },
   ];
