@@ -1,11 +1,5 @@
-import MainThirdSection from '~/components/page/Main/MainThirdSection';
-import CommonFooterSection from '~/components/common/CommonFooterSection';
+import Main from './md/main';
 
-export default function Index() {
-  return (
-    <>
-      <MainThirdSection />
-      <CommonFooterSection />
-    </>
-  );
+export default function index(params) {
+  return <Main />;
 }
