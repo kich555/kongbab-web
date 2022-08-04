@@ -1,11 +1,10 @@
-import { Text, Container, Space } from '@mantine/core';
+import { Text, Container, Space, Image } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
-
+import KakaoImage from '~/asset/image/Process/Process_Kakao_Image.png';
 export default function KakaoSection(params) {
   const { classes, cx } = useKakaoSectionStyles();
-  const { wrapper, phone, font20, titleFont, lineHeight150, underLine } =
-    classes;
+  const { wrapper, font20, titleFont, lineHeight150, underLine } = classes;
   const { mobile } = useResponsive();
 
   return (
@@ -27,7 +26,8 @@ export default function KakaoSection(params) {
       <Space h={mobile ? 40 : 60} />
       <div className={wrapper}>
         <Space h={40} />
-        <div className={phone}></div>
+
+        <Image src={KakaoImage} width={287} alt='kakao-image' />
       </div>
       <Space h={mobile ? 30 : 40} />
       <Container size={920} px={mobile ? 30 : 0}>
