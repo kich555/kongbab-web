@@ -1,4 +1,19 @@
 const BASIC_THEME = {
+  components: {
+    Container: {
+      defaultProps: {
+        size: 1080,
+      },
+      // sizes: {
+      //   xs: 428,
+      //   sm: 980,
+      //   md: 1080,
+      //   lg: 1200,
+      //   xl: 1440,
+      // },
+    },
+  },
+
   fontFamily: 'Pretendard',
   lineHeight: '100%',
   black: '#000000',
