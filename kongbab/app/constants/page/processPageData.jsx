@@ -146,7 +146,7 @@ const PROCESS_CONSTANTS = {
     },
     DETINUE: {
       LODGING_COMPLAINT: {
-        title: '소장 제출',
+        title: '명도소송 소장제출',
         desc: '소송은 법원에 소장을 제출함으로써 제기합니다. 소장에 기재된 내용은 법적 절차의 과정에서 매우 중요하므로 정확하고 신중하게 작성하여야 합니다.',
         procedureList: [
           {
