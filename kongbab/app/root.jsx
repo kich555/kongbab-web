@@ -1,4 +1,3 @@
-
 import {
   Links,
   LiveReload,
@@ -7,18 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { MantineProvider } from '@mantine/core';
+import { StylesPlaceholder } from '@mantine/remix';
+import BASIC_THEME from '~/constants/theme';
 import { json } from '@remix-run/node';
 import styles from '~/Style/reset.css';
-import { MantineProvider } from '@mantine/core';
-import BASIC_THEME from '~/constants/theme';
 import Layout from '~/components/common/Layout';
-
-// export function loader() {
-//   // process.env is available here because loader runs only on the server side
-//   return {
-//     KAKAO_KEY: process.env.REACT_APP_KEY,
-//   };
-// }
 
 export async function loader() {
   return json({ KAKAO_KEY: process.env.REACT_APP_KEY });
@@ -41,49 +34,35 @@ export function links() {
 
 export default function App() {
   return (
-    <html lang='en'>
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <>
-          <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
-          <script
-            async
-            id='kakao-init'
-            dangerouslySetInnerHTML={{
-              __html: `
+    <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
+      <html lang='ko'>
+        <head>
+          <Meta />
+          <Links />
+          <StylesPlaceholder />
+        </head>
+        <body>
+          <>
+            <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
+            <script
+              async
+              id='kakao-init'
+              dangerouslySetInnerHTML={{
+                __html: `
               Kakao.init('JAVASCRIPT_KEY');
               console.log(Kakao.isInitialized());
               `,
-            }}
-          />
-        </>
-        <MantineProvider
-          theme={BASIC_THEME}
-          withGlobalStyles
-          withNormalizeCSS
-          defaultProps={{
-            Container: {
-              sizes: {
-                xs: 428,
-                sm: 980,
-                md: 1080,
-                lg: 1200,
-                xl: 1440,
-              },
-            },
-          }}
-        >
+              }}
+            />
+          </>
           <Layout>
             <Outlet />
           </Layout>
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
-        </MantineProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </MantineProvider>
   );
 }
