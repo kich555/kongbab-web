@@ -13,15 +13,7 @@ const useKakaoSectionStyles = createStyles((theme) => ({
     borderRadius: '24px',
     backgroundColor: theme.colors.gray[0],
   },
-  phone: {
-    width: '287px',
-    [theme.fn.smallerThan('sm')]: {
-      width: '165px',
-    },
-    height: '100%',
-    borderRadius: '24px 24px 0 0 ',
-    backgroundColor: theme.colors.blue[1],
-  },
+
   font20: {
     fontSize: '20px',
     [theme.fn.smallerThan('sm')]: {
