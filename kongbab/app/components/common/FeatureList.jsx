@@ -38,8 +38,8 @@ export default function FeatureList() {
 
   return (
     <Container px={tablet ? 26 : 0}>
-      <Space h={tablet ? 40 : 80} />
-      <Title title='요금 안내' />
+      <Space h={tablet ? 40 : 30} />
+      <Title title='콩밥의 특장점' />
       <Space h={tablet ? 60 : 100} />
       <MediaQuery smallerThan='md' styles={{ justifyContent: 'center' }}>
         <Group spacing={tablet ? 30 : 24}>{items}</Group>
