@@ -8,6 +8,10 @@ const useProcedureStyles = createStyles((theme) => ({
       fontSize: '28px',
     },
   },
+  descBox: {
+    height: '63px',
+  },
+
   titleWrapper: {
     position: 'relative',
     [theme.fn.smallerThan('sm')]: {

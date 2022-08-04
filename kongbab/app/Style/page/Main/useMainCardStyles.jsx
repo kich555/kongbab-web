@@ -3,6 +3,8 @@ import { createStyles } from '@mantine/core';
 export const useMainCardStyles = createStyles((theme) => ({
   wrapper: {
     flexGrow: '1',
+    height: '500px',
+    overflow: 'hidden',
     borderRadius: '20px',
     backgroundColor: theme.colors.gray[0],
   },

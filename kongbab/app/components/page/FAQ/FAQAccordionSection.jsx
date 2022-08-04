@@ -9,13 +9,13 @@ export default function FAQAccordionSection(params) {
   return (
     <>
       <Title title='자주 묻는 질문' />
-      <Container size='sm' style={{ padding: '0 26px' }}>
+      <Container size={764} px={26}>
         <AccordionSection questions={SERVICE_FAQ} />
       </Container>
       <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
         <Space h={50} />
       </MediaQuery>
-      <Container size='sm' style={{ padding: '0 26px' }}>
+      <Container size={764} px={26}>
         <AccordionSection questions={PRICE_FAQ} />
       </Container>
     </>

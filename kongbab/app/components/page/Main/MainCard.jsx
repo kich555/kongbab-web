@@ -28,7 +28,7 @@ export default function MainCard({ subTitle, title, idx }) {
         <Image
           src={iamgeArr[idx]}
           alt={`main-card-${idx + 1}`}
-          width={320}
+          width={340}
           height='auto'
           className={image}
         />

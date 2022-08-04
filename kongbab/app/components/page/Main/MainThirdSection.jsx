@@ -12,7 +12,6 @@ export default function MainThirdSection() {
   const { MIDDLE_BANNER } = MAIN_CONSTANTS;
   return (
     <section className={wrapper}>
-      <Space h={150} />
       <FeatureList />
       <MiddleBanner
         title={MIDDLE_BANNER.title}

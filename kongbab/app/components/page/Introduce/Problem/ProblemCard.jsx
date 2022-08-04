@@ -8,7 +8,7 @@ import ProblemImage2 from '~/asset/image/Problem/Problem_Image2.png';
 import ProblemImage3 from '~/asset/image/Problem/Problem_Image3.png';
 
 export default function ProblemCard({ title, desc, advantage, idx }) {
-  const arr = [ProblemImage2, ProblemImage1, ProblemImage3];
+  const arr = [ProblemImage1, ProblemImage2, ProblemImage3];
   const { classes, cx, theme } = useProblemCardStyles();
   const { white } = theme;
   const { wrapper, inner, footer, font20, font30, lineHeight150 } = classes;
@@ -16,7 +16,7 @@ export default function ProblemCard({ title, desc, advantage, idx }) {
   return (
     <div className={wrapper}>
       <div className={inner}>
-        <Image src={arr[idx]} />
+        <Image src={arr[idx]} width={280} alt='problem-card' />
         <Space h={41} />
         <Text align='center' weight={700} className={font30}>
           {title}

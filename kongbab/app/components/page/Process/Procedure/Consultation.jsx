@@ -17,7 +17,7 @@ export default function Consultation({ procedureForm }) {
     });
   };
   return (
-    <Center className={centerColumn}>
+    <div className={centerColumn}>
       <Text size='lg' weight={700}>
         {title}
       </Text>
@@ -41,6 +41,6 @@ export default function Consultation({ procedureForm }) {
         <StickerList procedureList={procedureList} />
       </Group>
       {mobile ? <Arrow /> : <Space h={30} />}
-    </Center>
+    </div>
   );
 }

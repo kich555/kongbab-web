@@ -4,8 +4,8 @@ import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList
 
 export default function Procedure({ procedureForm }) {
   const { title, desc, condition, procedureList, badgeContent } = procedureForm;
-  const { classes, theme } = useProcedureStyles();
-  const { lineHeight150, badge, badgeWrapper, maxWidth } = classes;
+  const { classes, theme, cx } = useProcedureStyles();
+  const { lineHeight150, badge, badgeWrapper, maxWidth, descBox } = classes;
   const { colors } = theme;
   return (
     <>
@@ -16,7 +16,7 @@ export default function Procedure({ procedureForm }) {
         {badgeContent && <span className={badge}>{badgeContent}</span>}
       </div>
       <Space h={24} />
-      <Text size='sm' className={lineHeight150}>
+      <Text size='sm' className={cx(lineHeight150, descBox)}>
         {desc}
       </Text>
       {condition && (
