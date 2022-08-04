@@ -2,32 +2,18 @@ import { Accordion, MediaQuery, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useAccordianStyles from '~/Style/components/useAccordianStyles';
 
-export default function AccordionSection({ questions, style }) {
+export default function AccordionSection({ questions }) {
   const { classes, theme } = useAccordianStyles();
   const { colors, primaryColor } = theme;
-  const { control, content, contentInner, item, itemOpened } = classes;
+  const { label, control, content, chevron, item } = classes;
 
   const items = questions.map((question) => (
-    <Accordion.Item
-      key={question.label}
-      label={
-        <MediaQuery smallerThan='sm' styles={{ fontSize: theme.fontSizes.md }}>
-          <Text size='lg' weight={500}>
-            {question.label}
-          </Text>
-        </MediaQuery>
-      }
-    >
-      <MediaQuery smallerThan='sm' styles={{ fontSize: theme.fontSizes.md }}>
-        <Text
-          color={colors.gray[3]}
-          style={{ fontSize: '20px', lineHeight: '150%' }}
-        >
-          {question.desc}
-        </Text>
-      </MediaQuery>
+    <Accordion.Item key={question.label} value={question.label}>
+      <Accordion.Control>{question.label}</Accordion.Control>
+      <Accordion.Panel>{question.desc}</Accordion.Panel>
     </Accordion.Item>
   ));
+
   return (
     <>
       <MediaQuery
@@ -47,15 +33,15 @@ export default function AccordionSection({ questions, style }) {
       </MediaQuery>
 
       <Accordion
-        icon={<ArrowRight size={14} />}
-        iconPosition='right'
+        chevron={<ArrowRight size={14} />}
         multiple
-        classNames={{
+        chevronPosition='right'
+        styles={{
+          label,
           item,
-          itemOpened,
           control,
           content,
-          contentInner,
+          chevron,
         }}
       >
         {items}

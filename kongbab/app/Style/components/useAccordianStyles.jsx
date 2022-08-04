@@ -1,10 +1,20 @@
 import { createStyles } from '@mantine/core';
 
 const useAccordianStyles = createStyles((theme) => ({
+  label: {
+    fontSize: '20px',
+    fontWeight: 500,
+    lineHeight: '100%',
+  },
+  chevron: {
+    '&[data-rotate]': {
+      transform: 'rotate(90deg)',
+    },
+  },
   item: { borderBottom: '1px solid #EEEEEE', borderTop: '1px solid #EEEEEE' },
-  itemOpened: { borderBottom: 'none' },
+
   control: {
-    padding: '38px 0',
+    padding: '30px 0',
     [theme.fn.smallerThan('sm')]: {
       padding: '25px 0',
     },
@@ -13,10 +23,11 @@ const useAccordianStyles = createStyles((theme) => ({
     },
   },
   content: {
-    padding: '0 0 38px 0',
-    borderBottom: '1px solid #EEEEEE',
+    padding: '0 0 30px 0',
+    fontSize: '20px',
+    color: theme.colors.gray[3],
+    lineHeight: '150%',
   },
-  contentInner: { padding: '0px' },
 }));
 
 export default useAccordianStyles;
