@@ -11,7 +11,7 @@ export default function PriceInfoList() {
 
   const items = PRICE_INFO.map((plan) => (
     <PriceInfo
-      key={plan.title}
+      key={plan.subTitle}
       subTitle={plan.subTitle}
       title={plan.title}
       price={plan.price}

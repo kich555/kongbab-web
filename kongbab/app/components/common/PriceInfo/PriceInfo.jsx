@@ -34,29 +34,27 @@ export default function PriceInfo({ subTitle, title, price, options }) {
       const secondWord = option.split(' ')[1];
       if (firstWord === '본인') {
         return (
-          <>
-            <li>
-              <div key={idx} className={listItem}>
-                <CheckIcon />
-                <Space w={15} />
-                <Text weight={700} component='span'>
-                  {firstWord}{' '}
-                </Text>
-                <Space w={4} />
-                {secondWord}
-              </div>
-              <Space h={8} />
-              <div className={row}>
-                <Space w={29} />
-                <Text size='xs' color={colors.gray[3]}>
-                  통상 1-2회 출석 필요합니다.
-                  <br />
-                  콩밥에서 법정 출석 가이드를 제공합니다.
-                </Text>
-              </div>
-            </li>
+          <li key={idx}>
+            <div className={listItem}>
+              <CheckIcon />
+              <Space w={15} />
+              <Text weight={700} component='span'>
+                {firstWord}{' '}
+              </Text>
+              <Space w={4} />
+              {secondWord}
+            </div>
+            <Space h={8} />
+            <div className={row}>
+              <Space w={29} />
+              <Text size='xs' color={colors.gray[3]}>
+                통상 1-2회 출석 필요합니다.
+                <br />
+                콩밥에서 법정 출석 가이드를 제공합니다.
+              </Text>
+            </div>
             <Space h={15} />
-          </>
+          </li>
         );
       }
       return (
