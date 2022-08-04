@@ -4,7 +4,7 @@ const compression = require("compression");
 const morgan = require("morgan");
 const { createRequestHandler } = require("@remix-run/express");
 
-const BUILD_DIR = path.join(process.cwd(), "/home/hosting_users/esolaw3/apps/esolaw3_congbab/build");
+const BUILD_DIR = path.join(process.cwd(), "build");
 
 const app = express();
 
@@ -15,13 +15,13 @@ app.disable("x-powered-by");
 
 // Remix fingerprints its assets so we can cache forever.
 app.use(
-  "/home/hosting_users/esolaw3/apps/esolaw3_congbab/build",
-  express.static("/home/hosting_users/esolaw3/apps/esolaw3_congbab/public/build", { immutable: true, maxAge: "1y" })
+  "build",
+  express.static("public/build", { immutable: true, maxAge: "1y" })
 );
 
 // Everything else (like favicon.ico) is cached for an hour. You may want to be
 // more aggressive with this caching.
-app.use(express.static("/home/hosting_users/esolaw3/apps/esolaw3_congbab/public", { maxAge: "1h" }));
+app.use(express.static("public", { maxAge: "1h" }));
 
 app.use(morgan("tiny"));
 
@@ -41,7 +41,7 @@ app.all(
         mode: process.env.NODE_ENV,
       })
 );
-const port = process.env.PORT || 8001;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
