@@ -15,14 +15,16 @@ export default function LitigationProcedure(params) {
   const { CONSULTATION } = PROCEDURE;
   const { mobile } = useResponsive();
   return (
-    <Container size='sm' px={0} className={wrapper}>
+    <Container size='md' px={0} className={wrapper}>
       <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
         <div>
           <Space h={40} />
           <Divider size='xs' color={colors.gray[1]} />
           <Space h={80} />
-          <Container size='xs' px={0}>
-            <Consultation procedureForm={CONSULTATION} />
+          <Container size='md' px={0}>
+            <Center>
+              <Consultation procedureForm={CONSULTATION} />
+            </Center>
           </Container>
           <Center>
             <BranchArrow />
@@ -30,7 +32,7 @@ export default function LitigationProcedure(params) {
           <Space h={50} />
         </div>
       </MediaQuery>
-      <Container size='sm' px={0}>
+      <Container size='md' px={0}>
         {mobile ? <MobileProcedureList /> : <ProcedureList />}
       </Container>
     </Container>

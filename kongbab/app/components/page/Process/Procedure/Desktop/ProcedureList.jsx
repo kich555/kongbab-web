@@ -23,7 +23,7 @@ export default function ProcedureList(params) {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <Container
-        size='xs'
+        size={428}
         px={0}
         style={{ margin: 0, width: '100%', textAlign: 'center' }}
       >
@@ -36,7 +36,7 @@ export default function ProcedureList(params) {
         <Procedure procedureForm={EXCUTE_INJUNCTION} />
       </Container>
       <Container
-        size='xs'
+        size={428}
         px={0}
         style={{ margin: 0, width: '100%', textAlign: 'center' }}
       >

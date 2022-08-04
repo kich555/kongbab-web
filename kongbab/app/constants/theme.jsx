@@ -4,13 +4,6 @@ const BASIC_THEME = {
       defaultProps: {
         size: 1080,
       },
-      // sizes: {
-      //   xs: 428,
-      //   sm: 980,
-      //   md: 1080,
-      //   lg: 1200,
-      //   xl: 1440,
-      // },
     },
   },
 

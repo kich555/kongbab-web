@@ -23,7 +23,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
     <Card className={card}>
       <Card.Section className={cardSection}>
         <a {...linkProps}>
-          <Image src={imageSrc} withPlaceholder styles={{ image }} />
+          <Image src={imageSrc} styles={{ image }} />
         </a>
       </Card.Section>
       <div className={content}>
