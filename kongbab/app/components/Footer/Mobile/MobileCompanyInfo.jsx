@@ -23,8 +23,6 @@ export default function MobileCompanyInfo() {
         사업자등록번호 770-31-00160
         <br />
         통신판매업 2016-서울서초-1999호
-        <br />
-        문의/제휴 team@esolaw.com | 상담 10:00~18:00 (평일)
         <Space h={20} />
         <Group spacing={20}>
           <ul className={flexRow}>

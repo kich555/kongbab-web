@@ -7,7 +7,7 @@ const useFooterStyles = createStyles((theme) => ({
     minHeight: '240px',
     height: '100%',
     width: '100%',
-    borderTop: '1px solid #666666',
+    // borderTop: '1px solid #666666',
     backgroundColor: theme.black,
   },
   container: {
@@ -51,6 +51,10 @@ const useFooterStyles = createStyles((theme) => ({
   lineHeight150: { lineHeight: '150%' },
   wrapReverse: {
     flexWrap: 'wrapReverse',
+  },
+
+  link: {
+    color: theme.colors.gray[3],
   },
 }));
 

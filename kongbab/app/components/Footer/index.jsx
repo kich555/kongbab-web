@@ -32,9 +32,9 @@ export default function Footer() {
                 점심: 12:00 - 13:00
               </div>
               <div>
-                전화: 02-6713-2461
-                <br />
                 메일: team@esolaw.com
+                <br />
+                전화: 02-6713-2461
                 <br />
                 팩스: 02-6919-2737
               </div>
