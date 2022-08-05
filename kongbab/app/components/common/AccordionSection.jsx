@@ -1,8 +1,9 @@
+import parse from 'html-react-parser';
 import { Accordion, MediaQuery, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useAccordianStyles from '~/Style/components/useAccordianStyles';
 
-export default function AccordionSection({ questions }) {
+export default function AccordionSection({ title, questions }) {
   const { classes, theme } = useAccordianStyles();
   const { colors, primaryColor } = theme;
   const { label, control, content, chevron, item } = classes;
@@ -10,7 +11,7 @@ export default function AccordionSection({ questions }) {
   const items = questions.map((question) => (
     <Accordion.Item key={question.label} value={question.label}>
       <Accordion.Control>{question.label}</Accordion.Control>
-      <Accordion.Panel>{question.desc}</Accordion.Panel>
+      <Accordion.Panel>{parse(question.desc)}</Accordion.Panel>
     </Accordion.Item>
   ));
 
@@ -28,7 +29,7 @@ export default function AccordionSection({ questions }) {
           color={colors[primaryColor]}
           style={{ margin: '100px 0 25px 0', fontSize: '20px' }}
         >
-          요금
+          {title}
         </Text>
       </MediaQuery>
 
