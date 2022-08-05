@@ -11,7 +11,12 @@ const useAccordianStyles = createStyles((theme) => ({
       transform: 'rotate(90deg)',
     },
   },
-  item: { borderBottom: '1px solid #EEEEEE', borderTop: '1px solid #EEEEEE' },
+  item: {
+    borderBottom: '1px solid #EEEEEE',
+    '&:nth-of-type(1)': {
+      borderTop: '1px solid #EEEEEE',
+    },
+  },
 
   control: {
     padding: '30px 0',
