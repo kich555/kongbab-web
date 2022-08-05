@@ -10,22 +10,24 @@ export default function StickerList({ procedureList }) {
     if (sticker.subtitle && sticker.gradation) {
       return (
         <Sticker key={idx} icon>
-          <Text weight={700} className={font18}>
+          <Text weight={500} className={font18}>
             {sticker.title}
           </Text>
           <Space h={7} />
-          <Text size='sm'>{sticker.subtitle}</Text>
+          <Text size='sm' weight={400}>
+            {sticker.subtitle}
+          </Text>
         </Sticker>
       );
     }
     if (sticker.subtitle && sticker.gradation === false) {
       return (
         <Sticker key={idx}>
-          <Text weight={700} className={font18}>
+          <Text weight={500} className={font18}>
             {sticker.title}
           </Text>
           <Space h={7} />
-          <Text size='sm' color={colors.gray[3]}>
+          <Text size='sm' weight={400} color={colors.gray[3]}>
             {sticker.subtitle}
           </Text>
         </Sticker>
