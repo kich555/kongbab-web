@@ -1,8 +1,8 @@
-import { Container, Text, Center, Space, Image } from '@mantine/core';
+import { Container, Text, Space, Image } from '@mantine/core';
 import useEventSectionStyles from '~/Style/page/Pricing/useEventSectionStyles';
 import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
-import bannerSrc from '~/asset/image/Pricing_middle_banner_Image.png';
+import bannerSrc from '~/asset/image/Discount_Coupon_Image.png';
 export default function EventSection(params) {
   const { classes, theme } = useEventSectionStyles();
   const { colors, primaryColor } = theme;
@@ -32,7 +32,7 @@ export default function EventSection(params) {
               />
             </div>
           </div>
-          <Image src={bannerSrc} className={imageBox} />
+          <Image src={bannerSrc} width={220} className={imageBox} />
         </Container>
         {tablet ? <Space h={15} /> : <Space w={20} />}
       </section>
