@@ -15,7 +15,7 @@ export default function FeaturedFAQSection({ questions }) {
       <Space h={tablet ? 60 : 80} />
       <Container size={764} px={26}>
         <Title title='자주 묻는 질문' />
-        <AccordionSection questions={questions} />
+        <AccordionSection title='요금' questions={questions} />
         <Space h={tablet ? 40 : 50} />
         <Center>
           {/* <DefaultButton
