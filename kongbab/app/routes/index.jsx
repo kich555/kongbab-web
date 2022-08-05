@@ -1,5 +1,5 @@
-import Main from './md/main';
+import Main from '~/routes/md/main';
 
-export default function index(params) {
+export default function index() {
   return <Main />;
 }

@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import { useNavigate } from '@remix-run/react';
+import { Link } from '@remix-run/react';
 
 import useNavStyles from '~/Style/components/useNavStyles';
 
 export default function NavMenu({ close }) {
-  const navigate = useNavigate();
   const menus = [
     {
-      link: '/md',
+      link: '/md/home',
       label: '홈',
     },
     {
@@ -33,25 +32,23 @@ export default function NavMenu({ close }) {
   ];
 
   const [active, setActive] = useState(menus[0].link);
-  const { classes, cx, theme } = useNavStyles();
+  const { classes, cx } = useNavStyles();
 
-  const { linkBox, link, linkActive } = classes;
+  const { link, linkActive } = classes;
 
   const items = menus.map((menu) => (
-    <div
-      className={linkBox}
+    <Link
+      className={cx(link, { [linkActive]: active === menu.link })}
+      prefetch='intent'
       key={menu.label}
+      to={menu.link}
       onClick={(e) => {
-        e.preventDefault();
         setActive(menu.link);
         close();
-        navigate(menu.link);
       }}
     >
-      <div className={cx(link, { [linkActive]: active === menu.link })}>
-        {menu.label}
-      </div>
-    </div>
+      {menu.label}
+    </Link>
   ));
 
   return items;

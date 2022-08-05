@@ -45,29 +45,22 @@ const useNavStyles = createStyles((theme, opened) => ({
       display: 'none',
     },
   },
-  linkBox: {
-    height: '35px',
-    padding: '8px 10px',
-    borderRadius: '6px',
-    '&:hover': {
-      backgroundColor: theme.colors.gray[0],
-    },
-    [theme.fn.smallerThan('md')]: {
-      height: 'auto',
-      padding: '13px 0 13px 36px',
-    },
-  },
+
   link: {
     display: 'block',
-    borderRadius: theme.radius.sm,
+    padding: '8px 10px',
+    borderRadius: '6px',
     lineHeight: 1,
     textDecoration: 'none',
-    fontSize: theme.fontSizes.md,
     fontWeight: 500,
     color: 'black',
     [theme.fn.smallerThan('md')]: {
+      padding: '13px 0 13px 36px',
       fontSize: '20px',
       lineHeight: '24px',
+    },
+    '&:hover': {
+      backgroundColor: theme.colors.gray[0],
     },
   },
   linkActive: {
