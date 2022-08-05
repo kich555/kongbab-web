@@ -4,6 +4,7 @@ import Title from '~/components/common/Title';
 import useFeaturedFAQStyles from '~/Style/page/Pricing/useFeaturedFAQStyles';
 import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
+import { Link } from '@remix-run/react';
 
 export default function FeaturedFAQSection({ questions }) {
   const { classes } = useFeaturedFAQStyles();
@@ -17,13 +18,16 @@ export default function FeaturedFAQSection({ questions }) {
         <AccordionSection questions={questions} />
         <Space h={tablet ? 40 : 50} />
         <Center>
-          <DefaultButton
+          {/* <DefaultButton
             className={button}
             label='문의 전체보기'
             sx={(theme) => ({
               backgroundColor: 'none',
             })}
-          />
+          /> */}
+          <Link to='/md/faq' className={button}>
+            문의 전체보기
+          </Link>
         </Center>
       </Container>
       <Space h={tablet ? 100 : 200} />
