@@ -12,7 +12,7 @@ export default function IntroduceSection({
   const { colors, primaryColor } = theme;
   return (
     <section style={{ backgroundColor }}>
-      <Container px={180}>
+      <Container px={26}>
         <Space h={subTitle === '그럼에도 불구하고' ? 168 : 186} />
         <Text color={colors[primaryColor]} weight={500} className={font18}>
           {subTitle}
