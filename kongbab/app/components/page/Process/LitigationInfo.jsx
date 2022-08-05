@@ -1,4 +1,5 @@
 import { Container, Text, Group, Space } from '@mantine/core';
+import parse from 'html-react-parser';
 import useResponsive from '~/hooks/useResponsive';
 import useLitigationInfoStyles from '~/Style/page/Process/useLitigationInfoStyles';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
@@ -17,7 +18,6 @@ export default function LitigationInfo(params) {
       size={252}
       px={mobile ? 30 : 36}
       className={box}
-      style={item.backGround}
     >
       <Text align='center' weight={700} className={font40}>
         {item.icon}
@@ -34,7 +34,7 @@ export default function LitigationInfo(params) {
           size='xs'
           color={colors.gray[3]}
         >
-          {item.desc}
+          {parse(item.desc)}
         </Text>
       </div>
     </Container>

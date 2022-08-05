@@ -3,26 +3,17 @@ const PROCESS_CONSTANTS = {
     {
       icon: '🏦',
       title: '상가',
-      desc: '상가임대차보호법이 적용되는 상가는 월세가 3기 이상 연체시 명도소송 가능',
-      backGround: {
-        backgroundColor: '#EEFBEF',
-      },
+      desc: '상가임대차보호법이 적용되는 상가는 <b>월세가 3기 이상 연체시</b> 명도소송 가능',
     },
     {
       icon: '🏠',
       title: '주택',
-      desc: '주택임대차보호법이 적용되는 주택은 월세가 2기 이상 연체시 명도소송 가능',
-      backGround: {
-        backgroundColor: '#FFF8F8',
-      },
+      desc: '주택임대차보호법이 적용되는 주택은 <b>월세가 2기 이상 연체시</b> 명도소송 가능',
     },
     {
       icon: '🏢',
       title: '기타',
       desc: '일반 건물, 토지 등',
-      backGround: {
-        backgroundColor: '#EDF2FB',
-      },
     },
   ],
   PROCEDURE: {

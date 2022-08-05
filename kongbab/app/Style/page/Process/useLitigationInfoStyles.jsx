@@ -8,10 +8,11 @@ const useLitigationInfoStyles = createStyles((theme) => ({
     alignItems: 'center',
     maxWidth: '252px',
     width: '100%',
-    height: '170px',
+    height: '175px',
     borderRadius: '24px',
     padding: '0 36px',
     margin: 0,
+    backgroundColor: theme.colors.gray[0],
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'row-reverse',
       maxWidth: '324px',
