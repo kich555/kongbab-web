@@ -7,7 +7,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
     card,
     cardSection,
     image,
-    categoryText,
+
     titleText,
     descText,
     content,
@@ -27,11 +27,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
         </a>
       </Card.Section>
       <div className={content}>
-        <Text
-          className={categoryText}
-          color={colors[theme.primaryColor]}
-          size='sm'
-        >
+        <Text color={colors[theme.primaryColor]} size='sm'>
           {category}
         </Text>
         <div className={titleText}>
