@@ -51,7 +51,7 @@ const PROCESS_CONSTANTS = {
     PROHIBITE_TRANSFER_OWNERSHIP: {
       PROHIBITION_ESTATE_TRANSFER: {
         title: '부동산점유이전금지 가처분 신청',
-        desc: '임차인이 타인에게 점유 이전시키지 못하도록 법원에 신청하는 보전처분입니다. 소송 진행 중에 점유자가 변경될 경우 승소하여도 강제집행이 불가능하므로 가처분이 선행되어야 합니다. ',
+        desc: '임차인이 타인에게 점유 이전시키지 못하도록 법원에 신청하는 보전처분입니다. <br/>소송 진행 중에 점유자가 변경될 경우 승소하여도 강제집행이 불가능하므로 가처분이 선행되어야 합니다. ',
         procedureList: [
           {
             title: '소송 준비',
@@ -92,7 +92,7 @@ const PROCESS_CONSTANTS = {
       },
       MORTAGE_ORDER: {
         title: '담보제공 명령',
-        desc: "법원은 임대인에게 '담보를 제공하라'며 내리는 명령입니다. 일반적으로 보증보험증권을 발급받아 제출합니다.",
+        desc: "법원은 임대인에게 '담보를 제공하라'며 내리는 명령입니다. <br/>일반적으로 보증보험증권을 발급받아 제출합니다.",
         procedureList: [
           {
             title: '보증보험 발급 의뢰',
@@ -105,7 +105,7 @@ const PROCESS_CONSTANTS = {
             gradation: false,
           },
           {
-            title: '보증보험비용 결제',
+            title: '전자서명',
             subtitle: '공인인증서 필요',
             gradation: false,
           },
@@ -113,7 +113,7 @@ const PROCESS_CONSTANTS = {
       },
       SENTENCE_INJUNCTION: {
         title: '가처분 결정',
-        desc: '부동산점유이전금지 가처분 신청에 대한 법원의 최종 결정입니다. 통상적으로 신청 후 1개월 이내에 완료합니다.',
+        desc: '부동산점유이전금지 가처분 신청에 대한 법원의 최종 결정입니다. <br/>통상적으로 신청 후 1개월 이내에 완료합니다.',
         procedureList: [
           {
             title: '가처분 결정 결과안내',
@@ -124,7 +124,7 @@ const PROCESS_CONSTANTS = {
       },
       EXCUTE_INJUNCTION: {
         title: '가처분 집행',
-        desc: '집행관이 임대차 주소지에 방문하여 결정문을 고지하고 게시합니다. 임차인이 부재일 경우 증인 2명이 필요하며, 열쇠공을 불러 강제 개문합니다.',
+        desc: '집행관이 임대차 주소지에 방문하여 결정문을 고지하고 게시합니다. 임차인이 <br/>부재일 경우 증인 2명이 필요하며, 열쇠공을 불러 강제 개문합니다.',
         procedureList: [
           {
             title: '강제집행신청서 제출',
@@ -231,7 +231,7 @@ const PROCESS_CONSTANTS = {
       },
       NOTICE_ARGUMENT_DATE: {
         title: '변론기일 통지',
-        desc: '변론기일은 법정에 출석하여 재판을 받는 기일을 의미하며 피고의 대응에 따라 1회 또는 수회가 될 수 있습니다.',
+        desc: '변론기일은 법정에 출석하여 재판을 받는 기일을 의미하며 <br/>피고의 대응에 따라 1회 또는 수회가 될 수 있습니다.',
         procedureList: [
           {
             title: '변론기일 (법원출석)',

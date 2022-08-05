@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import { Text, Space, Group } from '@mantine/core';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
@@ -17,7 +18,7 @@ export default function Procedure({ procedureForm }) {
       </div>
       <Space h={24} />
       <Text size='sm' className={cx(lineHeight150, descBox)}>
-        {desc}
+        {parse(desc)}
       </Text>
       {condition && (
         <>
