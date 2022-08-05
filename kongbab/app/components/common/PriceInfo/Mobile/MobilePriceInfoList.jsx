@@ -5,7 +5,8 @@ import PRICE_INFO from '~/constants/common/priceInfoData';
 import OtherItem from '~/components/common/PriceInfo/OtherItem';
 
 export default function MobilePriceInfoList() {
-  const { classes, cx } = usePriceInfoListStyles();
+  const { classes, theme, cx } = usePriceInfoListStyles();
+  const { colors } = theme;
   const { wrapper, mobileWrapper, footer, lineHeight150 } = classes;
 
   const items = PRICE_INFO.map((plan) => (
@@ -25,7 +26,12 @@ export default function MobilePriceInfoList() {
       </ul>
       <Space h={30} />
       <Center>
-        <Text size='sm' align='left' className={cx(footer, lineHeight150)}>
+        <Text
+          size='sm'
+          align='left'
+          className={cx(footer, lineHeight150)}
+          color={colors.gray[3]}
+        >
           * 수임료 외 인지대, 송달료, 집행신청비용, 보증보험료가 발생합니다.
           소송목적물가액에 따라 달라지나, 평균 30-50만원 내외입니다.
           <br />* 명도소송의 강제집행은 별도 요금이 부과됩니다.

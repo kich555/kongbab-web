@@ -5,7 +5,8 @@ import PriceInfo from '~/components/common/PriceInfo/PriceInfo';
 import usePriceInfoListStyles from '~/Style/components/PriceInfo/usePriceInfoListStyles';
 
 export default function PriceInfoList() {
-  const { classes, cx } = usePriceInfoListStyles();
+  const { classes, theme, cx } = usePriceInfoListStyles();
+  const { colors } = theme;
   const { footer, lineHeight150, maxWidth, list, box, title, listTitle } =
     classes;
 
@@ -38,7 +39,12 @@ export default function PriceInfoList() {
         <OtherItem />
       </Group>
       <Space h={30} />
-      <Text size='sm' align='left' className={cx(footer, lineHeight150)}>
+      <Text
+        size='sm'
+        align='left'
+        className={cx(footer, lineHeight150)}
+        color={colors.gray[3]}
+      >
         * 카드 결제 가능, 부가세 별도
         <br />
         * 수임료 외 인지대, 송달료, 집행신청비용, 보증보험료가 발생합니다.

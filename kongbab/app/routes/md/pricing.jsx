@@ -4,13 +4,14 @@ import FeaturedFAQSection from '~/components/page/Pricing/FeaturedFAQSection';
 import PRICING_CONSTANTS from '~/constants/page/pricingPageData';
 
 import PriceInfoListSection from '~/components/common/PriceInfo/PriceInfoListSection';
+import { useMantineTheme } from '@mantine/core';
 
-export default function pricing(params) {
+export default function Pricing(params) {
   const { RATE_PLANS, FEATURES, FEATURED_FAQ } = PRICING_CONSTANTS;
-
+  const theme = useMantineTheme();
   return (
     <>
-      <section style={{ backgroundColor: '#F2F4F7' }}>
+      <section style={{ backgroundColor: theme.colors.gray[0] }}>
         <PriceInfoListSection plans={RATE_PLANS} />
         <FeatureList />
       </section>
