@@ -11,12 +11,16 @@ const usePriceInfoStyles = createStyles((theme) => ({
   },
   header: {
     [theme.fn.smallerThan('md')]: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       position: 'absolute',
       top: 0,
       left: 0,
       height: '45px',
       width: '100%',
-      backgroundColor: theme.black,
+      // color: theme.white,
+      backgroundColor: theme.colors[theme.primaryColor],
       borderRadius: '20px 20px 0 0 ',
     },
   },

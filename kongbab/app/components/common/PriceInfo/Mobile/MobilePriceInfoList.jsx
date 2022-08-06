@@ -12,6 +12,7 @@ export default function MobilePriceInfoList() {
   const items = PRICE_INFO.map((plan) => (
     <PriceInfo
       key={plan.title}
+      subTitle={plan.subTitle}
       title={plan.title}
       price={plan.price}
       options={plan.options}

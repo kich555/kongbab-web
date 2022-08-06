@@ -88,7 +88,11 @@ export default function PriceInfo({ subTitle, title, price, options }) {
   return (
     <MediaQuery smallerThan='md' styles={mobileBox}>
       <li className={cx(box, deskTopBox)}>
-        <div className={header} />
+        <div className={header}>
+          <Text weight={700} color={theme.white}>
+            차임 연체 (주택, 상가)
+          </Text>
+        </div>
         {tablet && <Space h={30} />}
         <Text
           size='sm'
