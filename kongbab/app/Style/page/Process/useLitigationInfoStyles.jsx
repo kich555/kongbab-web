@@ -15,6 +15,7 @@ const useLitigationInfoStyles = createStyles((theme) => ({
     backgroundColor: theme.colors.gray[0],
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'row-reverse',
+      height: '120px',
       maxWidth: '324px',
     },
   },
