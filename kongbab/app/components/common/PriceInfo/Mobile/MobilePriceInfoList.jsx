@@ -32,6 +32,8 @@ export default function MobilePriceInfoList() {
           className={cx(footer, lineHeight150)}
           color={colors.gray[3]}
         >
+          * 카드 결제 가능, 부가세 별도
+          <br />
           * 수임료 외 인지대, 송달료, 집행신청비용, 보증보험료가 발생합니다.
           소송목적물가액에 따라 달라지나, 평균 30-50만원 내외입니다.
           <br />* 명도소송의 강제집행은 별도 요금이 부과됩니다.
