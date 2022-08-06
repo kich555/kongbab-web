@@ -2,9 +2,8 @@ import { Container, Space, Text } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import Title from '~/components/common/Title';
 import useConsultationFormStyles from '~/Style/page/Main/useConsultationFormStyles';
-import FormBox from './ConsultationForm/FormBox';
 
-export default function ConsultationForm() {
+export default function ConsultationForm({ children }) {
   const { tablet } = useResponsive();
   const { classes, theme, cx } = useConsultationFormStyles();
   const { font18, lineHeight150 } = classes;
@@ -23,7 +22,8 @@ export default function ConsultationForm() {
           아래 내용을 남겨주시면 빠르게 연락드리겠습니다.
         </Text>
         <Space h={80} />
-        <FormBox />
+        {/* <FormBox /> */}
+        {children}
         <Space h={150} />
       </Container>
     </section>

@@ -1,5 +1,6 @@
 import { Form } from '@remix-run/react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   Space,
   Text,
@@ -15,13 +16,17 @@ import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
 import Garbage from '~/asset/icon/Garbage';
 import { redirect } from '@remix-run/node';
 
-export async function action({ request }) {
-  const formData = await request.formData();
-  console.log('formData', formData);
-  return redirect('/md/introduce');
-}
+export const action = async ({ request }) => {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: '/md/home',
+    },
+  });
+};
 
 export default function FormBox() {
+  const form = useRef();
   const [files, setFiles] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
   const { classes, theme, cx } = useFormBoxStyles();
@@ -38,7 +43,8 @@ export default function FormBox() {
   const { colors } = theme;
   console.log('action', files);
   return (
-    <Form method='post'>
+    // <Form method='post' ref={form} key='consult'>
+    <Form action='/md/home' method='post'>
       <label>
         <Text size='md' weight={500}>
           이름
@@ -91,7 +97,7 @@ export default function FormBox() {
         </Text>
         <Space h={10} />
         <FileButton
-          name='files'
+          // name='files'
           onChange={setFiles}
           accept='image/png,image/jpeg'
           multiple
