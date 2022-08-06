@@ -3,9 +3,6 @@ import { createStyles } from '@mantine/core';
 const useBlogCardStyles = createStyles((theme) => ({
   card: {
     width: '344px',
-    [theme.fn.smallerThan('sm')]: {
-      width: '324px',
-    },
     padding: '0px !important',
     backgroundColor: theme.colors.dark[7],
     transition: 'transform 250ms',
@@ -18,7 +15,7 @@ const useBlogCardStyles = createStyles((theme) => ({
   image: {
     height: '175px !important',
     [theme.fn.smallerThan('sm')]: {
-      height: '165px !important',
+      height: '194px !important',
     },
   },
   titleText: {
