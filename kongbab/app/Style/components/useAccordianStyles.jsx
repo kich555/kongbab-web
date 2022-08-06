@@ -2,9 +2,12 @@ import { createStyles } from '@mantine/core';
 
 const useAccordianStyles = createStyles((theme) => ({
   label: {
-    fontSize: '20px',
     fontWeight: 500,
     lineHeight: '100%',
+    fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '16px',
+    },
   },
   chevron: {
     '&[data-rotate]': {
@@ -29,9 +32,12 @@ const useAccordianStyles = createStyles((theme) => ({
   },
   content: {
     padding: '0 0 30px 0',
-    fontSize: '20px',
     color: theme.colors.gray[3],
     lineHeight: '150%',
+    fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '16px',
+    },
   },
 }));
 
