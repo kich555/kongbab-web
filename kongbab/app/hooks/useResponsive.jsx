@@ -6,6 +6,7 @@ export default function useResponsive(params) {
   const { breakpoints } = theme;
 
   const responsive = {
+    tiny: useMediaQuery(`(max-width: ${breakpoints.xs}px)`, false),
     mobile: useMediaQuery(`(max-width: ${breakpoints.sm}px)`, false),
     tablet: useMediaQuery(`(max-width: ${breakpoints.md}px)`, false),
   };
