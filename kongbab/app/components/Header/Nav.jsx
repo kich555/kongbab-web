@@ -40,7 +40,7 @@ export default function Nav() {
       height={scroll.y === 0 ? 100 : 80}
     >
       <Container className={container} px={26}>
-        {!opened && <HeaderLogo onClick={() => navigate('/')} />}
+        {!opened && <HeaderLogo onClick={() => navigate('/md/home')} />}
         <div className={menuWrapper}>
           <Group className={links} spacing={10}>
             {deskTopItems}
@@ -49,14 +49,14 @@ export default function Nav() {
             {!opened && (
               <Button
                 sx={(theme) => ({
-                  backgroundColor: theme.colors.dark[1],
+                  backgroundColor: theme.colors[theme.primaryColor],
                 })}
                 className={buttonWrapper}
                 variant='filled'
                 radius={36}
                 onClick={addChannel}
               >
-                카톡 상담 신청
+                카톡 상담신청
               </Button>
             )}
 
@@ -65,6 +65,7 @@ export default function Nav() {
               onClick={toggle}
               className={burger}
               size='md'
+              color='#CACACA'
             />
           </Group>
         </div>
