@@ -13,6 +13,18 @@ const useCommonFooterSectionStyles = createStyles((theme) => ({
   },
   subTitle: {
     fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.sm,
+    },
+  },
+  content: {
+    fontSize: theme.fontSizes.xl,
+    [theme.fn.smallerThan('sm')]: {
+      width: '200px',
+      margin: 'auto',
+      fontSize: '30px',
+      lineHeight: '150%',
+    },
   },
   title: {
     fontSize: '18px',
