@@ -11,6 +11,7 @@ import Carousel_A_3 from '~/asset/image/Carousel/Carousel_A_3.png';
 import Carousel_B_1 from '~/asset/image/Carousel/Carousel_B_1.png';
 import Carousel_B_2 from '~/asset/image/Carousel/Carousel_B_2.png';
 import Carousel_B_3 from '~/asset/image/Carousel/Carousel_B_3.png';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function MainHeader(params) {
   const { classes, theme, cx } = useMainHeaderStyles();
@@ -20,10 +21,12 @@ export default function MainHeader(params) {
     wrapper,
     inner,
     shadow,
+    subTitle,
     button,
     font18,
     font40,
     lineHeight150,
+    image,
     flewRow,
   } = classes;
   const { colors, primaryColor } = theme;
@@ -122,10 +125,10 @@ export default function MainHeader(params) {
   //     </>
   //   </Carousel.Slide>
   // ));
-
+  const { mobile } = useResponsive();
   return (
     <section className={backgorund}>
-      <Space w={180} />
+      {mobile ? <Space h={50} /> : <Space w={180} />}
       <Container px={0} className={wrapper}>
         <div className={inner}>
           <div>
@@ -138,11 +141,11 @@ export default function MainHeader(params) {
               <br />
               이제 참지마세요
             </Text>
-            <Space h={20} />
-            <Text weight={500} className={cx(font18, lineHeight150)}>
+            <Space h={mobile ? 15 : 20} />
+            <Text weight={500} className={cx(subTitle, lineHeight150)}>
               보증금이 모두 소진되기 전에 명도소송을 시작하세요.
             </Text>
-            <Space h={50} />
+            <Space h={mobile ? 10 : 50} />
             <DefaultButton
               className={button}
               sx={(theme) => ({
@@ -151,7 +154,11 @@ export default function MainHeader(params) {
               label='카톡 상담신청'
             />
           </div>
-          <Image src={Main_Banner} width={560} />
+          <Image
+            src={Main_Banner}
+            width={mobile ? 375 : 560}
+            className={image}
+          />
           {/* <Group spacing={10}>
             <Carousel
               orientation='vertical'

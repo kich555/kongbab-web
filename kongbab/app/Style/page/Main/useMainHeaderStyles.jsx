@@ -9,16 +9,50 @@ const useMainHeaderStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'column',
+    },
   },
-  button: {},
+  button: {
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
   font18: {
     fontSize: '18px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.sm,
+      textAlign: 'center',
+    },
   },
+
+  subTitle: {
+    fontSize: '18px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+      textAlign: 'center',
+      maxWidth: '182px',
+      margin: 'auto',
+    },
+  },
+
   font40: {
     fontSize: '40px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '28px',
+      textAlign: 'center',
+    },
   },
   lineHeight150: {
     lineHeight: '150%',
+  },
+
+  image: {
+    [theme.fn.smallerThan('sm')]: {
+      height: '254px',
+      overflow: 'hidden',
+    },
   },
   backgorund: {
     backgroundColor: theme.colors.gray[0],
