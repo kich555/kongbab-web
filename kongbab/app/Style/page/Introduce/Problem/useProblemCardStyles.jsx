@@ -18,9 +18,15 @@ const useProblemCardStyles = createStyles((theme) => ({
   },
   font20: {
     fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '18px',
+    },
   },
   font30: {
     fontSize: '30px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: '24px',
+    },
   },
   lineHeight150: {
     lineHeight: '150%',

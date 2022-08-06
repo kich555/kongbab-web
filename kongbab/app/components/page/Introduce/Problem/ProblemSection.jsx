@@ -19,7 +19,9 @@ export default function ProblemSection({ problems }) {
         <Space h={30} />
         <Title title='콩밥이 해결하고 싶은 문제' />
         <Space h={100} />
-        <Group spacing={24}>{items}</Group>
+        <Group spacing={24} style={{ justifyContent: 'center' }}>
+          {items}
+        </Group>
         <Space h={150} />
       </Container>
     </section>
