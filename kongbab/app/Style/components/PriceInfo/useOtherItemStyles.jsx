@@ -11,11 +11,12 @@ const useOtherItemStyles = createStyles((theme) => ({
     backgroundColor: theme.white,
     [theme.fn.smallerThan('sm')]: {
       maxWidth: '325px',
+      height: '244px',
     },
   },
   inner: {
     flexDirection: 'column',
-    height: '100%',
+    height: 'calc(100% - 44px)',
   },
   title: {
     paddingTop: '14px',
