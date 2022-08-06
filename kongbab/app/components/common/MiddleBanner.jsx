@@ -1,7 +1,8 @@
 import { useRef } from 'react';
-import { Space, Text } from '@mantine/core';
+import { Container, Space, Text } from '@mantine/core';
 import { useIntersection } from '@mantine/hooks';
 import useMiddleBannerStyles from '~/constants/common/useMiddleBannerStyles';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function MiddleBanner({ title, desc }) {
   const containerRef = useRef();
@@ -9,18 +10,17 @@ export default function MiddleBanner({ title, desc }) {
     root: containerRef.current,
   });
   const { classes, theme } = useMiddleBannerStyles();
-  const { wrapper, font18, font40 } = classes;
+  const { section, wrapper, font18, font40 } = classes;
   const { colors, primaryColor, white } = theme;
 
-  console.log('entry?.isIntersecting', entry?.isIntersecting);
+  const { mobile } = useResponsive();
   return (
-    <div>
-      <div
-        className={wrapper}
-        ref={ref}
-        style={{ backgroundPosition: entry?.isIntersecting && 'left' }}
-      >
-        <Space h={100} />
+    <section
+      className={section}
+      style={{ backgroundPosition: entry?.isIntersecting && 'left' }}
+    >
+      <Container px={mobile ? 26 : 0} className={wrapper} ref={ref}>
+        <Space h={mobile ? 60 : 100} />
         <Text
           color={colors[primaryColor]}
           align='center'
@@ -29,12 +29,12 @@ export default function MiddleBanner({ title, desc }) {
         >
           {title}
         </Text>
-        <Space h={24} />
+        <Space h={mobile ? 20 : 24} />
         <Text color={white} align='center' weight={700} className={font40}>
           {desc}
         </Text>
-        <Space h={100} />
-      </div>
-    </div>
+        <Space h={mobile ? 56 : 100} />
+      </Container>
+    </section>
   );
 }
