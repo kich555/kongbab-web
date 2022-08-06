@@ -36,7 +36,12 @@ export const useMainLargeCardStyles = createStyles((theme) => ({
     borderRadius: '20px',
     backgroundColor: theme.colors.gray[0],
     padding: '48px 45px 57px 70px',
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'column',
+      padding: '40px 36px 10px 36px',
+    },
   },
+
   inner: {
     display: 'flex',
     flexDirection: 'column',
@@ -50,12 +55,26 @@ export const useMainLargeCardStyles = createStyles((theme) => ({
   },
   font20: {
     fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+      textAlign: 'center',
+    },
+  },
+  content: {
+    fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.sm,
+      textAlign: 'center',
+    },
   },
   lineHeight150: {
     lineHeight: '150%',
   },
   image: {
     width: '453px',
+    [theme.fn.smallerThan('sm')]: {
+      width: '271px',
+    },
     height: 'auto',
   },
 }));
