@@ -2,34 +2,35 @@ import { Image, Space, Text, Center } from '@mantine/core';
 import Title from '~/components/common/Title';
 import profileImage from '~/asset/image/Profile_Image.png';
 import useLwaerProfileStyles from '~/Style/page/Introduce/useLwaerProfileStyles';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function LawerProfile({ name, desc }) {
   const { classes, theme } = useLwaerProfileStyles();
   const { colors } = theme;
-  const { content, imageWrapper, center } = classes;
+  const { content, imageWrapper, profileName } = classes;
+  const { mobile } = useResponsive();
   return (
     <section>
-      <Space h={28} />
-      <Title title='콩밥이 해결하고 싶은 문제' />
+      <Space h={mobile ? 20 : 28} />
+      <Title title='대표 변호사' />
       <Space h={50} />
       <Center>
         <Image
           src={profileImage}
           alt='lawer profile'
-          width={200}
-          height={200}
+          width={mobile ? 150 : 200}
           className={imageWrapper}
         />
       </Center>
       <Space h={32} />
-      <Text size='lg' align='center' weight={700} className={center}>
+      <Text size='lg' align='center' weight={700} className={profileName}>
         {name}
         <Space w={8} />
-        <Text size='md' component='span'>
+        <Text size={mobile ? 'sm' : 'md'} component='span'>
           변호사
         </Text>
       </Text>
-      <Space h={40} />
+      <Space h={mobile ? 30 : 40} />
       <Text color={colors.gray[3]} align='center' className={content}>
         {desc}
       </Text>
