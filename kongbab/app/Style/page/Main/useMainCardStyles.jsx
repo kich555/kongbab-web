@@ -4,12 +4,18 @@ export const useMainCardStyles = createStyles((theme) => ({
   wrapper: {
     flexGrow: '1',
     height: '500px',
+    [theme.fn.smallerThan('sm')]: {
+      height: '408px',
+    },
     overflow: 'hidden',
     borderRadius: '20px',
     backgroundColor: theme.colors.gray[0],
   },
   font20: {
     fontSize: '20px',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+    },
   },
   lineHeight150: {
     lineHeight: '150%',
@@ -17,6 +23,9 @@ export const useMainCardStyles = createStyles((theme) => ({
   image: {
     width: '320px',
     height: 'auto',
+    [theme.fn.smallerThan('sm')]: {
+      width: '295px',
+    },
   },
 }));
 
