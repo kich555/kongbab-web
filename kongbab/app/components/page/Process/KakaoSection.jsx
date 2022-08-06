@@ -3,7 +3,8 @@ import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
 import KakaoImage from '~/asset/image/Process/Process_Kakao_Image.png';
 export default function KakaoSection(params) {
-  const { classes, cx } = useKakaoSectionStyles();
+  const { classes, theme, cx } = useKakaoSectionStyles();
+  const { colors } = theme;
   const { wrapper, font20, titleFont, lineHeight150, underLine } = classes;
   const { mobile } = useResponsive();
 
@@ -12,8 +13,7 @@ export default function KakaoSection(params) {
       <Space h={mobile ? 100 : 180} />
       <Text
         className={font20}
-        variant='gradient'
-        gradient={{ from: '#FF0000', to: '#FF8541', deg: 90 }}
+        color={colors[theme.primaryColor]}
         weight={700}
         align='center'
       >
@@ -25,9 +25,9 @@ export default function KakaoSection(params) {
       </Text>
       <Space h={mobile ? 40 : 60} />
       <div className={wrapper}>
-        <Space h={40} />
+        <Space h={mobile ? 26 : 40} />
 
-        <Image src={KakaoImage} width={287} alt='kakao-image' />
+        <Image src={KakaoImage} width={mobile ? 173 : 287} alt='kakao-image' />
       </div>
       <Space h={mobile ? 30 : 40} />
       <Container size={920} px={mobile ? 30 : 0}>
