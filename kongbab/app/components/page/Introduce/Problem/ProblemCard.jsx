@@ -13,11 +13,13 @@ export default function ProblemCard({ title, desc, advantage, idx }) {
   const { classes, cx, theme } = useProblemCardStyles();
   const { white } = theme;
   const { wrapper, inner, footer, font20, font30, lineHeight150 } = classes;
-  const { mobile } = useResponsive();
+  const { mobile, tiny } = useResponsive();
   return (
-    <Container px={mobile ? 26 : 0} className={wrapper}>
+    <div className={wrapper}>
       <div className={inner}>
-        <Image src={arr[idx]} width={280} alt='problem-card' />
+        <Center>
+          <Image src={arr[idx]} width={280} alt='problem-card' />
+        </Center>
         <Space h={mobile ? 25 : 41} />
         <Text align='center' weight={700} className={font30}>
           {title}
@@ -42,6 +44,6 @@ export default function ProblemCard({ title, desc, advantage, idx }) {
           {parse(advantage)}
         </Text>
       </div>
-    </Container>
+    </div>
   );
 }

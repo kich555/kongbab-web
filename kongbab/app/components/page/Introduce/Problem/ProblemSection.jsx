@@ -1,5 +1,6 @@
 import { Container, Group, Space } from '@mantine/core';
 import Title from '~/components/common/Title';
+import useResponsive from '~/hooks/useResponsive';
 import ProblemCard from './ProblemCard';
 
 export default function ProblemSection({ problems }) {
@@ -13,9 +14,10 @@ export default function ProblemSection({ problems }) {
     />
   ));
 
+  const { mobile } = useResponsive();
   return (
     <section style={{ backgroundColor: '#F7F7F7' }}>
-      <Container px={0}>
+      <Container px={mobile ? 26 : 0}>
         <Space h={30} />
         <Title title='콩밥이 해결하고 싶은 문제' />
         <Space h={100} />
