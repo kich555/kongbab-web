@@ -12,7 +12,7 @@ const useNavStyles = createStyles((theme, opened) => ({
     [theme.fn.smallerThan('md')]: {
       height: '80px',
     },
-    borderBottom: 'none',
+    borderBottom: opened ? 'none' : '1px solid #EEEEEE',
     backgroundColor: `transparent`,
     transition: 'all 0.25s ease-in-out 0s',
     cursor: 'pointer',
@@ -80,7 +80,9 @@ const useNavStyles = createStyles((theme, opened) => ({
       width: '95px',
       height: '32px',
       marginLeft: '0px',
-      fontSize: theme.fontSizes.sm,
+      padding: '8px 11px',
+      fontSize: '13px',
+      lineHeight: '16px',
     },
     [theme.fn.smallerThan('xs')]: {
       display: 'none',
@@ -99,6 +101,7 @@ const useNavStyles = createStyles((theme, opened) => ({
     right: 0,
     width: '100vw',
     height: '100vh',
+    border: 'none',
     paddingBottom: '24px',
     zIndex: 0,
     [theme.fn.largerThan('md')]: {
