@@ -1,7 +1,7 @@
-import MainThirdSection from '~/routes/md/home/MainThirdSection';
+import MainThirdSection from '~/components/page/Main/MainThirdSection';
 import CommonFooterSection from '~/components/common/CommonFooterSection';
-import MainSecondSection from '~/routes/md/home/MainSecondSection';
-import MainHeader from '~/routes/md/home/MainHeader';
+import MainSecondSection from '~/components/page/Main/MainSecondSection';
+import MainHeader from '~/components/page/Main/MainHeader';
 import ConsultationForm from '~/components/page/Main/ConsultationForm';
 
 import { showNotification } from '@mantine/notifications';
