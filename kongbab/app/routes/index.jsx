@@ -1,4 +1,4 @@
-import Main from '~/routes/md/main';
+import Main from '~/routes/md/home';
 
 export default function index() {
   return <Main />;
