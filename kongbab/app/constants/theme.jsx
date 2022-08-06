@@ -25,6 +25,7 @@ const BASIC_THEME = {
   },
   colors: {
     carrot: '#FF4500',
+    red: ['#FF0000'],
     dark: ['#040000', '#000000'],
     gray: ['#F7F7F7', '#EEEEEE', '#DADADA', '#666666'],
     blue: ['#364B60', '#B8C8D5', '#EDF2FB', '#93A4B4', '#6F8396', '#0A1C2D'],
