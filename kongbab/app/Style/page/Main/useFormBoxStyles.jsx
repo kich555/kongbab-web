@@ -5,6 +5,7 @@ const useFormBoxStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    maxWidth: '436px',
     padding: '17px, 20px',
     border: '1px solid #EEEEEE',
     borderRadius: '8px',
@@ -15,6 +16,7 @@ const useFormBoxStyles = createStyles((theme) => ({
     },
   },
   textInput: {
+    width: '100%',
     height: '18px',
     margin: '15px 0 ',
     marginLeft: '20px',
@@ -57,22 +59,36 @@ const useFormBoxStyles = createStyles((theme) => ({
     },
   },
 
+  listWrapper: {
+    width: '100%',
+  },
+  icon: {
+    marginRight: '16px',
+    cursor: 'pointer',
+  },
+
   input: {
-    // width: '20px',
-    // height: '20px',
+    width: '20px',
+    height: '20px',
+    marginRight: '8px',
     border: '1px solid #EEEEEE',
     borderRadius: '6px',
-    // backgroundColor: '#FFFFFF',
+    backgroundColor: '#FFFFFF',
+    accentColor: theme.black,
   },
 
   label: {
-    paddingLeft: '8px',
-    lineHeight: '100%',
+    height: '20px',
+    display: 'flex',
+    alignItems: 'end',
+  },
+  anchor: {
+    color: '#3787E4',
   },
 
   error: {
     marginTop: '10px',
-    color: theme.colors[theme.primaryColor],
+    color: theme.colors.red[0],
   },
 }));
 
