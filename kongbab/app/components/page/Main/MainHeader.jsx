@@ -28,6 +28,7 @@ export default function MainHeader(params) {
     lineHeight150,
     image,
     flewRow,
+    carouselB,
   } = classes;
   const { colors, primaryColor } = theme;
   const CarouselA = [
@@ -179,6 +180,7 @@ export default function MainHeader(params) {
               {items}
             </Carousel>
             <Carousel
+              className={carouselB}
               orientation='vertical'
               loop
               align={0.7}
