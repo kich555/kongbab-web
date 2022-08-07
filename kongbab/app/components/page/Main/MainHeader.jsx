@@ -30,106 +30,104 @@ export default function MainHeader(params) {
     flewRow,
   } = classes;
   const { colors, primaryColor } = theme;
-  // const CarouselA = [
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  //   Carousel_A_1,
-  //   Carousel_A_2,
-  //   Carousel_A_3,
-  // ];
-  // const CarouselB = [
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  //   Carousel_B_1,
-  //   Carousel_B_2,
-  //   Carousel_B_3,
-  // ];
-  // const autoplayA = useRef(
-  //   Autoplay({ delay: 3000 }, (emblaRoot) => emblaRoot.parentElement)
-  // );
-  // const autoplayB = useRef(
-  //   Autoplay({ delay: 3000 }, (emblaRoot) => emblaRoot.parentElement)
-  // );
+  const CarouselA = [
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+    Carousel_A_1,
+    Carousel_A_2,
+    Carousel_A_3,
+  ];
+  const CarouselB = [
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+    Carousel_B_1,
+    Carousel_B_2,
+    Carousel_B_3,
+  ];
+  const autoplayA = useRef(
+    Autoplay({ delay: 3000 }, (emblaRoot) => emblaRoot.parentElement)
+  );
+  const autoplayB = useRef(
+    Autoplay({ delay: 3000 }, (emblaRoot) => emblaRoot.parentElement)
+  );
 
-  // const items = CarouselA.map((item, idx) => (
-  //   <Carousel.Slide key={`carousel-A-Slide-${idx}`}>
-  //     <>
-  //       <Image
-  //         src={item}
-  //         alt={`carousel-A-image-${idx}`}
-  //         width={242}
-  //         className={shadow}
-  //         withPlaceholder
-  //       />
-  //     </>
-  //   </Carousel.Slide>
-  // ));
+  const items = CarouselA.map((item, idx) => (
+    <Carousel.Slide key={`carousel-A-Slide-${idx}`}>
+      <>
+        <Image
+          src={item}
+          alt={`carousel-A-image-${idx}`}
+          width={242}
+          className={shadow}
+        />
+      </>
+    </Carousel.Slide>
+  ));
 
-  // const itemsB = CarouselB.map((item, idx) => (
-  //   <Carousel.Slide key={`carousel-A-Slide-${idx}`}>
-  //     <>
-  //       <Image
-  //         src={item}
-  //         alt={`carousel-A-image-${idx}`}
-  //         width={242}
-  //         className={shadow}
-  //         withPlaceholder
-  //       />
-  //     </>
-  //   </Carousel.Slide>
-  // ));
-  const { mobile } = useResponsive();
+  const itemsB = CarouselB.map((item, idx) => (
+    <Carousel.Slide key={`carousel-A-Slide-${idx}`}>
+      <>
+        <Image
+          src={item}
+          alt={`carousel-A-image-${idx}`}
+          width={242}
+          className={shadow}
+        />
+      </>
+    </Carousel.Slide>
+  ));
+  const { mobile, tablet } = useResponsive();
   return (
     <section className={backgorund}>
       {mobile ? <Space h={50} /> : <Space w={180} />}
-      <Container px={0} className={wrapper}>
+      <Container px={tablet ? 26 : 0} className={wrapper}>
         <div className={inner}>
           <div>
             <Text color={colors[primaryColor]} weight={500} className={font18}>
@@ -154,12 +152,12 @@ export default function MainHeader(params) {
               label='카톡 상담신청'
             />
           </div>
-          <Image
+          {/* <Image
             src={Main_Banner}
             width={mobile ? 375 : 560}
             className={image}
-          />
-          {/* <Group spacing={10}>
+          /> */}
+          <Group spacing={10}>
             <Carousel
               orientation='vertical'
               loop
@@ -185,7 +183,7 @@ export default function MainHeader(params) {
               loop
               align={0.7}
               withControls={false}
-              initialSlide={1}
+              initialSlide={2}
               slideSize='33.33%'
               height={540}
               sx={{ maxWidth: 530 }}
@@ -201,7 +199,7 @@ export default function MainHeader(params) {
             >
               {itemsB}
             </Carousel>
-          </Group> */}
+          </Group>
         </div>
         <Space w={180} />
       </Container>
