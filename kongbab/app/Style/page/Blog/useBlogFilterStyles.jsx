@@ -12,6 +12,7 @@ const useBlogFilterStyles = createStyles((theme) => ({
     fontSize: '20px',
     color: theme.colors.gray[3],
     cursor: 'pointer',
+    whiteSpace: 'nowrap',
     '&:hover': {
       backgroundColor: theme.colors.gray[0],
     },
