@@ -3,7 +3,7 @@ import { createStyles } from '@mantine/core';
 const useAccordianStyles = createStyles((theme) => ({
   label: {
     fontWeight: 500,
-    lineHeight: '100%',
+    lineHeight: '150%',
     fontSize: '20px',
     [theme.fn.smallerThan('sm')]: {
       fontSize: '16px',
