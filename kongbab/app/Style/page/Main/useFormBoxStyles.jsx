@@ -6,6 +6,7 @@ const useFormBoxStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     maxWidth: '436px',
+    height: '50px',
     padding: '17px, 20px',
     border: '1px solid #EEEEEE',
     borderRadius: '8px',
@@ -15,10 +16,14 @@ const useFormBoxStyles = createStyles((theme) => ({
       border: '1px solid #000000 !important',
     },
   },
+
+  errorBorder: {
+    border: '1px solid #FF0000',
+  },
   textInput: {
     width: '100%',
     height: '18px',
-    margin: '15px 0 ',
+    // margin: '15px 0 ',
     marginLeft: '20px',
     border: 'none',
     backgroundColor: 'inherit',

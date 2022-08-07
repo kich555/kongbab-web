@@ -21,13 +21,20 @@ import {
 import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
 import Garbage from '~/asset/icon/Garbage';
 import useResponsive from '~/hooks/useResponsive';
+import { redirect } from '@remix-run/node';
+
+export async function action() {
+  return redirect('/md/home');
+}
 
 export default function Home() {
   const form = useRef();
+  const nameRef = useRef();
+  const phoneNumberRef = useRef();
   const [files, setFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [errorStatus, setErrorStatus] = useState('');
+  const [errorStatus, setErrorStatus] = useState({ name: '', phoneNumber: '' });
   const [isChecked, setIsChecked] = useState(false);
   const { classes, theme, cx } = useFormBoxStyles();
   const {
@@ -37,16 +44,49 @@ export default function Home() {
     fileInput,
     label,
     textInput,
+    listWrapper,
+    anchor,
+    icon,
     button,
+    errorBorder,
     submmit,
   } = classes;
   const { colors } = theme;
 
   // const { EMAIL_JS_ID, EMAIL_JS_TEMPLETE_ID, EMAIL_JS_PUBLIC_KEY } = ENV;
+  console.log('form.current', form.current);
+  console.log('errorStatus', errorStatus);
+
+  const handleNameValidate = () => {
+    if (nameRef.current.value === '') {
+      setIsError(true);
+      setErrorStatus((prevErrorStatus) => ({
+        ...prevErrorStatus,
+        name: '이름을 입력해 주세요.',
+      }));
+      return;
+    }
+  };
+
+  const handlePhoneNumberValidate = () => {
+    if (phoneNumberRef.current.value === '') {
+      setIsError(true);
+      setErrorStatus((prevErrorStatus) => ({
+        ...prevErrorStatus,
+        phoneNumber: '휴대폰 번호를 입력해 주세요.',
+      }));
+      return;
+    }
+  };
 
   const sendEmail = async (e) => {
+    handleNameValidate();
+    handlePhoneNumberValidate();
+    if (nameRef.current.value === '' || phoneNumberRef.current.value === '')
+      return null;
     setIsLoading(true);
     e.preventDefault();
+
     showNotification({
       id: 'load-data',
       loading: true,
@@ -98,17 +138,27 @@ export default function Home() {
                   이름
                 </Text>
                 <Space h={10} />
-                <div className={inputWrapper}>
+                <div
+                  className={cx(inputWrapper, {
+                    [errorBorder]: errorStatus?.name,
+                  })}
+                >
                   <input
                     type='text'
                     name='name'
                     placeholder='김임차'
-                    className={cx(textInput, error)}
+                    ref={nameRef}
+                    className={textInput}
                   />
                 </div>
-                {/* {errors?.slug ? (
-        <em className='text-red-600'>{errors.slug}</em>
-      ) : null} */}
+                {errorStatus?.name && (
+                  <>
+                    <Space h={10} />
+                    <Text size='sm' color={colors.red[0]} component='em'>
+                      {errorStatus.name}
+                    </Text>
+                  </>
+                )}
               </label>
 
               <Space h={35} />
@@ -126,22 +176,32 @@ export default function Home() {
                   </Text>
                 </Text>
                 <Space h={10} />
-                <div className={inputWrapper}>
+                <div
+                  className={cx(inputWrapper, {
+                    [errorBorder]: errorStatus?.phoneNumber,
+                  })}
+                >
                   <input
                     type='number'
                     name='phoneNumber'
                     placeholder='01012345678'
+                    ref={phoneNumberRef}
                     className={textInput}
                   />
                 </div>
-                {/* {errors?.slug ? (
-        <em className='text-red-600'>{errors.slug}</em>
-      ) : null} */}
+                {errorStatus?.phoneNumber && (
+                  <>
+                    <Space h={10} />
+                    <Text size='sm' color={colors.red[0]} component='em'>
+                      {errorStatus.phoneNumber}
+                    </Text>
+                  </>
+                )}
               </label>
 
               <Space h={35} />
 
-              <label>
+              {/* <label>
                 <Text size='md' weight={500} component='div'>
                   임대차 계약서{' '}
                   <Text
@@ -166,57 +226,65 @@ export default function Home() {
                     </Button>
                   )}
                 </FileButton>
-                {/* {errors?.slug ? (
+                {errors?.slug ? (
         <em className='text-red-600'>{errors.slug}</em>
-      ) : null} */}
-              </label>
+      ) : null}
+              </label> */}
 
-              <List size='sm' mt={5}>
+              {/* <List size='sm' mt={5}>
                 <Group spacing={10}>
                   {files.map((file, index) => (
-                    <List.Item key={index}>
+                    <List.Item key={index} className={listWrapper}>
                       <div className={cx(inputWrapper, fileInput)}>
                         <input
                           className={textInput}
                           value={file.name}
                           disabled
                         />
-                        <Garbage style={{ marginRight: '16px' }} />
+                        <Garbage
+                          className={icon}
+                          onClick={() =>
+                            setFiles(
+                              files.filter((item) => item.name !== file.name)
+                            )
+                          }
+                        />
                       </div>
                     </List.Item>
                   ))}
                 </Group>
-              </List>
+              </List> */}
 
               <Space h={35} />
-              <Checkbox
-                onChange={(e) => setIsChecked(e.currentTarget.checked)}
-                checked={isChecked}
-                value={isChecked}
-                label={
-                  <>
-                    (필수){' '}
-                    <Anchor
-                      size='md'
-                      href='https://mantine.dev'
-                      target='_blank'
-                      color='#3787E4'
-                    >
-                      개인정보 처리방침
-                    </Anchor>{' '}
-                    동의
-                  </>
-                }
-                size='md'
-                color='black'
-                classNames={{ input, label }}
-              />
+
+              <label className={label}>
+                <input
+                  type='checkbox'
+                  onChange={(e) => setIsChecked(e.currentTarget.checked)}
+                  value={isChecked}
+                  className={input}
+                />
+                <span>
+                  (필수){' '}
+                  <Anchor
+                    size='md'
+                    href='https:mantine.dev'
+                    target='_blank'
+                    className={anchor}
+                    rel='noreferrer'
+                  >
+                    개인정보 처리방침
+                  </Anchor>{' '}
+                  동의
+                </span>
+              </label>
+
               <Space h={42} />
               <Button
                 type='submit'
                 radius='md'
                 name='intent'
-                disabled={isLoading}
+                disabled={isLoading || !isChecked}
                 loading={isLoading}
                 className={submmit}
               >
