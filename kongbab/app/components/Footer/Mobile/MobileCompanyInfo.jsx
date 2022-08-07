@@ -4,7 +4,7 @@ import useFooterStyles from '~/Style/components/useFooterStyles';
 
 export default function MobileCompanyInfo() {
   const { classes, theme } = useFooterStyles();
-  const { lineHeight150, flexRow, menuItem } = classes;
+  const { lineHeight150, flexRow, menuItem, link } = classes;
   const { colors, white } = theme;
   return (
     <div>
@@ -26,8 +26,28 @@ export default function MobileCompanyInfo() {
         <Space h={20} />
         <Group spacing={20}>
           <ul className={flexRow}>
-            <li className={menuItem}>개인정보처리방침</li>
-            <li className={menuItem}>면책약관</li>
+            <li className={menuItem}>
+              {' '}
+              <a
+                className={link}
+                href='https://congbab.notion.site/2022-08-01-6ba190142b8845ec9cdcc2e290941e4b'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                개인정보처리방침
+              </a>
+            </li>
+            <li className={menuItem}>
+              {' '}
+              <a
+                className={link}
+                href='https://congbab.notion.site/2022-08-01-2dc692457f604414ae79a6076e43789e'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                면책약관
+              </a>
+            </li>
           </ul>
           © 2016-2022. ESO LAW. All rights reserved.
         </Group>
