@@ -6,7 +6,7 @@ export default function OtherItem() {
   const { classes, theme } = useOtherItemStyles();
   const { wrapper, inner, title, desc } = classes;
   const { colors } = theme;
-  const { mobile } = useResponsive();
+  const { tablet } = useResponsive();
   return (
     <div className={wrapper}>
       <Center className={title}>

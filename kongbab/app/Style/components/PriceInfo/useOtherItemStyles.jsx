@@ -9,7 +9,7 @@ const useOtherItemStyles = createStyles((theme) => ({
     boxShadow: '0px 4px 10px rgba(54, 75, 96, 0.05)',
     overflow: 'hidden',
     backgroundColor: theme.white,
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('md')]: {
       maxWidth: '325px',
       height: '244px',
     },

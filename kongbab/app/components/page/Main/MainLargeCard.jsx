@@ -5,7 +5,15 @@ import useResponsive from '~/hooks/useResponsive';
 
 export default function MainLargeCard({ subTitle, title, desc }) {
   const { classes, theme, cx } = useMainLargeCardStyles();
-  const { wrapper, inner, content, font20, lineHeight150, image } = classes;
+  const {
+    wrapper,
+    contentWrapper,
+    inner,
+    content,
+    font20,
+    lineHeight150,
+    image,
+  } = classes;
   const { colors, primaryColor } = theme;
 
   const { mobile } = useResponsive();
@@ -30,7 +38,7 @@ export default function MainLargeCard({ subTitle, title, desc }) {
         </Text>
       </div>
       {mobile && <Space h={30} />}
-      <div>
+      <div className={contentWrapper}>
         <Image
           src={mainCard3}
           alt='main-card-3'
