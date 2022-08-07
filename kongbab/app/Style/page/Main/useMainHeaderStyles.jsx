@@ -19,6 +19,11 @@ const useMainHeaderStyles = createStyles((theme) => ({
     },
   },
 
+  carouselB: {
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none',
+    },
+  },
   font18: {
     fontSize: '18px',
     [theme.fn.smallerThan('sm')]: {
