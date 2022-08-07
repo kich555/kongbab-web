@@ -13,12 +13,9 @@ const useNavStyles = createStyles((theme, opened) => ({
       height: '80px',
     },
     borderBottom: opened ? 'none' : '1px solid #EEEEEE',
-    backgroundColor: `transparent`,
+    backgroundColor: '#fff',
     transition: 'all 0.25s ease-in-out 0s',
     cursor: 'pointer',
-    '&:hover': {
-      backgroundColor: '#fff',
-    },
   },
   headerActive: {
     height: '80px',

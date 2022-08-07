@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Nav />
-      <Space h={tablet ? 80 : 100} />
+      <Space h={80} />
       {children}
       <Footer />
     </>

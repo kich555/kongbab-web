@@ -36,8 +36,9 @@ export default function Nav() {
   const { addChannel } = useAddKakaoChannel();
   return (
     <Header
-      className={cx(header, { [headerActive]: scroll.y !== 0 })}
-      height={scroll.y === 0 ? 100 : 80}
+      className={header}
+      // className={cx(header, { [headerActive]: scroll.y !== 0 })}
+      height={80}
     >
       <Container className={container} px={26}>
         {!opened && <HeaderLogo onClick={() => navigate('/md/home')} />}
