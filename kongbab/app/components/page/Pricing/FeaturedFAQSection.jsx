@@ -18,13 +18,6 @@ export default function FeaturedFAQSection({ questions }) {
         <AccordionSection title='요금' questions={questions} />
         <Space h={tablet ? 40 : 50} />
         <Center>
-          {/* <DefaultButton
-            className={button}
-            label='문의 전체보기'
-            sx={(theme) => ({
-              backgroundColor: 'none',
-            })}
-          /> */}
           <Link to='/md/faq' className={button}>
             문의 전체보기
           </Link>
