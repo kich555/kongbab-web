@@ -2,8 +2,6 @@ import { createStyles } from '@mantine/core';
 
 const useConsultationCardStyles = createStyles((theme) => ({
   warpper: {
-    marginTop: '200px',
-    marginBottom: '200px',
     padding: '60px 22px 46px 22px ',
     borderRadius: '20px',
     backgroundRepeat: 'no-repeat',
