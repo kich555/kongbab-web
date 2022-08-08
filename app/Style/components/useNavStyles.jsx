@@ -17,14 +17,7 @@ const useNavStyles = createStyles((theme, opened) => ({
     transition: 'all 0.25s ease-in-out 0s',
     cursor: 'pointer',
   },
-  headerActive: {
-    height: '80px',
-    [theme.fn.smallerThan('md')]: {
-      height: '60px',
-    },
-    backgroundColor: '#fff',
-    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)',
-  },
+
   container: {
     display: 'flex',
     alignItems: 'center',
@@ -51,6 +44,7 @@ const useNavStyles = createStyles((theme, opened) => ({
     textDecoration: 'none',
     fontWeight: 500,
     color: 'black',
+
     [theme.fn.smallerThan('md')]: {
       padding: '13px 0 13px 36px',
       fontSize: '20px',

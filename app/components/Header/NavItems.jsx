@@ -37,18 +37,19 @@ export default function NavMenu({ close }) {
   const { link, linkActive } = classes;
 
   const items = menus.map((menu) => (
-    <Link
-      className={cx(link, { [linkActive]: active === menu.link })}
-      prefetch='intent'
-      key={menu.label}
-      to={menu.link}
-      onClick={(e) => {
-        setActive(menu.link);
-        close();
-      }}
-    >
-      {menu.label}
-    </Link>
+    <li key={menu.label} style={{ listStyle: 'none' }}>
+      <Link
+        className={cx(link, { [linkActive]: active === menu.link })}
+        prefetch='intent'
+        to={menu.link}
+        onClick={() => {
+          setActive(menu.link);
+          close();
+        }}
+      >
+        {menu.label}
+      </Link>
+    </li>
   ));
 
   return items;
