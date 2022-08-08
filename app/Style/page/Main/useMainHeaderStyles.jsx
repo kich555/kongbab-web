@@ -9,6 +9,7 @@ const useMainHeaderStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    height: '100%',
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
@@ -18,12 +19,21 @@ const useMainHeaderStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
-
+  carouselWrapper: {
+    overflow: 'hidden',
+    [theme.fn.smallerThan('sm')]: {
+      height: 'calc(100% - 183px)',
+      background:
+        'linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%)',
+      transform: 'rotate(-180deg)',
+    },
+  },
   carouselB: {
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
   },
+
   font18: {
     fontSize: '18px',
     [theme.fn.smallerThan('sm')]: {
