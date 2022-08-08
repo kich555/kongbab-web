@@ -2,8 +2,10 @@ import { renderToString } from 'react-dom/server';
 import { RemixServer } from '@remix-run/react';
 
 import { injectStyles, createStylesServer } from '@mantine/remix';
+import { getEnv } from './utils';
 
 const server = createStylesServer();
+global.env = getEnv();
 
 export default function handleRequest(
   request,
