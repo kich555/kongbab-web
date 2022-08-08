@@ -27,6 +27,7 @@ const useBlogCardStyles = createStyles((theme) => ({
   },
   descText: {
     paddingTop: '18px',
+    lineHeight: '150%',
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
