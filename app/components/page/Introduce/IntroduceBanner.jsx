@@ -13,7 +13,7 @@ export default function IntroduceBanner() {
   if (mobile) {
     return (
       <section className={mobileWrapper}>
-        <Text size='xl' align='center' color={white} weight={700}>
+        <Text size='lg' align='center' color={white} weight={700}>
           콩밥 소개
         </Text>
       </section>

@@ -8,6 +8,13 @@ const useIntroduceBannerStyles = createStyles((theme) => ({
     overflow: 'hidden',
     margin: '0px auto',
   },
+  mobileWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '180px',
+    backgroundColor: theme.black,
+  },
   imageBox: {
     width: '100%',
   },
@@ -19,14 +26,6 @@ const useIntroduceBannerStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  mobileWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '120px',
-    backgroundColor: theme.black,
   },
 }));
 
