@@ -33,7 +33,7 @@ export default function MainSecondSection() {
         빠르고 간편한 소송을 위한, 법률서비스
       </Text>
       <Space h={mobile ? 30 : 100} />
-      <Container px={0}>
+      <Container px={mobile ? 15 : 0}>
         <Group spacing={24}>{items}</Group>
         <Space h={24} />
         <MainLargeCard
