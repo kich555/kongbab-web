@@ -41,7 +41,7 @@ export default function FormBox() {
     submmit,
   } = classes;
   const { colors } = theme;
-  console.log('action', files);
+
   return (
     // <Form method='post' ref={form} key='consult'>
     <Form action='/md/home' method='post'>
