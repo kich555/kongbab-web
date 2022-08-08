@@ -52,6 +52,9 @@ const useFooterStyles = createStyles((theme) => ({
   wrapReverse: {
     flexWrap: 'wrapReverse',
   },
+  gray: {
+    color: rgba(0,0,0,0.8)
+  }
 
   link: {
     color: theme.colors.gray[3],

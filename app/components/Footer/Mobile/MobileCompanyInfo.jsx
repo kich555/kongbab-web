@@ -3,9 +3,9 @@ import { Text, Space, Group } from '@mantine/core';
 import useFooterStyles from '~/Style/components/useFooterStyles';
 
 export default function MobileCompanyInfo() {
-  const { classes, theme } = useFooterStyles();
-  const { lineHeight150, flexRow, menuItem, link } = classes;
-  const { colors, white } = theme;
+  const { classes, theme, cx } = useFooterStyles();
+  const { lineHeight150, flexRow, menuItem, link, gray } = classes;
+  const { white } = theme;
   return (
     <div>
       <Space h={45} />
@@ -13,7 +13,7 @@ export default function MobileCompanyInfo() {
         법률사무소 이소
       </Text>
       <Space h={20} />
-      <Text size='sm' color={colors.gray[3]} className={lineHeight150}>
+      <Text size='sm' className={cx(gray, lineHeight150)}>
         대표 김서영
         <br />
         서울 강남구 테헤란로2길 27, 11층 (역삼동)
