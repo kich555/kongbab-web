@@ -4,7 +4,8 @@ import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import { Logo } from '~/components/common/Logo';
 
 export default function LitigationProcedureTitle() {
-  const { classes } = useProcedureStyles();
+  const { classes, theme } = useProcedureStyles();
+  const { colors, primaryColor } = theme;
   const { titleFont, titleWrapper, group } = classes;
   const { mobile } = useResponsive();
   return (
@@ -25,13 +26,13 @@ export default function LitigationProcedureTitle() {
           </Badge>
           <Badge
             size='xl'
-            variant='gradient'
-            gradient={{ from: '#FF4545', to: '#FF9D66', deg: 90 }}
+            variant='outline'
+            style={{ border: '1px solid #FF4500' }}
           >
-            <Text size='sm' component='span'>
+            <Text color={colors[primaryColor]} size='sm' component='span'>
               콩밥 변호사
             </Text>
-            <Logo width={12} variant='white' style={{ marginLeft: '7px' }} />
+            <Logo width={12} variant='default' style={{ marginLeft: '7px' }} />
           </Badge>
         </Group>
       </Center>
