@@ -26,57 +26,55 @@ export async function loader() {
   });
 }
 
-export const meta = () => (
-  {
-    charset: 'utf-8',
-    title: 'cong-bab',
-    viewport: 'width=device-width,initial-scale=1',
-    'og:type': 'website',
-    'og:url': 'http://congbab.com/md/home',
-    'og:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-    'og:image': '/og/og-image.png',
-    'og:site_name': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-    'og:locale': 'ko_KR',
-    'og:image:width': '1200',
-    'og:image:height': '630',
-    'twitter:card': 'summary_large_image',
-    'twitter:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-    'twitter:image': '/og/og-image.png',
-  },
-  // {
-  //   name: 'msapplication-TileColor',
-  //   content: '#ffffff',
-  // },
-  // {
-  //   name: 'msapplication-TileImage',
-  //   content: '/ms-icon-144x144.png',
-  // },
-  // {
-  //   name: 'theme-color',
-  //   content: '#ffffff',
-  // },
-  // { property: 'og:type', content: 'website' },
-  // { property: 'og:url', content: 'http://congbab.com/root.jsx' },
-  // {
-  //   property: 'og:title',
-  //   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-  // },
-  // { property: 'og:image', content: '/og/og-image.png' },
-  // {
-  //   property: 'og:site_name',
-  //   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-  // },
-  // { property: 'og:locale', content: 'ko_KR' },
-  // { property: 'og:image:width', content: '1200' },
-  // { property: 'og:image:height', content: '630' },
-  // { property: 'og:image:height', content: '630' },
-  // { name: 'twitter:card', content: 'summary_large_image' },
-  // {
-  //   name: 'twitter:title',
-  //   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-  // },
-  // { name: 'twitter:image', content: '/og/og-image.png' }
-);
+export const meta = () => ({
+  charset: 'utf-8',
+  title: '콩밥',
+  viewport: 'width=device-width,initial-scale=1',
+  'og:type': 'website',
+  'og:url': 'http://congbab.com/md/home',
+  'og:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+  'og:image': '/og/og-image.png',
+  'og:site_name': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+  'og:locale': 'ko_KR',
+  'og:image:width': '1200',
+  'og:image:height': '630',
+  'twitter:card': 'summary_large_image',
+  'twitter:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+  'twitter:image': '/og/og-image.png',
+});
+// {
+//   name: 'msapplication-TileColor',
+//   content: '#ffffff',
+// },
+// {
+//   name: 'msapplication-TileImage',
+//   content: '/ms-icon-144x144.png',
+// },
+// {
+//   name: 'theme-color',
+//   content: '#ffffff',
+// },
+// { property: 'og:type', content: 'website' },
+// { property: 'og:url', content: 'http://congbab.com/root.jsx' },
+// {
+//   property: 'og:title',
+//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+// },
+// { property: 'og:image', content: '/og/og-image.png' },
+// {
+//   property: 'og:site_name',
+//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+// },
+// { property: 'og:locale', content: 'ko_KR' },
+// { property: 'og:image:width', content: '1200' },
+// { property: 'og:image:height', content: '630' },
+// { property: 'og:image:height', content: '630' },
+// { name: 'twitter:card', content: 'summary_large_image' },
+// {
+//   name: 'twitter:title',
+//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
+// },
+// { name: 'twitter:image', content: '/og/og-image.png' }
 
 export function links() {
   return [
