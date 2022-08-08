@@ -8,9 +8,10 @@ import MobileCompanyInfo from '~/components/Footer/Mobile/MobileCompanyInfo';
 import CompanyInfo from '~/components/Footer/CompanyInfo';
 
 export default function Footer() {
-  const { classes, theme } = useFooterStyles();
-  const { footer, container, lineHeight150, links, alignSelfStart } = classes;
-  const { colors, white } = theme;
+  const { classes, theme, cx } = useFooterStyles();
+  const { footer, container, lineHeight150, links, alignSelfStart, gray } =
+    classes;
+  const { white } = theme;
   const { mobile } = useResponsive();
 
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
             상담센터
           </Text>
           <Space h={15} />
-          <Text size='sm' color={colors.gray[3]} className={lineHeight150}>
+          <Text size='sm' className={cx(gray, lineHeight150)}>
             카톡으로 상담신청하시면 가장 빠릅니다.
             <Space h={20} />
             <Group spacing={mobile ? 15 : 25}>
@@ -45,8 +46,8 @@ export default function Footer() {
                 <Space h={20} />
                 <Group spacing={10}>
                   <Kakao />
-                  {/* <Image src={KakaoSvg} /> */}
-                  <Naver />
+                  <Image src={KakaoSvg} />
+                  {/* <Naver /> */}
                 </Group>
               </>
             )}
