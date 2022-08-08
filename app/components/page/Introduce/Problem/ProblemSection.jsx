@@ -20,7 +20,7 @@ export default function ProblemSection({ problems }) {
       <Container px={mobile ? 26 : 0}>
         <Space h={30} />
         <Title title='콩밥이 해결하고 싶은 문제' />
-        <Space h={100} />
+        <Space h={mobile ? 40 : 100} />
         <Group spacing={24} style={{ justifyContent: 'center' }}>
           {items}
         </Group>
