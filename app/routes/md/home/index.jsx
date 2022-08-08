@@ -21,7 +21,7 @@ import {
 import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
 import Garbage from '~/asset/icon/Garbage';
 import useResponsive from '~/hooks/useResponsive';
-import { redirect } from '@remix-run/node';
+import { json, redirect } from '@remix-run/node';
 
 export async function action() {
   return redirect('/md/home');
@@ -52,10 +52,6 @@ export default function Home() {
     submmit,
   } = classes;
   const { colors } = theme;
-
-  // const { EMAIL_JS_ID, EMAIL_JS_TEMPLETE_ID, EMAIL_JS_PUBLIC_KEY } = ENV;
-  console.log('form.current', form.current);
-  console.log('errorStatus', errorStatus);
 
   const handleNameValidate = () => {
     if (nameRef.current.value === '') {
