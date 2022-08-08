@@ -57,7 +57,8 @@ const useFooterStyles = createStyles((theme) => ({
   },
 
   link: {
-    color: theme.colors.gray[3],
+    color: '#CCCCCC',
+    fontWeight: 500,
   },
 }));
 
