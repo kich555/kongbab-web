@@ -25,6 +25,7 @@ const useKakaoSectionStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.xl,
     [theme.fn.smallerThan('sm')]: {
       fontSize: '28px',
+      lineHeight: '150%',
     },
   },
   underLine: {
