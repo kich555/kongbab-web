@@ -13,9 +13,9 @@ const useBlogCardStyles = createStyles((theme) => ({
   cardSection: { margin: '0px' },
 
   image: {
-    height: '175px !important',
+    height: '170px !important',
     [theme.fn.smallerThan('sm')]: {
-      height: '194px !important',
+      height: '170px !important',
     },
   },
   titleText: {
