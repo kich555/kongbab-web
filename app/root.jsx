@@ -14,16 +14,10 @@ import { json } from '@remix-run/node';
 import styles from '~/Style/reset.css';
 import Layout from '~/components/common/Layout';
 import { NotificationsProvider } from '@mantine/notifications';
-// import { getEnv } from './env.server';
+import { getEnv } from './utils';
 
 export async function loader() {
-  return json({
-    ENV: {
-      EMAIL_JS_ID: process.env.EMAIL_JS_ID,
-      EMAIL_JS_TEMPLETE_ID: process.env.EMAIL_JS_TEMPLETE_ID,
-      EMAIL_JS_PUBLIC_KEY: process.env.EMAIL_JS_PUBLIC_KEY,
-    },
-  });
+  return getEnv();
 }
 
 export const meta = () => ({
@@ -161,7 +155,8 @@ export function links() {
 
 export default function App() {
   const data = useLoaderData();
-
+  const { ENV } = data;
+  console.log('emv?', ENV.REACT_APP_KEY);
   return (
     <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
       <NotificationsProvider>
@@ -179,7 +174,8 @@ export default function App() {
                 id='kakao-init'
                 dangerouslySetInnerHTML={{
                   __html: `
-              Kakao.init('JAVASCRIPT_KEY');
+              // Kakao.init(${ENV.REACT_APP_KEY});
+              Kakao.init('466532c41cf682be6a1ce648d7e9c48d');
               console.log(Kakao.isInitialized());
               `,
                 }}
