@@ -16,7 +16,7 @@ import NavItems from '~/components/Header/NavItems';
 
 export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
-
+  const { addKakaoChannel } = useAddKakaoChannel();
   const { classes } = useNavStyles(opened);
   const {
     header,
@@ -32,7 +32,6 @@ export default function Nav() {
   const deskTopItems = items.slice(1);
   const navigate = useNavigate();
 
-  const { addChannel } = useAddKakaoChannel();
   return (
     <Header
       className={header}
@@ -54,12 +53,11 @@ export default function Nav() {
                 className={buttonWrapper}
                 variant='filled'
                 radius={36}
-                onClick={addChannel}
+                onClick={addKakaoChannel}
               >
                 카톡 상담신청
               </Button>
             )}
-
             <Burger
               opened={opened}
               onClick={toggle}
