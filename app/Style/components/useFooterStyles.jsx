@@ -7,7 +7,7 @@ const useFooterStyles = createStyles((theme) => ({
     minHeight: '240px',
     height: '100%',
     width: '100%',
-    // borderTop: '1px solid #666666',
+    borderTop: '1px solid rgba(0,0,0,0.05)',
     backgroundColor: theme.black,
   },
   container: {
