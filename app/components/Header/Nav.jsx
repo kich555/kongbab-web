@@ -8,7 +8,7 @@ import {
   Group,
   Paper,
 } from '@mantine/core';
-import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 import useNavStyles from '~/Style/components/useNavStyles';
 import { HeaderLogo } from '~/components/common/Logo';
@@ -16,11 +16,10 @@ import NavItems from '~/components/Header/NavItems';
 
 export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const scroll = useWindowScroll()[0];
-  const { classes, cx } = useNavStyles(opened);
+
+  const { classes } = useNavStyles(opened);
   const {
     header,
-    headerActive,
     container,
     menuWrapper,
     buttonWrapper,
@@ -73,7 +72,7 @@ export default function Nav() {
         <Transition transition='pop-top-right' duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={dropdown} withBorder style={styles}>
-              {items}
+              <ul>{items}</ul>
               <div onClick={close} className={outer} />
             </Paper>
           )}
