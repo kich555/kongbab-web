@@ -29,6 +29,7 @@ export default function MainHeader(params) {
     image,
     flewRow,
     carouselB,
+    carouselWrapper,
   } = classes;
   const { colors, primaryColor } = theme;
   const CarouselA = [
@@ -158,7 +159,7 @@ export default function MainHeader(params) {
             width={mobile ? 375 : 560}
             className={image}
           /> */}
-          <Group spacing={10}>
+          <Group spacing={10} className={carouselWrapper}>
             <Carousel
               orientation='vertical'
               loop
