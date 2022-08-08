@@ -21,7 +21,9 @@ export default function KakaoSection(params) {
       </Text>
       <Space h={mobile ? 12 : 20} />
       <Text className={titleFont} weight={700} align='center'>
-        실시간 진행사항을 카카오 알림톡으로 발송
+        실시간 진행사항이
+        {mobile && <br />}
+        카카오 알림톡으로 발송
       </Text>
       <Space h={mobile ? 40 : 60} />
       <div className={wrapper}>
