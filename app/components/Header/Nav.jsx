@@ -11,7 +11,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 import useNavStyles from '~/Style/components/useNavStyles';
-import { HeaderLogo } from '~/components/common/Logo';
+import { HeaderLogo } from '~/asset/icon/Logo';
 import NavItems from '~/components/Header/NavItems';
 
 export default function Nav() {
