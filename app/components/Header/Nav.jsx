@@ -39,7 +39,7 @@ export default function Nav() {
       height={80}
     >
       <Container className={container} px={26}>
-        {!opened && <HeaderLogo onClick={() => navigate('/md/home')} />}
+        {!opened && <HeaderLogo onClick={() => navigate('/')} />}
         <div className={menuWrapper}>
           <Group className={links} spacing={10}>
             {deskTopItems}
