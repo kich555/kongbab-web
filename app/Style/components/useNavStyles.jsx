@@ -75,7 +75,7 @@ const useNavStyles = createStyles((theme, opened) => ({
       fontSize: '13px',
       lineHeight: '16px',
     },
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan(330)]: {
       display: 'none',
     },
   },
