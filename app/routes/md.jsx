@@ -21,7 +21,7 @@ import {
 import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
 import Garbage from '~/asset/icon/Garbage';
 import useResponsive from '~/hooks/useResponsive';
-import { json, redirect } from '@remix-run/node';
+import { redirect } from '@remix-run/node';
 
 export async function action() {
   return redirect('/md/home');
@@ -194,62 +194,6 @@ export default function Home() {
                   </>
                 )}
               </label>
-
-              <Space h={35} />
-
-              {/* <label>
-                <Text size='md' weight={500} component='div'>
-                  임대차 계약서{' '}
-                  <Text
-                    size='md'
-                    color={colors.gray[3]}
-                    weight={500}
-                    component='span'
-                  >
-                    (선택)
-                  </Text>
-                </Text>
-                <Space h={10} />
-                <FileButton
-                  name='files'
-                  onChange={setFiles}
-                  accept='image/png,image/jpeg'
-                  multiple
-                >
-                  {(props) => (
-                    <Button radius='md' {...props} className={button}>
-                      파일 첨부
-                    </Button>
-                  )}
-                </FileButton>
-                {errors?.slug ? (
-        <em className='text-red-600'>{errors.slug}</em>
-      ) : null}
-              </label> */}
-
-              {/* <List size='sm' mt={5}>
-                <Group spacing={10}>
-                  {files.map((file, index) => (
-                    <List.Item key={index} className={listWrapper}>
-                      <div className={cx(inputWrapper, fileInput)}>
-                        <input
-                          className={textInput}
-                          value={file.name}
-                          disabled
-                        />
-                        <Garbage
-                          className={icon}
-                          onClick={() =>
-                            setFiles(
-                              files.filter((item) => item.name !== file.name)
-                            )
-                          }
-                        />
-                      </div>
-                    </List.Item>
-                  ))}
-                </Group>
-              </List> */}
 
               <Space h={35} />
 
