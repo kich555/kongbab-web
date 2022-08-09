@@ -15,6 +15,8 @@ import styles from '~/Style/reset.css';
 import Layout from '~/components/common/Layout';
 import { NotificationsProvider } from '@mantine/notifications';
 import { getEnv } from './utils';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 
 export async function loader() {
   return getEnv();
@@ -24,6 +26,7 @@ export const meta = () => ({
   charset: 'utf-8',
   title: '콩밥',
   viewport: 'width=device-width,initial-scale=1',
+  'naver-site-verification': 'd1c76b234d77669ee9f5db876831a0c14c7c8d46',
   'og:type': 'website',
   'og:url': 'http://congbab.com/md/home',
   'og:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
@@ -36,39 +39,6 @@ export const meta = () => ({
   'twitter:title': '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
   'twitter:image': '/og/og-image.png',
 });
-// {
-//   name: 'msapplication-TileColor',
-//   content: '#ffffff',
-// },
-// {
-//   name: 'msapplication-TileImage',
-//   content: '/ms-icon-144x144.png',
-// },
-// {
-//   name: 'theme-color',
-//   content: '#ffffff',
-// },
-// { property: 'og:type', content: 'website' },
-// { property: 'og:url', content: 'http://congbab.com/root.jsx' },
-// {
-//   property: 'og:title',
-//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-// },
-// { property: 'og:image', content: '/og/og-image.png' },
-// {
-//   property: 'og:site_name',
-//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-// },
-// { property: 'og:locale', content: 'ko_KR' },
-// { property: 'og:image:width', content: '1200' },
-// { property: 'og:image:height', content: '630' },
-// { property: 'og:image:height', content: '630' },
-// { name: 'twitter:card', content: 'summary_large_image' },
-// {
-//   name: 'twitter:title',
-//   content: '명도소송 콩밥 | 빠르고 간편한 소송을 위한 법률서비스',
-// },
-// { name: 'twitter:image', content: '/og/og-image.png' }
 
 export function links() {
   return [
@@ -157,6 +127,12 @@ export default function App() {
   const data = useLoaderData();
   const { ENV } = data;
   console.log('emv?', ENV.REACT_APP_KEY);
+
+  useEffect(() => {
+    const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
+
+    TagManager.initialize(tagManagerArgs);
+  }, []);
   return (
     <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
       <NotificationsProvider>
@@ -168,6 +144,15 @@ export default function App() {
           </head>
           <body>
             <>
+              {/* <noscript>
+                <iframe
+                  src='[https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM](https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM)'
+                  height='0'
+                  width='0'
+                  style={{ display: 'none', visibility: 'hidden' }}
+                ></iframe>
+              </noscript> */}
+
               <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
               <script
                 async
