@@ -5,6 +5,7 @@ import useBlogCardListStyles from '~/Style/page/Blog/useBlogListStyles';
 import Title from '~/components/common/Title';
 import BlogFilter from '~/components/page/Blog/BlogFilter';
 import BlogCard from '~/components/page/Blog/BlogCard';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function BlogList(params) {
   const { MENUS, LIST } = BLOG_CONSTANTS;
@@ -22,6 +23,7 @@ export default function BlogList(params) {
   ));
   const { classes } = useBlogCardListStyles();
   const { listWrapper, list } = classes;
+  const { mobile } = useResponsive();
   return (
     <>
       <Center>
@@ -30,7 +32,7 @@ export default function BlogList(params) {
       {/* <Center style={{ overflowX: 'auto' }}>
         <BlogFilter options={MENUS} active={active} setActive={setActive} />
       </Center> */}
-      <Space h={80}/>
+      <Space h={mobile ? 50 : 80} />
       <Center>
         <div className={listWrapper}>
           <Container className={list}>{items}</Container>
