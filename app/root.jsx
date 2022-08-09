@@ -130,11 +130,11 @@ export default function App() {
   const { ENV } = data;
   console.log('emv?', ENV.REACT_APP_KEY);
 
-  // useEffect(() => {
-  //   const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
+  useEffect(() => {
+    const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
+    TagManager.initialize(tagManagerArgs);
+  }, []);
 
-  //   TagManager.initialize(tagManagerArgs);
-  // }, []);
   return (
     <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
       <NotificationsProvider>
