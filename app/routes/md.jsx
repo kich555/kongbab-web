@@ -239,18 +239,18 @@ export default function Home() {
   );
 }
 
-export function ErrorBoundary({ error }) {
-  console.error('error', error);
+// export function ErrorBoundary({ error }) {
+//   console.error('error', error);
 
-  return <div>An unexpected error occurred: {error.text}</div>;
-}
+//   return <div>An unexpected error occurred: {error.text}</div>;
+// }
 
-export function CatchBoundary() {
-  const caught = useCatch();
-  console.log('caught--->', caught);
-  if (caught.status === 413) {
-    return <div>Note not found</div>;
-  }
+// export function CatchBoundary() {
+//   const caught = useCatch();
+//   console.log('caught--->', caught);
+//   if (caught.status === 404) {
+//     return <div>Note not found</div>;
+//   }
 
-  throw new Error(`Unexpected caught response with status: ${caught.status}`);
-}
+//   throw new Error(`Unexpected caught response with status: ${caught.status}`);
+// }
