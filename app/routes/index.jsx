@@ -1,5 +1,5 @@
-import Main from '~/routes/md/home';
+import Home from '~/routes/md';
 
 export default function index() {
-  return <Main />;
+  return <Home />;
 }
