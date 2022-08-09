@@ -1,6 +1,6 @@
 import { Badge, Text } from '@mantine/core';
 import useStickerStyles from '~/Style/components/useStickerStyles';
-import { Logo } from '~/components/common/Logo';
+import { Logo } from '~/asset/icon/Logo';
 
 export default function Sticker({ children, icon }) {
   const { classes, cx, theme } = useStickerStyles();
