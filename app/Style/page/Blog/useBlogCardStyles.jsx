@@ -15,7 +15,7 @@ const useBlogCardStyles = createStyles((theme) => ({
   image: {
     height: '180px !important',
     [theme.fn.smallerThan('sm')]: {
-      height: '170px !important',
+      height: '180px !important',
     },
   },
   titleText: {
