@@ -6,7 +6,7 @@ import useNavStyles from '~/Style/components/useNavStyles';
 export default function NavMenu({ close }) {
   const menus = [
     {
-      link: '/md/home',
+      link: '/',
       label: '홈',
     },
     {
