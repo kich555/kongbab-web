@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
   useLoaderData,
 } from '@remix-run/react';
 import { MantineProvider } from '@mantine/core';
@@ -17,6 +18,7 @@ import { NotificationsProvider } from '@mantine/notifications';
 import { getEnv } from './utils';
 import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
+import NotFoundPage from './components/NotFoundPage';
 
 export async function loader() {
   return getEnv();
@@ -128,11 +130,11 @@ export default function App() {
   const { ENV } = data;
   console.log('emv?', ENV.REACT_APP_KEY);
 
-  useEffect(() => {
-    const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
+  // useEffect(() => {
+  //   const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
 
-    TagManager.initialize(tagManagerArgs);
-  }, []);
+  //   TagManager.initialize(tagManagerArgs);
+  // }, []);
   return (
     <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
       <NotificationsProvider>
@@ -181,5 +183,24 @@ export default function App() {
         </html>
       </NotificationsProvider>
     </MantineProvider>
+  );
+}
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  return (
+    <html>
+      <head>
+        <Meta />
+        <Links />
+        <StylesPlaceholder />
+        <title>404 Not found</title>
+      </head>
+      <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
+        <body>
+          <NotFoundPage />
+        </body>
+      </MantineProvider>
+    </html>
   );
 }
