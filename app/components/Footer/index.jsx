@@ -46,7 +46,7 @@ export default function Footer() {
                 <Space h={20} />
                 <Group spacing={10}>
                   <Kakao />
-                  <Image src={KakaoSvg} />
+                  <Image src={KakaoSvg} width={40} height={40} />
                   {/* <Naver /> */}
                 </Group>
               </>
