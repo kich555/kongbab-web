@@ -128,7 +128,6 @@ export function links() {
 export default function App() {
   const data = useLoaderData();
   const { ENV } = data;
-  console.log('emv?', ENV.REACT_APP_KEY);
 
   useEffect(() => {
     const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
