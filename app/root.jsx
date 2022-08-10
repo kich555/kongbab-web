@@ -11,7 +11,7 @@ import {
 import { MantineProvider } from '@mantine/core';
 import { StylesPlaceholder } from '@mantine/remix';
 import BASIC_THEME from '~/constants/theme';
-// import { json } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import styles from '~/Style/reset.css';
 import Layout from '~/components/common/Layout';
 import { NotificationsProvider } from '@mantine/notifications';
@@ -21,7 +21,7 @@ import { getEnv } from './utils';
 import NotFoundPage from './components/NotFoundPage';
 
 export async function loader() {
-  return getEnv();
+  return json({ kakaoKey: process.env.REACT_APP_KEY });
 }
 
 export const meta = () => ({
@@ -127,7 +127,7 @@ export function links() {
 
 export default function App() {
   const data = useLoaderData();
-  const { ENV } = data;
+  console.log('data', data);
 
   // useEffect(() => {
   //   const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
@@ -170,17 +170,17 @@ export default function App() {
                 id='kakao-init'
                 dangerouslySetInnerHTML={{
                   __html: `
-              // Kakao.init(${ENV.REACT_APP_KEY});
+              
               Kakao.init('466532c41cf682be6a1ce648d7e9c48d');
               console.log(Kakao.isInitialized());
               `,
                 }}
               />
-              <script
+              {/* <script
                 dangerouslySetInnerHTML={{
                   __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
                 }}
-              />
+              /> */}
             </>
             <Layout>
               <Outlet />
