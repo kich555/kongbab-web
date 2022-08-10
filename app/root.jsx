@@ -11,13 +11,13 @@ import {
 import { MantineProvider } from '@mantine/core';
 import { StylesPlaceholder } from '@mantine/remix';
 import BASIC_THEME from '~/constants/theme';
-import { json } from '@remix-run/node';
+// import { json } from '@remix-run/node';
 import styles from '~/Style/reset.css';
 import Layout from '~/components/common/Layout';
 import { NotificationsProvider } from '@mantine/notifications';
 import { getEnv } from './utils';
-import { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
+// import { useEffect } from 'react';
+// import TagManager from 'react-gtm-module';
 import NotFoundPage from './components/NotFoundPage';
 
 export async function loader() {
@@ -129,10 +129,10 @@ export default function App() {
   const data = useLoaderData();
   const { ENV } = data;
 
-  useEffect(() => {
-    const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
-    TagManager.initialize(tagManagerArgs);
-  }, []);
+  // useEffect(() => {
+  //   const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
+  //   TagManager.initialize(tagManagerArgs);
+  // }, []);
 
   return (
     <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
@@ -142,18 +142,28 @@ export default function App() {
             <Meta />
             <Links />
             <StylesPlaceholder />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-5D3HDWM');`,
+              }}
+            />
           </head>
           <body>
             <>
-              {/* <noscript>
-                <iframe
-                  src='[https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM](https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM)'
-                  height='0'
-                  width='0'
-                  style={{ display: 'none', visibility: 'hidden' }}
-                ></iframe>
-              </noscript> */}
-
+              <noscript
+                dangerouslySetInnerHTML={{
+                  __html: `<iframe
+                src='[https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM](https://www.googletagmanager.com/ns.html?id=GTM-5D3HDWM)'
+                height='0'
+                width='0'
+                style={{ display: 'none', visibility: 'hidden' }}
+              />`,
+                }}
+              />
               <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
               <script
                 async
