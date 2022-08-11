@@ -9,7 +9,9 @@ import CommonFooterSection from '~/components/common/CommonFooterSection';
 import MainSecondSection from '~/components/page/Main/MainSecondSection';
 import MainHeader from '~/components/page/Main/MainHeader';
 import ConsultationForm from '~/components/page/Main/ConsultationForm';
-
+import CouponSticker, {
+  ConsultButtonSticker,
+} from '~/components/page/Main/CouponSticker';
 import { showNotification } from '@mantine/notifications';
 import { Form, useLoaderData, useCatch } from '@remix-run/react';
 import { useState, useRef, useEffect } from 'react';
@@ -123,6 +125,10 @@ export default function Home() {
   const { mobile } = useResponsive();
   return (
     <>
+      <>
+        <CouponSticker />
+        <ConsultButtonSticker />
+      </>
       <MainHeader />
       <MainSecondSection />
       <MainThirdSection />
