@@ -32,7 +32,7 @@ export default function BlogList(params) {
       {/* <Center style={{ overflowX: 'auto' }}>
         <BlogFilter options={MENUS} active={active} setActive={setActive} />
       </Center> */}
-      <Space h={mobile ? 50 : 80} />
+      <Space h={mobile ? 25 : 80} />
       <Center>
         <div className={listWrapper}>
           <Container className={list}>{items}</Container>
