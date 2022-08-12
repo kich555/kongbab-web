@@ -1,3 +1,10 @@
+import Carousel_A_1 from '~/asset/image/Carousel/Carousel_A_1.png';
+import Carousel_A_2 from '~/asset/image/Carousel/Carousel_A_2.png';
+import Carousel_A_3 from '~/asset/image/Carousel/Carousel_A_3.png';
+import Carousel_B_1 from '~/asset/image/Carousel/Carousel_B_1.png';
+import Carousel_B_2 from '~/asset/image/Carousel/Carousel_B_2.png';
+import Carousel_B_3 from '~/asset/image/Carousel/Carousel_B_3.png';
+
 const MAIN_CONSTANTS = {
   CARD_SECTION: [
     {
@@ -20,6 +27,15 @@ const MAIN_CONSTANTS = {
     title: '온라인 명도소송',
     desc: '소송도 얼마든지<br/>간편하고 합리적인 요금으로 진행할 수 있습니다',
   },
+
+  NewCarousel: [
+    { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
+    { leftImage: Carousel_A_3, rightImage: Carousel_B_3 },
+    { leftImage: Carousel_A_1, rightImage: Carousel_B_1 },
+    { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
+    { leftImage: Carousel_A_3, rightImage: Carousel_B_3 },
+    { leftImage: Carousel_A_1, rightImage: Carousel_B_1 },
+  ],
 };
 
 export default MAIN_CONSTANTS;
