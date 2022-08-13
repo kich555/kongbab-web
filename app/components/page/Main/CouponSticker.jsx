@@ -12,7 +12,6 @@ export default function CouponSticker() {
   const { wrapper, inner, closeButton, clicked } = classes;
   const { colors } = theme;
 
-  console.log('opened', opened);
   return (
     <div className={cx(wrapper, { [clicked]: opened === false })}>
       <CouponClose className={closeButton} onClick={handlers.close} />
