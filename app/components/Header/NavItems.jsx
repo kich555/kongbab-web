@@ -3,51 +3,26 @@ import { Link } from '@remix-run/react';
 
 import useNavStyles from '~/Style/components/useNavStyles';
 
-export default function NavMenu({ close }) {
-  const menus = [
-    {
-      link: '/',
-      label: '홈',
-    },
-    {
-      link: '/md/introduce',
-      label: '콩밥 소개',
-    },
-    {
-      link: '/md/process',
-      label: '진행 방법',
-    },
-    {
-      link: '/md/pricing',
-      label: '요금 안내',
-    },
-    {
-      link: '/md/faq',
-      label: '자주 묻는 질문',
-    },
-    {
-      link: '/md/blog',
-      label: '블로그',
-    },
-  ];
+import ROUTES from '~/constants/NavData';
 
-  const [active, setActive] = useState(menus[0].link);
+export default function NavMenu({ close }) {
+  const [active, setActive] = useState(ROUTES[0].link);
   const { classes, cx } = useNavStyles();
 
   const { link, linkActive } = classes;
 
-  const items = menus.map((menu) => (
-    <li key={menu.label} style={{ listStyle: 'none' }}>
+  const items = ROUTES.map((route) => (
+    <li key={route.label}>
       <Link
-        className={cx(link, { [linkActive]: active === menu.link })}
+        className={cx(link, { [linkActive]: active === route.link })}
         prefetch='intent'
-        to={menu.link}
+        to={route.link}
         onClick={() => {
-          setActive(menu.link);
+          setActive(route.link);
           close();
         }}
       >
-        {menu.label}
+        {route.label}
       </Link>
     </li>
   ));
