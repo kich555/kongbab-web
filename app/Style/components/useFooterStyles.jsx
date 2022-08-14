@@ -60,6 +60,12 @@ const useFooterStyles = createStyles((theme) => ({
     color: '#CCCCCC',
     fontWeight: 500,
   },
+
+  linkButton: {
+    padding: 0,
+    height: '40px',
+    border: 'none',
+  },
 }));
 
 export default useFooterStyles;

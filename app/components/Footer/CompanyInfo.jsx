@@ -1,11 +1,13 @@
-import { Image, Text, Space, Group } from '@mantine/core';
+import { Image, Text, Space, Group, Anchor, Button } from '@mantine/core';
 import Kakao from '~/asset/icon/Kakao';
 import useFooterStyles from '~/Style/components/useFooterStyles';
-import KakaoSvg from '~/asset/icon/Kakao.svg';
+import NaverSvg from '~/asset/icon/Kakao.svg';
+import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 
 export default function CompanyInfo() {
+  const { addKakaoChannel } = useAddKakaoChannel();
   const { classes, theme, cx } = useFooterStyles();
-  const { lineHeight150, flexRow, menuItem, link, gray } = classes;
+  const { lineHeight150, flexRow, menuItem, link, gray, linkButton } = classes;
   const { white } = theme;
   return (
     <div>
@@ -21,8 +23,16 @@ export default function CompanyInfo() {
         사업자등록번호 770-31-00160 | 통신판매업 2016-서울서초-1999호
         <Space h={15} />
         <Group spacing={10}>
-          <Kakao />
-          <Image src={KakaoSvg} width={40} height={40} />
+          <Button onClick={addKakaoChannel} className={linkButton}>
+            <Kakao />
+          </Button>
+          <Anchor
+            href='https://blog.naver.com/PostList.naver?blogId=congbablaw&widgetTypeCall=true&categoryNo=1&directAccess=true'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Image src={NaverSvg} width={40} height={40} />
+          </Anchor>
         </Group>
         <Space h={17} />
         <Group spacing={20}>

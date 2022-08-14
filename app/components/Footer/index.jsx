@@ -1,18 +1,34 @@
-import { Container, Image, Text, Space, Group } from '@mantine/core';
+import {
+  Container,
+  Image,
+  Text,
+  Space,
+  Group,
+  Anchor,
+  Button,
+} from '@mantine/core';
 import Kakao from '~/asset/icon/Kakao';
-import Naver from '~/asset/icon/Naver';
 import useFooterStyles from '~/Style/components/useFooterStyles';
-import KakaoSvg from '~/asset/icon/Kakao.svg';
+import NaverSvg from '~/asset/icon/Kakao.svg';
 import useResponsive from '~/hooks/useResponsive';
 import MobileCompanyInfo from '~/components/Footer/Mobile/MobileCompanyInfo';
 import CompanyInfo from '~/components/Footer/CompanyInfo';
+import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 
 export default function Footer() {
   const { classes, theme, cx } = useFooterStyles();
-  const { footer, container, lineHeight150, links, alignSelfStart, gray } =
-    classes;
+  const {
+    footer,
+    container,
+    lineHeight150,
+    links,
+    alignSelfStart,
+    gray,
+    linkButton,
+  } = classes;
   const { white } = theme;
   const { mobile } = useResponsive();
+  const { addKakaoChannel } = useAddKakaoChannel();
 
   return (
     <div className={footer}>
@@ -45,9 +61,16 @@ export default function Footer() {
               <>
                 <Space h={20} />
                 <Group spacing={10}>
-                  <Kakao />
-                  <Image src={KakaoSvg} width={40} height={40} />
-                  {/* <Naver /> */}
+                  <Button onClick={addKakaoChannel} className={linkButton}>
+                    <Kakao />
+                  </Button>
+                  <Anchor
+                    href='https://blog.naver.com/PostList.naver?blogId=congbablaw&widgetTypeCall=true&categoryNo=1&directAccess=true'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <Image src={NaverSvg} width={40} height={40} />
+                  </Anchor>
                 </Group>
               </>
             )}
