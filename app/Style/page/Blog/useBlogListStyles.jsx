@@ -3,8 +3,8 @@ import { createStyles } from '@mantine/core';
 const useBlogCardListStyles = createStyles((theme) => ({
   listWrapper: {
     display: 'inline-block',
-    paddingLeft: '26px',
-    paddingRight: '26px',
+    marginLeft: '26px',
+    marginRight: '26px',
   },
   list: {
     display: 'grid',
