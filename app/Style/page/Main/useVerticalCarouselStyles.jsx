@@ -9,7 +9,7 @@ export const slide = keyframes({
     transform: 'translateY(0)',
   },
   '100%': {
-    transform: 'translateY(calc(337px * 3))',
+    transform: 'translateY(calc(336px * 3))',
   },
 });
 
@@ -41,9 +41,9 @@ const useVerticalCarouselStyles = createStyles((theme) => ({
     },
   },
   slideContainer: {
-    animation: `${slide} 4s linear infinite`,
+    animation: `${slide} 8s linear infinite`,
     [theme.fn.smallerThan('md')]: {
-      animation: `${mobileSlide} 4s linear infinite`,
+      animation: `${mobileSlide} 8s linear infinite`,
     },
   },
 
