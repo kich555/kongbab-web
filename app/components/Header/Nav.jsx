@@ -1,4 +1,5 @@
 import { useNavigate } from '@remix-run/react';
+import { useState } from 'react';
 import {
   Burger,
   Button,
@@ -8,13 +9,17 @@ import {
   Group,
   Paper,
 } from '@mantine/core';
+
 import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 import useNavStyles from '~/Style/components/useNavStyles';
 import { HeaderLogo } from '~/asset/icon/Logo';
-import NavItems from '~/components/Header/NavItems';
+import MobileNavItems from '~/components/Header/MobileNavItems';
+import NavItems from './NavItems';
+import ROUTES from '~/constants/NavData';
 
 export default function Nav() {
+  const [active, setActive] = useState(ROUTES[0].link);
   const [opened, { toggle, close }] = useDisclosure(false);
   const { addKakaoChannel } = useAddKakaoChannel();
   const { classes } = useNavStyles(opened);
@@ -28,21 +33,17 @@ export default function Nav() {
     dropdown,
     outer,
   } = classes;
-  const items = NavItems({ close });
-  const deskTopItems = items.slice(1);
+  // const items = NavItems({ close });
+  const deskTopRoutes = ROUTES.slice(1);
   const navigate = useNavigate();
-
+  console.log('deskTopRoutes', deskTopRoutes);
   return (
-    <Header
-      className={header}
-      // className={cx(header, { [headerActive]: scroll.y !== 0 })}
-      height={80}
-    >
+    <Header className={header} height={80}>
       <Container className={container} px={26}>
         {!opened && <HeaderLogo onClick={() => navigate('/')} />}
         <div className={menuWrapper}>
           <Group className={links} spacing={10}>
-            {deskTopItems}
+            <NavItems close={close} active={active} setActive={setActive} />
           </Group>
           <Group spacing={20}>
             {!opened && (
@@ -70,7 +71,11 @@ export default function Nav() {
         <Transition transition='pop-top-right' duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={dropdown} withBorder style={styles}>
-              <ul>{items}</ul>
+              <MobileNavItems
+                close={close}
+                active={active}
+                setActive={setActive}
+              />
               <div onClick={close} className={outer} />
             </Paper>
           )}
