@@ -143,6 +143,10 @@ input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type='checkbox'] {
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+}
 button {
   background: none;
   color: inherit;

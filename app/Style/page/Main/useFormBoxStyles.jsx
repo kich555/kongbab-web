@@ -12,7 +12,7 @@ const useFormBoxStyles = createStyles((theme) => ({
     borderRadius: '8px',
     backgroundColor: theme.white,
     color: theme.black,
-    '&:hover': {
+    '&:focus-within': {
       border: '1px solid #000000 !important',
     },
   },
@@ -20,6 +20,7 @@ const useFormBoxStyles = createStyles((theme) => ({
   errorBorder: {
     border: '1px solid #FF0000',
   },
+
   textInput: {
     width: '100%',
     height: '18px',
@@ -27,8 +28,13 @@ const useFormBoxStyles = createStyles((theme) => ({
     marginLeft: '20px',
     border: 'none',
     backgroundColor: 'inherit',
+    lineHeight: '100%',
     '&:focus': {
       outline: 'none',
+    },
+    '::placeholder': {
+      color: theme.black,
+      opacity: 0.3,
     },
   },
 
@@ -80,6 +86,7 @@ const useFormBoxStyles = createStyles((theme) => ({
     borderRadius: '6px',
     backgroundColor: '#FFFFFF',
     accentColor: theme.black,
+    
   },
 
   label: {

@@ -1,9 +1,3 @@
-// import Home from '~/routes/md';
-
-// export default function index() {
-//   return <Home />;
-// }
-
 import MainThirdSection from '~/components/page/Main/MainThirdSection';
 import CommonFooterSection from '~/components/common/CommonFooterSection';
 import MainSecondSection from '~/components/page/Main/MainSecondSection';
@@ -13,21 +7,11 @@ import CouponSticker, {
   ConsultButtonSticker,
 } from '~/components/page/Main/CouponSticker';
 import { showNotification } from '@mantine/notifications';
-import { Form, useLoaderData, useCatch } from '@remix-run/react';
-import { useState, useRef, useEffect } from 'react';
+import { Form } from '@remix-run/react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import {
-  Space,
-  Text,
-  FileButton,
-  Button,
-  Checkbox,
-  List,
-  Anchor,
-  Group,
-} from '@mantine/core';
+import { Space, Text, Button, Anchor } from '@mantine/core';
 import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
-import Garbage from '~/asset/icon/Garbage';
 import useResponsive from '~/hooks/useResponsive';
 import { redirect } from '@remix-run/node';
 
@@ -39,7 +23,6 @@ export default function Home() {
   const form = useRef();
   const nameRef = useRef();
   const phoneNumberRef = useRef();
-  const [files, setFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorStatus, setErrorStatus] = useState({ name: '', phoneNumber: '' });
@@ -154,7 +137,7 @@ export default function Home() {
                   <input
                     type='text'
                     name='name'
-                    placeholder='김임차'
+                    placeholder='이름을 입력해 주세요'
                     ref={nameRef}
                     className={textInput}
                   />
@@ -207,7 +190,7 @@ export default function Home() {
                 )}
               </label>
 
-              <Space h={35} />
+              <Space h={50} />
 
               <label className={label}>
                 <input
@@ -220,7 +203,7 @@ export default function Home() {
                   (필수){' '}
                   <Anchor
                     size='md'
-                    href='https:mantine.dev'
+                    href='https://congbab.notion.site/2022-08-01-6ba190142b8845ec9cdcc2e290941e4b'
                     target='_blank'
                     className={anchor}
                     rel='noreferrer'
@@ -231,7 +214,7 @@ export default function Home() {
                 </span>
               </label>
 
-              <Space h={42} />
+              <Space h={30} />
               <Button
                 type='submit'
                 radius='md'
