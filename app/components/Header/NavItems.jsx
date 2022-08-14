@@ -10,12 +10,12 @@ export default function NavMenu({ close }) {
   const { classes, cx } = useNavStyles();
 
   const { link, linkActive } = classes;
-
+  console.log('active', active);
   const items = ROUTES.map((route) => (
     <li key={route.label}>
       <Link
         // className={cx(link, { [linkActive]: active === route.link })}
-        className={link}
+        className={cx(link, { [linkActive]: route.link === active })}
         prefetch='intent'
         to={route.link}
         onClick={() => {
