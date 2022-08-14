@@ -69,10 +69,10 @@ export default function Nav() {
         </div>
         <Transition transition='pop-top-right' duration={200} mounted={opened}>
           {(styles) => (
-            <Paper className={dropdown} withBorder style={styles}>
+            <div className={dropdown} withBorder style={styles}>
               <ul>{items}</ul>
               <div onClick={close} className={outer} />
-            </Paper>
+            </div>
           )}
         </Transition>
       </Container>

@@ -94,7 +94,8 @@ const useNavStyles = createStyles((theme, opened) => ({
     height: '100vh',
     border: 'none',
     paddingBottom: '24px',
-    zIndex: 0,
+    zIndex: 2,
+    backgroundColor: theme.white,
     [theme.fn.largerThan('md')]: {
       display: 'none',
     },
