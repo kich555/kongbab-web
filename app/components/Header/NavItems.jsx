@@ -14,7 +14,8 @@ export default function NavMenu({ close }) {
   const items = ROUTES.map((route) => (
     <li key={route.label}>
       <Link
-        className={cx(link, { [linkActive]: active === route.link })}
+        // className={cx(link, { [linkActive]: active === route.link })}
+        className={link}
         prefetch='intent'
         to={route.link}
         onClick={() => {
