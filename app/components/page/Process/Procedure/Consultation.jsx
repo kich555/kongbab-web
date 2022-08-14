@@ -3,6 +3,7 @@ import useResponsive from '~/hooks/useResponsive';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
+import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 
 export default function Consultation({ procedureForm }) {
   const { classes, cx } = useProcedureStyles();
@@ -10,12 +11,14 @@ export default function Consultation({ procedureForm }) {
   const { title, desc, link, procedureList } = procedureForm;
   const { mobile } = useResponsive();
 
-  const handleClick = () => {
-    console.log('window', window.Kakao);
-    window.Kakao.Channel.addChannel({
-      channelPublicId: '_eXERxj',
-    });
-  };
+  // const handleClick = () => {
+  //   console.log('window', window.Kakao);
+  //   window.Kakao.Channel.addChannel({
+  //     channelPublicId: '_eXERxj',
+  //   });
+  // };
+
+  const { addKakaoChannel } = useAddKakaoChannel();
   return (
     <div className={centerColumn}>
       <Text size='lg' weight={700}>
@@ -27,7 +30,7 @@ export default function Consultation({ procedureForm }) {
       </Text>
       <Space h={4} />
       <Text
-        onClick={handleClick}
+        onClick={addKakaoChannel}
         component='button'
         href='#'
         size='sm'
