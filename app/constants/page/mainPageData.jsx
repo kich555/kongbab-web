@@ -29,12 +29,14 @@ const MAIN_CONSTANTS = {
   },
 
   NewCarousel: [
-    { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
-    { leftImage: Carousel_A_3, rightImage: Carousel_B_3 },
     { leftImage: Carousel_A_1, rightImage: Carousel_B_1 },
     { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
     { leftImage: Carousel_A_3, rightImage: Carousel_B_3 },
     { leftImage: Carousel_A_1, rightImage: Carousel_B_1 },
+    { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
+    { leftImage: Carousel_A_3, rightImage: Carousel_B_3 },
+    { leftImage: Carousel_A_1, rightImage: Carousel_B_1 },
+    { leftImage: Carousel_A_2, rightImage: Carousel_B_2 },
   ],
 };
 
