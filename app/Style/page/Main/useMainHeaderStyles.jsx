@@ -21,12 +21,6 @@ const useMainHeaderStyles = createStyles((theme) => ({
   },
   carouselWrapper: {
     overflow: 'hidden',
-    [theme.fn.smallerThan('sm')]: {
-      height: 'calc(100% - 183px)',
-      background:
-        'linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%)',
-      transform: 'rotate(-180deg)',
-    },
   },
   carouselB: {
     [theme.fn.smallerThan('sm')]: {
