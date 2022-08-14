@@ -4,6 +4,9 @@ const useMainHeaderStyles = createStyles((theme) => ({
   wrapper: {
     height: '540px',
     overflow: 'hidden',
+    [theme.fn.smallerThan('md')]: {
+      height: '437px',
+    },
   },
   inner: {
     display: 'flex',
@@ -12,15 +15,13 @@ const useMainHeaderStyles = createStyles((theme) => ({
     height: '100%',
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   button: {
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
-  },
-  carouselWrapper: {
-    overflow: 'hidden',
   },
   carouselB: {
     [theme.fn.smallerThan('sm')]: {
@@ -58,9 +59,8 @@ const useMainHeaderStyles = createStyles((theme) => ({
   },
 
   image: {
-    [theme.fn.smallerThan('sm')]: {
-      height: '254px',
-      overflow: 'hidden',
+    [theme.fn.smallerThan('md')]: {
+      height: '190px',
     },
   },
   backgorund: {
