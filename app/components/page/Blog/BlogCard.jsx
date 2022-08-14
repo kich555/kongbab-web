@@ -1,8 +1,9 @@
-import useBlogCardStyles from '~/Style/page/Blog/useBlogCardStyles';
 import { Card, Image, Text } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
+import useBlogCardStyles from '~/Style/page/Blog/useBlogCardStyles';
 
 export default function BlogCard({ imageSrc, link, category, title, desc }) {
-  const { classes, theme } = useBlogCardStyles();
+const { classes, theme } = useBlogCardStyles();
   const {
     card,
     cardSection,
@@ -18,12 +19,12 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
     target: '_blank',
     rel: 'noopener noreferrer',
   };
-
+  const { mobile } = useResponsive();
   return (
     <Card className={card}>
       <Card.Section className={cardSection}>
         <a {...linkProps}>
-          <Image src={imageSrc} styles={{ image }} />
+          <Image src={imageSrc} styles={{ image }} width={mobile ? 324 : 344} />
         </a>
       </Card.Section>
       <div className={content}>

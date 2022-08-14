@@ -28,6 +28,12 @@ const useBlogCardStyles = createStyles((theme) => ({
   descText: {
     paddingTop: '18px',
     lineHeight: '150%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    '-webkit-line-clamp': 2 /* 라인수 */,
+    '-webkit-box-orient': 'vertical',
+    wordWrap: 'break-word',
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
