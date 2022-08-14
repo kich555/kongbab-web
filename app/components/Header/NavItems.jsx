@@ -5,9 +5,8 @@ import ROUTES from '~/constants/NavData';
 export default function NavItems({ close, active, setActive }) {
   const { classes, cx } = useNavStyles();
   const { link, linkActive } = classes;
-
-  console.log('active', active);
   const NewItems = ROUTES.slice(1);
+
   return (
     <>
       {NewItems.map((route) => (

@@ -33,10 +33,9 @@ export default function Nav() {
     dropdown,
     outer,
   } = classes;
-  // const items = NavItems({ close });
-  const deskTopRoutes = ROUTES.slice(1);
+
   const navigate = useNavigate();
-  console.log('deskTopRoutes', deskTopRoutes);
+
   return (
     <Header className={header} height={80}>
       <Container className={container} px={26}>
