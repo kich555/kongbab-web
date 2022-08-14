@@ -13,7 +13,7 @@ export const slide = keyframes({
   },
 });
 
-const InfiniteVerticalSlider = createStyles((theme) => ({
+const useVerticalCarouselStyles = createStyles((theme) => ({
   slideContainer: {
     animation: `${slide} 4s linear infinite`,
   },
@@ -27,4 +27,4 @@ const InfiniteVerticalSlider = createStyles((theme) => ({
   },
 }));
 
-export default InfiniteVerticalSlider;
+export default useVerticalCarouselStyles;

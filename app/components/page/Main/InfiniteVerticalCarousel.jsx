@@ -1,10 +1,10 @@
 import { Group, Image } from '@mantine/core';
 import MAIN_CONSTANTS from '~/constants/page/mainPageData';
-import useVerticalSliderStyles from '~/Style/page/Main/useVerticalSliderStyles';
+import useVerticalCarouselStyles from '~/Style/page/Main/useVerticalCarouselStyles';
 
-export default function InfiniteVerticalSlider() {
+export default function InfiniteVerticalCarousel() {
   const { NewCarousel } = MAIN_CONSTANTS;
-  const { classes, cx } = useVerticalSliderStyles();
+  const { classes, cx } = useVerticalCarouselStyles();
   const { slideContainer, rightSlider, rightSlideItem } = classes;
 
   const SliderLeftItems = NewCarousel.map((item, idx) => (
