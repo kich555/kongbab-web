@@ -26,7 +26,13 @@ const useProcedureStyles = createStyles((theme) => ({
   },
 
   // Procedure
-  warpper: {
+  wrapper: {
+    backgroundColor: theme.colors.gray[0],
+    [theme.fn.smallerThan('sm')]: {
+      backgroundColor: theme.white,
+    },
+  },
+  container: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

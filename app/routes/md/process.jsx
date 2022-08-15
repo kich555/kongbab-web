@@ -4,19 +4,17 @@ import LitigationProcedureTitle from '~/components/page/Process/Procedure/Litiga
 import LitigationProcedure from '~/components/page/Process/Procedure/LitigationProcedure';
 import KakaoSection from '~/components/page/Process/KakaoSection';
 import LitigationInfo from '~/components/page/Process/LitigationInfo';
+import useResponsive from '~/hooks/useResponsive';
 
-export default function process() {
+export default function ProcessRoute() {
   return (
     <section>
-      <Container style={{ padding: '0 26px' }}>
+      <Container px={26}>
         <LitigationInfo />
         <LitigationProcedureTitle />
         <Space h={40} />
       </Container>
-      <section style={{ backgroundColor: '#F7F7F7' }}>
-        <LitigationProcedure />
-        <Space h={100} />
-      </section>
+      <LitigationProcedure />
       <KakaoSection />
       <ProcessConsultationSection />
     </section>
