@@ -3,8 +3,8 @@ export const loader = () => {
   const content = `
           <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-      <loc>https://www.taco-it.com/</loc>
-      <lastmod>2022-01-08T00:15:16+01:00</lastmod>
+      <loc>https://congbab.com/</loc>
+      <lastmod>2022-08-15T00:15:16+01:00</lastmod>
       <priority>1.0</priority>
       </url>
       </urlset>
