@@ -1,10 +1,8 @@
-import { Container, Center, Space, MediaQuery, Group } from '@mantine/core';
-import useResponsive from '~/hooks/useResponsive';
+import { Container, Center, Space, MediaQuery } from '@mantine/core';
 import BranchArrow from '~/asset/icon/procedure/BranchArrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Consultation from '~/components/page/Process/Procedure/Consultation';
-import MobileProcedureList from '~/components/page/Process/Procedure/Mobile/MobileProcedureList';
 import ProcedureList from '~/components/page/Process/Procedure/Desktop/ProcedureList';
 
 export default function LitigationProcedure() {
@@ -12,7 +10,7 @@ export default function LitigationProcedure() {
   const { wrapper, container } = classes;
   const { PROCEDURE } = PROCESS_CONSTANTS;
   const { CONSULTATION } = PROCEDURE;
-  const { mobile } = useResponsive();
+
   return (
     <section className={wrapper}>
       <Container size='md' px={0} className={container}>
@@ -30,8 +28,8 @@ export default function LitigationProcedure() {
             <Space h={50} />
           </div>
         </MediaQuery>
-        <Container size='md' px={mobile ? 26 : 0} style={{ width: '100%' }}>
-          {mobile ? <MobileProcedureList /> : <ProcedureList />}
+        <Container size='md' px={0} style={{ width: '100%' }}>
+          <ProcedureList />
         </Container>
       </Container>
       <Space h={100} />

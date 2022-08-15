@@ -5,8 +5,10 @@ import LitigationProcedure from '~/components/page/Process/Procedure/LitigationP
 import KakaoSection from '~/components/page/Process/KakaoSection';
 import LitigationInfo from '~/components/page/Process/LitigationInfo';
 import useResponsive from '~/hooks/useResponsive';
+import MobileProcedureList from '~/components/page/Process/Procedure/Mobile/MobileProcedureList';
 
 export default function ProcessRoute() {
+  const { mobile } = useResponsive();
   return (
     <section>
       <Container px={26}>
@@ -14,7 +16,7 @@ export default function ProcessRoute() {
         <LitigationProcedureTitle />
         <Space h={40} />
       </Container>
-      <LitigationProcedure />
+      {mobile ? <MobileProcedureList /> : <LitigationProcedure />}
       <KakaoSection />
       <ProcessConsultationSection />
     </section>

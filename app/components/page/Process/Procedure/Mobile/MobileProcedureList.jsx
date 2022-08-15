@@ -1,4 +1,4 @@
-import { Space, Text } from '@mantine/core';
+import { Container, Space, Text } from '@mantine/core';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import MobileProcedure from '~/components/page/Process/Procedure/Mobile/MobileProcedure';
 export default function MobileProcedureList() {
@@ -61,10 +61,11 @@ export default function MobileProcedureList() {
   }
 
   return (
-    <>
+    <Container size='md' px={26} style={{ width: '100%' }}>
+      <Space h={20} />
       <MobileProcedureListSection {...MOBILE_PROHIBITION_ESTATE_TRANSFER} />
       <Space h={100} />
       <MobileProcedureListSection {...MOBILE_DETINUE} />
-    </>
+    </Container>
   );
 }
