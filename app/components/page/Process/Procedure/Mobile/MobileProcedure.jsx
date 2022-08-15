@@ -4,7 +4,7 @@ import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useMobileProcedureStyles from '~/Style/page/Process/Mobile/useMobileProcedureStyles';
 
-export default function MobileProcedure({ procedure }) {
+export default function MobileProcedure({ procedure, index }) {
   const { classes, theme } = useMobileProcedureStyles();
   const {
     icon,
@@ -29,7 +29,7 @@ export default function MobileProcedure({ procedure }) {
             weight={700}
             className={icon}
           >
-            1
+            {index}
           </Text>
           <Space w={8} />
           <Text component='span' weight={700}>

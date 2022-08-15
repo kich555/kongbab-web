@@ -46,8 +46,8 @@ export default function MobileProcedureList() {
   };
 
   function MobileProcedureListSection({ title, list }) {
-    const items = list.map((item) => (
-      <MobileProcedure key={item.title} procedure={item} />
+    const items = list.map((item, index) => (
+      <MobileProcedure key={item.title} procedure={item} index={index + 1} />
     ));
     return (
       <>
