@@ -41,9 +41,9 @@ const useVerticalCarouselStyles = createStyles((theme) => ({
     },
   },
   slideContainer: {
-    animation: `${slide} 8s linear infinite`,
+    animation: `${slide} 10s linear infinite`,
     [theme.fn.smallerThan('md')]: {
-      animation: `${mobileSlide} 8s linear infinite`,
+      animation: `${mobileSlide} 10s linear infinite`,
     },
   },
 
