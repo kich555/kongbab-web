@@ -5,7 +5,9 @@ const useStickerStyles = createStyles((theme) => ({
     position: 'relative',
     width: '100%',
     height: '70px',
-    maxWidth: '428px',
+    [theme.fn.largerThan('sm')]: {
+      maxWidth: '428px',
+    },
     borderRadius: '36px',
     padding: '0 22px',
     backgroundColor: theme.white,
