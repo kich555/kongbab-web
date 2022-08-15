@@ -9,14 +9,19 @@ export default function Sticker({ children, icon }) {
 
   const sticker = icon ? (
     <Badge className={cx(warpper, outline)} variant='outline'>
-      <Text className={basicFont} color={colors[primaryColor]} weight={500}>
+      <Text
+        align='center'
+        className={basicFont}
+        color={colors[primaryColor]}
+        weight={500}
+      >
         {children}
       </Text>
       <Logo className={miniIcon} width={24} variant='default' />
     </Badge>
   ) : (
     <Badge className={cx(warpper, basic)} variant='filled'>
-      <Text className={basicFont} color={black} weight={500}>
+      <Text align='center' className={basicFont} color={black} weight={500}>
         {children}
       </Text>
     </Badge>
