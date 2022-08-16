@@ -10,7 +10,7 @@ export default function KakaoSection(params) {
 
   return (
     <Container px={0}>
-      <Space h={mobile ? 0 : 180} />
+      <Space h={mobile ? 100 : 180} />
       <Text
         className={font20}
         color={colors[theme.primaryColor]}

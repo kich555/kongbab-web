@@ -28,9 +28,6 @@ const useMobileProcedureStyles = createStyles((theme) => ({
   item: {
     width: '100%',
     borderBottom: '1px solid #EEEEEE',
-    '&:nth-of-type(1)': {
-      borderTop: '1px solid #EEEEEE',
-    },
   },
 
   control: {
