@@ -5,8 +5,8 @@ import useConsultationFormStyles from '~/Style/page/Main/useConsultationFormStyl
 
 export default function ConsultationForm({ children }) {
   const { tablet } = useResponsive();
-  const { classes, theme, cx } = useConsultationFormStyles();
-  const { font18, lineHeight150 } = classes;
+  const { classes, theme } = useConsultationFormStyles();
+  const { lineHeight150 } = classes;
 
   return (
     <section>
@@ -15,9 +15,10 @@ export default function ConsultationForm({ children }) {
         <Title title='상담 신청' />
         <Space h={36} />
         <Text
+          size={18}
           color={theme.colors.gray[3]}
           align='center'
-          className={cx(font18, lineHeight150)}
+          className={lineHeight150}
         >
           아래 내용을 남겨주시면 빠르게 연락드리겠습니다.
         </Text>
