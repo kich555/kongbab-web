@@ -5,11 +5,11 @@ import useLitigationInfoStyles from '~/Style/page/Process/useLitigationInfoStyle
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Title from '~/components/common/Title';
 
-export default function LitigationInfo(params) {
+export default function LitigationInfo() {
   const { LITIGATION_INFO } = PROCESS_CONSTANTS;
   const { classes, theme } = useLitigationInfoStyles();
   const { colors } = theme;
-  const { lineHeight150, box, maxWidth, font40, content } = classes;
+  const { lineHeight150, box, maxWidth, content } = classes;
   const { mobile } = useResponsive();
 
   const items = LITIGATION_INFO.map((item) => (
@@ -19,19 +19,23 @@ export default function LitigationInfo(params) {
       px={mobile ? 30 : 36}
       className={box}
     >
-      <Text align='center' weight={700} className={font40}>
+      <Text size={40} align='center' weight={700}>
         {item.icon}
       </Text>
       {mobile ? <Space w={36} /> : <Space h={20} />}
       <div className={maxWidth}>
-        <Text size='lg' align={mobile ? 'left' : 'center'} weight={700}>
+        <Text
+          size={mobile ? 20 : 24}
+          align={mobile ? 'left' : 'center'}
+          weight={700}
+        >
           {item.title}
         </Text>
         <Space h={12} />
         <Text
           align={mobile ? 'left' : 'center'}
           className={lineHeight150}
-          size='xs'
+          size='sm'
           color={colors.gray[3]}
         >
           {parse(item.desc)}
