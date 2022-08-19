@@ -13,7 +13,7 @@ export default function FeaturedFAQSection({ questions }) {
   return (
     <section className={horizontal}>
       <Space h={tablet ? 60 : 80} />
-      <Container size={764} px={26}>
+      <Container size={764} px={0}>
         <Title title='자주 묻는 질문' />
         <AccordionSection title='요금' questions={questions} />
         <Space h={tablet ? 40 : 50} />
