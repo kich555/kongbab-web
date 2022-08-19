@@ -14,9 +14,9 @@ export default function MobileCompanyInfo() {
       </Text>
       <Space h={20} />
       <Text size='sm' className={cx(gray, lineHeight150)}>
-        대표 김서영
+        대표변호사 김서영
         <br />
-        서울 강남구 테헤란로2길 27, 11층 (역삼동)
+        테헤란로2길 27, 패스트파이브 빌딩 11층
         <br />
         광고책임변호사 김서영
         <br />

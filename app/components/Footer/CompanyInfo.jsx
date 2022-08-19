@@ -17,8 +17,8 @@ export default function CompanyInfo() {
       </Text>
       <Space h={15} />
       <Text size='sm' className={cx(gray, lineHeight150)}>
-        대표 김서영 | 서울 강남구 테헤란로2길 27, 11층 (역삼동) |광고책임변호사
-        김서영
+        대표변호사 김서영 | 테헤란로2길 27, 패스트파이브 빌딩 11층 |
+        광고책임변호사 김서영
         <br />
         사업자등록번호 770-31-00160 | 통신판매업 2016-서울서초-1999호
         <Space h={15} />

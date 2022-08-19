@@ -51,8 +51,8 @@ export default function Footer() {
               </div>
               <div>
                 메일: team@esolaw.com
-                <br />
-                전화: 02-6713-2461
+                {/* <br />
+                전화: 02-6713-2461 */}
                 <br />
                 팩스: 02-6919-2737
               </div>
