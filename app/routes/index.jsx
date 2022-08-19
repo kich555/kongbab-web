@@ -109,7 +109,7 @@ export default function Home() {
   return (
     <>
       <>
-        <CouponSticker />
+        {/* <CouponSticker /> */}
         <ConsultButtonSticker />
       </>
       <MainHeader />

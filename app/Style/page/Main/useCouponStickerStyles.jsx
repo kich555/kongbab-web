@@ -2,7 +2,8 @@ import { createStyles } from '@mantine/core';
 
 const useCouponStickerStyles = createStyles((theme) => ({
   wrapper: {
-    display: 'flex',
+    display: 'none',
+    // display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
     right: 0,
