@@ -5,18 +5,9 @@ import InfiniteVerticalCarousel from '~/components/page/Main/InfiniteVerticalCar
 import useResponsive from '~/hooks/useResponsive';
 
 export default function MainHeader(params) {
-  const { classes, theme, cx } = useMainHeaderStyles();
+  const { classes, theme } = useMainHeaderStyles();
 
-  const {
-    backgorund,
-    wrapper,
-    inner,
-    subTitle,
-    button,
-    font18,
-    font40,
-    lineHeight150,
-  } = classes;
+  const { backgorund, wrapper, inner, button, lineHeight150 } = classes;
   const { colors, primaryColor } = theme;
 
   const { mobile, tablet } = useResponsive();
@@ -26,20 +17,37 @@ export default function MainHeader(params) {
       <Container px={tablet ? 26 : 0} className={wrapper}>
         <div className={inner}>
           <div>
-            <Text color={colors[primaryColor]} weight={500} className={font18}>
+            <Text
+              align={mobile && 'center'}
+              size={mobile ? 14 : 18}
+              color={colors[primaryColor]}
+              weight={500}
+            >
               온라인 명도소송
             </Text>
             <Space h={12} />
-            <Text weight={700} className={cx(font40, lineHeight150)}>
+            <Text
+              size={mobile ? 28 : 40}
+              align={mobile && 'center'}
+              weight={700}
+              className={lineHeight150}
+            >
               임차인의 월세 연체,
               <br />
               이제 참지마세요
             </Text>
             <Space h={mobile ? 15 : 20} />
-            <Text weight={500} className={cx(subTitle, lineHeight150)}>
-              보증금이 모두 소진되기 전에 명도소송을 시작하세요.
+            <Text
+              size={mobile ? 18 : 16}
+              align={mobile && 'center'}
+              weight={500}
+              className={lineHeight150}
+            >
+              보증금이 모두 소진되기 전에
+              {mobile && <br />}
+              명도소송을 시작하세요.
             </Text>
-            <Space h={mobile ? 10 : 50} />
+            <Space h={mobile ? 20 : 50} />
             <DefaultButton
               className={button}
               sx={(theme) => ({
