@@ -1,16 +1,15 @@
-import { Text, Space } from '@mantine/core';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import { Text, Space, useMantineTheme } from '@mantine/core';
 import Sticker from '~/components/page/Process/Procedure/Sticker/Sticker';
 
 export default function StickerList({ procedureList }) {
-  const { classes, theme } = useProcedureStyles();
-  const { font18 } = classes;
+  const theme = useMantineTheme();
   const { colors } = theme;
+  
   const items = procedureList.map((sticker, idx) => {
     if (sticker.subtitle && sticker.gradation) {
       return (
         <Sticker key={idx} icon>
-          <Text weight={500} className={font18}>
+          <Text size={18} weight={500}>
             {sticker.title}
           </Text>
           <Space h={7} />
@@ -23,7 +22,7 @@ export default function StickerList({ procedureList }) {
     if (sticker.subtitle && sticker.gradation === false) {
       return (
         <Sticker key={idx}>
-          <Text weight={500} className={font18}>
+          <Text size={18} weight={500}>
             {sticker.title}
           </Text>
           <Space h={7} />
@@ -36,7 +35,7 @@ export default function StickerList({ procedureList }) {
     if (sticker.gradation) {
       return (
         <Sticker key={idx} icon>
-          <Text weight={500} className={font18}>
+          <Text size={18} weight={500}>
             {sticker.title}
           </Text>
         </Sticker>
@@ -44,7 +43,7 @@ export default function StickerList({ procedureList }) {
     } else {
       return (
         <Sticker key={idx}>
-          <Text weight={500} className={font18}>
+          <Text size={18} weight={500}>
             {sticker.title}
           </Text>
         </Sticker>
