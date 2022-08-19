@@ -9,7 +9,7 @@ export default function IntroduceSection({
   backgroundColor,
 }) {
   const { classes, theme } = useIntroduceSectionStyles();
-  const { font18, lineHeight150 } = classes;
+  const { lineHeight150 } = classes;
   const { colors, primaryColor } = theme;
 
   const { mobile } = useResponsive();
@@ -17,7 +17,7 @@ export default function IntroduceSection({
     <section style={{ backgroundColor }}>
       <Container px={26}>
         <Space h={mobile ? 64 : 186} />
-        <Text color={colors[primaryColor]} weight={500} className={font18}>
+        <Text size={18} color={colors[primaryColor]} weight={500}>
           {subTitle}
         </Text>
         <Space h={12} />

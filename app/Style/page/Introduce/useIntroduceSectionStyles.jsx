@@ -1,9 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-const useIntroduceSectionStyles = createStyles((theme) => ({
-  font18: {
-    fontSize: '18px',
-  },
+const useIntroduceSectionStyles = createStyles(() => ({
   lineHeight150: {
     lineHeight: '150%',
   },
