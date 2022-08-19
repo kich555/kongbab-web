@@ -2,17 +2,17 @@ import { Text, Container, Space, Image } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
 import KakaoImage from '~/asset/image/Process/Process_Kakao_Image.png';
-export default function KakaoSection(params) {
+export default function KakaoSection() {
   const { classes, theme, cx } = useKakaoSectionStyles();
   const { colors } = theme;
-  const { wrapper, font20, titleFont, lineHeight150, underLine } = classes;
+  const { wrapper, lineHeight150, underLine } = classes;
   const { mobile } = useResponsive();
 
   return (
     <Container px={0}>
       <Space h={mobile ? 100 : 180} />
       <Text
-        className={font20}
+        size={mobile ? 16 : 20}
         color={colors[theme.primaryColor]}
         weight={700}
         align='center'
@@ -20,7 +20,12 @@ export default function KakaoSection(params) {
         더이상 기다리지 마세요
       </Text>
       <Space h={mobile ? 12 : 20} />
-      <Text className={titleFont} weight={700} align='center'>
+      <Text
+        size={mobile ? 28 : 36}
+        className={cx({ [lineHeight150]: mobile })}
+        weight={700}
+        align='center'
+      >
         실시간 진행사항이
         {mobile && <br />}
         카카오 알림톡으로 발송
@@ -33,7 +38,7 @@ export default function KakaoSection(params) {
       </div>
       <Space h={mobile ? 30 : 40} />
       <Container size={920} px={mobile ? 30 : 0}>
-        <Text className={cx(font20, lineHeight150)} align='center'>
+        <Text size={mobile ? 16 : 20} className={lineHeight150} align='center'>
           매번 법률사무실에 연락드려서
           {mobile && <br />}
           진행사항 확인하기 번거롭지 않으신가요?
@@ -41,7 +46,8 @@ export default function KakaoSection(params) {
           {mobile && <br />}
           콩밥은 고객님의{' '}
           <Text
-            className={cx(font20, underLine)}
+            size={mobile ? 16 : 20}
+            className={underLine}
             component='span'
             weight={900}
             underline
