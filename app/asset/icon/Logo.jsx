@@ -1,8 +1,6 @@
 import { useMantineTheme } from '@mantine/core';
-import useResponsive from '~/hooks/useResponsive';
 
 export function HeaderLogo({ width = 150, ...others }) {
-  const { tablet } = useResponsive();
   return (
     // <svg
     //   {...others}

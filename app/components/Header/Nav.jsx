@@ -17,6 +17,7 @@ import { HeaderLogo } from '~/asset/icon/Logo';
 import MobileNavItems from '~/components/Header/MobileNavItems';
 import NavItems from './NavItems';
 import ROUTES from '~/constants/NavData';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function Nav() {
   const [active, setActive] = useState(ROUTES[0].link);
@@ -33,11 +34,11 @@ export default function Nav() {
     dropdown,
     outer,
   } = classes;
-
+  const { mobile } = useResponsive();
   const navigate = useNavigate();
 
   return (
-    <Header className={header} height={80}>
+    <Header className={header} height={mobile ? 60 : 80}>
       <Container className={container} px={26}>
         {!opened && <HeaderLogo onClick={() => navigate('/')} />}
         <div className={menuWrapper}>
@@ -47,9 +48,6 @@ export default function Nav() {
           <Group spacing={20}>
             {!opened && (
               <Button
-                sx={(theme) => ({
-                  backgroundColor: theme.colors[theme.primaryColor],
-                })}
                 className={buttonWrapper}
                 variant='filled'
                 radius={36}
