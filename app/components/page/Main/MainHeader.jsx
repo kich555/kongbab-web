@@ -46,6 +46,10 @@ export default function MainHeader(params) {
               보증금이 모두 소진되기 전에
               {mobile && <br />}
               명도소송을 시작하세요.
+              <br />
+              14년 경력의 변호사가
+              {mobile && <br />}
+              확실히 해결해 드립니다.
             </Text>
             <Space h={mobile ? 20 : 50} />
             <DefaultButton
