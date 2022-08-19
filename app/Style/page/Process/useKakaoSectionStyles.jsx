@@ -17,8 +17,17 @@ const useKakaoSectionStyles = createStyles((theme) => ({
   lineHeight150: { lineHeight: '150%' },
 
   underLine: {
-    textDecorationColor: '#fbea53',
-    textDecorationThickness: '5px',
+    position: 'relative',
+    '&:after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      bottom: '-4px',
+      left: '0px',
+      width: '100%',
+      height: '8px',
+      backgroundColor: '#fbea53',
+    },
   },
 }));
 

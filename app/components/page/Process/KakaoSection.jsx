@@ -26,8 +26,7 @@ export default function KakaoSection() {
         weight={700}
         align='center'
       >
-        실시간 진행사항이
-        {mobile && <br />}
+        실시간 진행사항을 {mobile && <br />}
         카카오 알림톡으로 발송
       </Text>
       <Space h={mobile ? 40 : 60} />
@@ -39,8 +38,7 @@ export default function KakaoSection() {
       <Space h={mobile ? 30 : 40} />
       <Container size={920} px={mobile ? 30 : 0}>
         <Text size={mobile ? 16 : 20} className={lineHeight150} align='center'>
-          매번 법률사무실에 연락드려서
-          {mobile && <br />}
+          매번 법률사무실에 연락드려서 {mobile && <br />}
           진행사항 확인하기 번거롭지 않으신가요?
           <br />
           {mobile && <br />}
@@ -50,7 +48,7 @@ export default function KakaoSection() {
             className={underLine}
             component='span'
             weight={900}
-            underline
+            // underline
           >
             소송 지연을 방지하고자
           </Text>{' '}
