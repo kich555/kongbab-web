@@ -1,13 +1,6 @@
 import { createStyles } from '@mantine/core';
 
 const useProcedureStyles = createStyles((theme) => ({
-  //Procedure List Title
-  titleFont: {
-    fontSize: theme.fontSizes.xl,
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: '28px',
-    },
-  },
   descBox: {
     height: '63px',
   },
@@ -68,8 +61,6 @@ const useProcedureStyles = createStyles((theme) => ({
   },
   maxWidth: { width: '100%' },
   lineHeight150: { lineHeight: '150%' },
-  font18: { fontSize: '18px' },
-  font11: { fontSize: '11px' },
   pointer: { cursor: 'pointer' },
 }));
 

@@ -6,13 +6,14 @@ import { Logo } from '~/asset/icon/Logo';
 export default function LitigationProcedureTitle() {
   const { classes, theme } = useProcedureStyles();
   const { colors, primaryColor } = theme;
-  const { titleFont, titleWrapper, group } = classes;
+  const {  titleWrapper, group } = classes;
   const { mobile } = useResponsive();
+  
   return (
     <Container>
       <Space h={mobile ? 100 : 200} />
       <Center className={titleWrapper}>
-        <Text weight={700} className={titleFont}>
+        <Text size={mobile ? 28 : 36} weight={700}>
           소송진행 절차
         </Text>
         {mobile && <Space h={30} />}

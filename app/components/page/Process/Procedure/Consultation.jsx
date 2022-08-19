@@ -1,4 +1,4 @@
-import { Text, Center, Space, Group } from '@mantine/core';
+import { Text, Space, Group } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
@@ -10,13 +10,6 @@ export default function Consultation({ procedureForm }) {
   const { centerColumn, lineHeight150, pointer } = classes;
   const { title, desc, link, procedureList } = procedureForm;
   const { mobile } = useResponsive();
-
-  // const handleClick = () => {
-  //   console.log('window', window.Kakao);
-  //   window.Kakao.Channel.addChannel({
-  //     channelPublicId: '_eXERxj',
-  //   });
-  // };
 
   const { addKakaoChannel } = useAddKakaoChannel();
   return (
