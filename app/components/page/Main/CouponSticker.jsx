@@ -5,6 +5,7 @@ import CouponClose from '~/asset/icon/CouponClose';
 import { Logo } from '~/asset/icon/Logo';
 import CouponImage from '~/asset/image/CouponImage.png';
 import useCouponStickerStyles from '~/Style/page/Main/useCouponStickerStyles';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function CouponSticker() {
   const [opened, handlers] = useDisclosure(true);
@@ -33,6 +34,7 @@ export default function CouponSticker() {
 }
 
 export function ConsultButtonSticker() {
+  const { mobile } = useResponsive();
   const { addKakaoChannel } = useAddKakaoChannel();
   const { classes, theme } = useCouponStickerStyles();
   const { buttonWrapper } = classes;
@@ -40,9 +42,9 @@ export function ConsultButtonSticker() {
 
   return (
     <button onClick={addKakaoChannel} className={buttonWrapper}>
-      <Logo width={21} variant='white' />
+      {!mobile && <Logo width={21} variant='white' />}
       <Space w={8} />
-      <Text color={white} weight={700}>
+      <Text size={mobile ? 'sm' : 'md'} color={white} weight={700}>
         카톡 상담 신청
       </Text>
     </button>
