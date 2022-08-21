@@ -26,7 +26,7 @@ export default function KakaoSection() {
         weight={700}
         align='center'
       >
-        실시간 진행사항을 {mobile && <br />}
+        실시간 진행사항 {mobile && <br />}
         카카오 알림톡으로 발송
       </Text>
       <Space h={mobile ? 40 : 60} />
@@ -50,10 +50,9 @@ export default function KakaoSection() {
             weight={900}
             // underline
           >
-            소송 지연을 방지하고자
+            소송 지연을 방지하고자 모니터링을 진행
           </Text>{' '}
-          모니터링을 진행하여 빠르게 대응하고, 모든 과정을 알림톡으로
-          전달드립니다.
+          하여 빠르게 대응하고, 모든 과정을 알림톡으로 전달드립니다.
         </Text>
       </Container>
     </Container>
