@@ -38,6 +38,9 @@ const useCouponStickerStyles = createStyles((theme) => ({
     right: 0,
     bottom: 0,
     padding: '25px 36px',
+    [theme.fn.smallerThan('sm')]: {
+      padding: '16px 12px 12px 12px',
+    },
     borderRadius: '12px 0 0 0',
     backgroundColor: theme.colors[theme.primaryColor],
     cursor: 'pointer',
