@@ -4,12 +4,12 @@ import Footer from '~/components/Footer/index';
 import Nav from '~/components/Header/Nav';
 
 export default function Layout({ children }) {
-  const { tablet } = useResponsive();
+  const { mobile } = useResponsive();
 
   return (
     <>
       <Nav />
-      <Space h={80} />
+      <Space h={mobile ? 60 : 80} />
       {children}
       <Footer />
     </>
