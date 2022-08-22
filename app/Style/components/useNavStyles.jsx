@@ -85,7 +85,7 @@ const useNavStyles = createStyles((theme, opened) => ({
 
   dropdown: {
     position: 'absolute',
-    top: 80,
+    top: 60,
     left: 0,
     right: 0,
     width: '100vw',
