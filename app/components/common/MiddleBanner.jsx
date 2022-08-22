@@ -3,8 +3,8 @@ import useMiddleBannerStyles from '~/Style/components/useMiddleBannerStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function MiddleBanner({ title, desc }) {
-  const { classes, theme } = useMiddleBannerStyles();
-  const { section, wrapper } = classes;
+  const { classes, theme, cx } = useMiddleBannerStyles();
+  const { section, wrapper, lineHeight150 } = classes;
   const { colors, primaryColor, white } = theme;
 
   const { mobile } = useResponsive();
@@ -13,7 +13,7 @@ export default function MiddleBanner({ title, desc }) {
       <Container px={mobile ? 26 : 0} className={wrapper}>
         <Space h={mobile ? 60 : 100} />
         <Text
-          size={18}
+          size={mobile ? 16 : 18}
           color={colors[primaryColor]}
           align='center'
           weight={700}
@@ -21,7 +21,13 @@ export default function MiddleBanner({ title, desc }) {
           {title}
         </Text>
         <Space h={mobile ? 20 : 24} />
-        <Text size={40} color={white} align='center' weight={700}>
+        <Text
+          size={mobile ? 24 : 40}
+          color={white}
+          align='center'
+          weight={700}
+          className={cx({ [lineHeight150]: mobile })}
+        >
           {desc}
         </Text>
         <Space h={mobile ? 56 : 100} />
