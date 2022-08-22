@@ -3,7 +3,7 @@ import useMiddleBannerStyles from '~/Style/components/useMiddleBannerStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function MiddleBanner({ title, desc }) {
-  const { classes, theme, cx } = useMiddleBannerStyles();
+  const { classes, theme } = useMiddleBannerStyles();
   const { section, wrapper, lineHeight150 } = classes;
   const { colors, primaryColor, white } = theme;
 
@@ -26,7 +26,7 @@ export default function MiddleBanner({ title, desc }) {
           color={white}
           align='center'
           weight={700}
-          className={cx({ [lineHeight150]: mobile })}
+          className={lineHeight150}
         >
           {desc}
         </Text>
