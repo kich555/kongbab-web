@@ -1,11 +1,8 @@
-import { Text, Space, Group, Anchor, useMantineTheme } from '@mantine/core';
-import Kakao from '~/asset/icon/Kakao';
-import Naver from '~/asset/icon/Naver';
-import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
+import { Text, Space, Group,  useMantineTheme } from '@mantine/core';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
+import SNSGroup from './SNSGroup';
 
 export default function CompanyInfo() {
-  const { addKakaoChannel } = useAddKakaoChannel();
   const theme = useMantineTheme();
   const { white, colors } = theme;
 
@@ -22,24 +19,7 @@ export default function CompanyInfo() {
         <br />
         사업자등록번호 770-31-00160 | 통신판매업 2016-서울서초-1999호
         <Space h={15} />
-        <Group spacing={10}>
-          <Anchor
-            component='button'
-            type='button'
-            onClick={addKakaoChannel}
-            sx={{ height: '40px' }}
-          >
-            <Kakao />
-          </Anchor>
-          <Anchor
-            href='https://blog.naver.com/PostList.naver?blogId=congbablaw&widgetTypeCall=true&categoryNo=1&directAccess=true'
-            target='_blank'
-            rel='noreferrer'
-            sx={{ height: '40px' }}
-          >
-            <Naver />
-          </Anchor>
-        </Group>
+        <SNSGroup />
         <Space h={17} />
         <Group spacing={20}>
           <div>
