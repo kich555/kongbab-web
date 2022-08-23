@@ -16,7 +16,9 @@ export default function MobileCompanyInfo() {
       <Text size='sm' className={cx(gray, lineHeight150)}>
         대표변호사 김서영
         <br />
-        테헤란로2길 27, 패스트파이브 빌딩 11층
+        서울 강남구 테헤란로2길 27,
+        <br />
+        패스트파이브 빌딩 11층 (역삼동)
         <br />
         광고책임변호사 김서영
         <br />
