@@ -1,11 +1,10 @@
-import { Text, Space, Group } from '@mantine/core';
-
-import useFooterStyles from '~/Style/components/useFooterStyles';
+import { Text, Space, Group, useMantineTheme } from '@mantine/core';
+import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 
 export default function MobileCompanyInfo() {
-  const { classes, theme, cx } = useFooterStyles();
-  const { lineHeight150, flexRow, menuItem, link, gray } = classes;
-  const { white } = theme;
+  const theme = useMantineTheme();
+  const { white, colors } = theme;
+
   return (
     <div>
       <Space h={45} />
@@ -13,7 +12,7 @@ export default function MobileCompanyInfo() {
         법률사무소 이소
       </Text>
       <Space h={20} />
-      <Text size='sm' className={cx(gray, lineHeight150)}>
+      <MultiLineText size='sm' color={colors.gray[4]}>
         대표변호사 김서영
         <br />
         서울 강남구 테헤란로2길 27,
@@ -27,33 +26,33 @@ export default function MobileCompanyInfo() {
         통신판매업 2016-서울서초-1999호
         <Space h={20} />
         <Group spacing={20}>
-          <ul className={flexRow}>
-            <li className={menuItem}>
+          <div>
+            <Text
+              component='a'
+              weight={500}
+              href='https://congbab.notion.site/2022-08-01-6ba190142b8845ec9cdcc2e290941e4b'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              개인정보처리방침
+            </Text>
+            <Text component='span' sx={{ padding: '0 6px' }}>
               {' '}
-              <a
-                className={link}
-                href='https://congbab.notion.site/2022-08-01-6ba190142b8845ec9cdcc2e290941e4b'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                개인정보처리방침
-              </a>
-            </li>
-            <li className={menuItem}>
-              {' '}
-              <a
-                className={link}
-                href='https://congbab.notion.site/2022-08-01-2dc692457f604414ae79a6076e43789e'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                면책약관
-              </a>
-            </li>
-          </ul>
+              |{' '}
+            </Text>
+            <Text
+              component='a'
+              weight={500}
+              href='https://congbab.notion.site/2022-08-01-2dc692457f604414ae79a6076e43789e'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              면책약관
+            </Text>
+          </div>
           © 2016-2022. ESO LAW. All rights reserved.
         </Group>
-      </Text>
+      </MultiLineText>
     </div>
   );
 }
