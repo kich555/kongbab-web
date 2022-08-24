@@ -1,7 +1,6 @@
 import { Container, Text, Space, Group } from '@mantine/core';
 import useFooterStyles from '~/Style/components/useFooterStyles';
 import useResponsive from '~/hooks/useResponsive';
-
 import MobileCompanyInfo from '~/components/Footer/Mobile/MobileCompanyInfo';
 import CompanyInfo from '~/components/Footer/CompanyInfo';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';

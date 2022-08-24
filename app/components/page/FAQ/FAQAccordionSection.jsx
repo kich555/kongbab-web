@@ -8,7 +8,7 @@ export default function FAQAccordionSection() {
   const { SUIT_FAQ, SERVICE_FAQ, PRICE_FAQ } = FAQ_CONSTANTS;
   const { mobile } = useResponsive();
   return (
-    <>
+    <section>
       <Title title='자주 묻는 질문' />
       <Container size={764} px={26}>
         <AccordionSection title='소송' questions={SUIT_FAQ} />
@@ -26,6 +26,6 @@ export default function FAQAccordionSection() {
         <AccordionSection title='요금' questions={PRICE_FAQ} />
       </Container>
       {mobile && <Space h={100} />}
-    </>
+    </section>
   );
 }
