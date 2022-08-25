@@ -1,6 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 const useProcedureStyles = createStyles((theme) => ({
+  
   descBox: {
     height: '63px',
   },
@@ -11,6 +12,7 @@ const useProcedureStyles = createStyles((theme) => ({
       flexDirection: 'column',
     },
   },
+
   group: {
     [theme.fn.largerThan('sm')]: {
       position: 'absolute',
@@ -25,6 +27,7 @@ const useProcedureStyles = createStyles((theme) => ({
       backgroundColor: theme.white,
     },
   },
+
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -37,30 +40,24 @@ const useProcedureStyles = createStyles((theme) => ({
     maxWidth: '428px',
     textAlign: 'center',
   },
+
   badgeWrapper: {
     position: 'relative',
   },
 
   badge: {
-    display: 'inline',
     position: 'absolute',
     top: '-4px',
     marginLeft: '12px',
     padding: '7px',
     borderRadius: '6px',
-    fontSize: theme.fontSizes.xs,
-    fontWeight: 600,
-    color: theme.colors.magenta[0],
     backgroundColor: theme.colors.magenta[1],
-    [theme.fn.smallerThan('sm')]: {
-      position: 'relative',
-      display: 'block',
-      marginLeft: 0,
-      marginTop: '16px',
-    },
   },
+
   maxWidth: { width: '100%' },
+
   lineHeight150: { lineHeight: '150%' },
+
   pointer: { cursor: 'pointer' },
 }));
 
