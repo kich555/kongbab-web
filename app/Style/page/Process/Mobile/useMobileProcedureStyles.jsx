@@ -1,6 +1,9 @@
 import { createStyles } from '@mantine/core';
 
 const useMobileProcedureStyles = createStyles((theme) => ({
+  labelTitle: {
+    display: 'flex',
+  },
   icon: {
     display: 'flex',
     alignItems: 'center',
@@ -10,15 +13,6 @@ const useMobileProcedureStyles = createStyles((theme) => ({
     borderRadius: '50%',
     backgroundColor: theme.colors[theme.primaryColor],
   },
-
-  labelTitle: {
-    display: 'flex',
-    fontSize: '20px',
-  },
-  labelDesc: {
-    lineHeight: '150%',
-  },
-
   chevron: {
     alignSelf: 'start',
     '&[data-rotate]': {

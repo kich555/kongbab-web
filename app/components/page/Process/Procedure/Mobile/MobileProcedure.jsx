@@ -3,19 +3,11 @@ import { Accordion, Group, Space, Text } from '@mantine/core';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useMobileProcedureStyles from '~/Style/page/Process/Mobile/useMobileProcedureStyles';
+import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 
 export default function MobileProcedure({ procedure, index }) {
   const { classes, theme } = useMobileProcedureStyles();
-  const {
-    icon,
-    label,
-    labelTitle,
-    labelDesc,
-    control,
-    content,
-    chevron,
-    item,
-  } = classes;
+  const { icon, label, labelTitle, control, content, chevron, item } = classes;
   const { white, colors } = theme;
 
   function AccordionLabel() {
@@ -23,8 +15,8 @@ export default function MobileProcedure({ procedure, index }) {
       <>
         <div className={labelTitle}>
           <Text
-            size='xs'
             component='span'
+            size='xs'
             color={white}
             weight={700}
             className={icon}
@@ -32,14 +24,14 @@ export default function MobileProcedure({ procedure, index }) {
             {index}
           </Text>
           <Space w={8} />
-          <Text component='span' weight={700}>
+          <Text component='span' size={20} weight={700}>
             {procedure.title}
           </Text>
         </div>
         <Space h={12} />
-        <Text size='sm' color={colors.gray[3]} className={labelDesc}>
+        <MultiLineText size='sm' color={colors.gray[3]}>
           {parse(procedure.desc)}
-        </Text>
+        </MultiLineText>
       </>
     );
   }
