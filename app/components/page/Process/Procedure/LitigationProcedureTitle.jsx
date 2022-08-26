@@ -1,14 +1,22 @@
-import { Container, Center, Badge, Group, Text, Space } from '@mantine/core';
+import {
+  Container,
+  Center,
+  Badge,
+  Group,
+  Text,
+  Space,
+  Box,
+} from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import useLitigationProcedureTitleStyles from '~/Style/page/Process/useLitigationProcedureTitleStyles';
 import { Logo } from '~/asset/icon/Logo';
 
 export default function LitigationProcedureTitle() {
-  const { classes, theme } = useProcedureStyles();
+  const { classes, theme } = useLitigationProcedureTitleStyles();
   const { colors, primaryColor } = theme;
-  const {  titleWrapper, group } = classes;
+  const { titleWrapper, group } = classes;
   const { mobile } = useResponsive();
-  
+
   return (
     <Container>
       <Space h={mobile ? 100 : 200} />
@@ -21,19 +29,24 @@ export default function LitigationProcedureTitle() {
           <Badge
             size='xl'
             variant='outline'
-            style={{ border: '1px solid #DADADA' }}
+            sx={{ border: '1px solid #DADADA' }}
           >
             <Text size='sm'>고객님 진행</Text>
           </Badge>
           <Badge
             size='xl'
             variant='outline'
-            style={{ border: '1px solid #FF4500' }}
+            sx={{ border: '1px solid #FF4500' }}
           >
-            <Text color={colors[primaryColor]} size='sm' component='span'>
+            <Text component='span' size='sm' color={colors[primaryColor]}>
               콩밥 변호사
             </Text>
-            <Logo width={12} variant='default' style={{ marginLeft: '7px' }} />
+            <Box
+              component={Logo}
+              variant='default'
+              width={12}
+              sx={{ marginLeft: '7px' }}
+            />
           </Badge>
         </Group>
       </Center>
