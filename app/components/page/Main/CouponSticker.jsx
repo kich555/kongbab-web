@@ -1,9 +1,9 @@
-import { Image, Space, Text, Transition } from '@mantine/core';
+import { Image, Space, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 import CouponClose from '~/asset/icon/CouponClose';
 import { Logo } from '~/asset/icon/Logo';
-import CouponImage from '~/asset/image/CouponImage.png';
+import CouponImage from '~/asset/image/Coupon/CouponImage.png';
 import useCouponStickerStyles from '~/Style/page/Main/useCouponStickerStyles';
 import useResponsive from '~/hooks/useResponsive';
 

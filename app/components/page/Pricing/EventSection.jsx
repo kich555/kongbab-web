@@ -2,8 +2,9 @@ import { Container, Text, Space, Image } from '@mantine/core';
 import useEventSectionStyles from '~/Style/page/Pricing/useEventSectionStyles';
 import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
-import bannerSrc from '~/asset/image/Discount_Coupon_Image.png';
-export default function EventSection(params) {
+import bannerSrc from '~/asset/image/Coupon/Discount_Coupon_Image.png';
+
+export default function EventSection() {
   const { classes, theme } = useEventSectionStyles();
   const { colors, primaryColor } = theme;
   const { horizontal, warpper, font30, buttonWrapper, imageBox } = classes;
