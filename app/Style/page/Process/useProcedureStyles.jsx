@@ -1,23 +1,8 @@
 import { createStyles } from '@mantine/core';
 
 const useProcedureStyles = createStyles((theme) => ({
-  
   descBox: {
     height: '63px',
-  },
-
-  titleWrapper: {
-    position: 'relative',
-    [theme.fn.smallerThan('sm')]: {
-      flexDirection: 'column',
-    },
-  },
-
-  group: {
-    [theme.fn.largerThan('sm')]: {
-      position: 'absolute',
-      right: 0,
-    },
   },
 
   // Procedure

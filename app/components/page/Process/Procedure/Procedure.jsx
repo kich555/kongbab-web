@@ -31,7 +31,7 @@ export default function Procedure({ procedureForm }) {
         )}
       </div>
       <Space h={24} />
-      <MultiLineText size='sm' className={descBox}>
+      <MultiLineText size='sm' sx={{ height: '63px' }}>
         {parse(desc)}
       </MultiLineText>
       {condition && (
