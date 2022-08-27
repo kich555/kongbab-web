@@ -20,7 +20,7 @@ export default function InfiniteVerticalCarousel() {
     <div key={`carousel-A-Slide-${idx}`}>
       <Image
         src={item.leftImage}
-        alt={`carousel-A-image-${idx}`}
+        alt={`carousel-A-${idx}`}
         width={tablet ? 135 : 242}
       />
     </div>
@@ -30,7 +30,7 @@ export default function InfiniteVerticalCarousel() {
     <div className={rightSlideItem} key={`carousel-B-Slide-${idx}`}>
       <Image
         src={item.rightImage}
-        alt={`carousel-B-image-${idx}`}
+        alt={`carousel-B-${idx}`}
         width={tablet ? 135 : 242}
       />
     </div>
