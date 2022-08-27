@@ -1,6 +1,6 @@
 import { Image, Space, Text, Center } from '@mantine/core';
 import Title from '~/components/common/Title';
-import profileImage from '~/asset/image/Profile_Image.png';
+import profileImage from '~/asset/image/Introduce/Profile_Image.webp';
 import useLwaerProfileStyles from '~/Style/page/Introduce/useLwaerProfileStyles';
 import useResponsive from '~/hooks/useResponsive';
 
