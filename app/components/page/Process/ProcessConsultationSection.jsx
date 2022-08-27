@@ -1,6 +1,6 @@
 import { Container, Space, Text, useMantineTheme } from '@mantine/core';
-import asset from '~/asset/image/Process_Footer_Banner.png';
-import mobileAsset from '~/asset/image/Mobile_Process_Footer_Banner.png';
+import asset from '~/asset/image/Process/Process_Footer_Banner.webp';
+import mobileAsset from '~/asset/image/Process/Mobile_Process_Footer_Banner.webp';
 import useResponsive from '~/hooks/useResponsive';
 import ConsultationCard from '~/components/common/ConsultationCard';
 

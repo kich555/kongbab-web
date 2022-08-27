@@ -1,7 +1,7 @@
 import { Text, Container, Space, Image } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useKakaoSectionStyles from '~/Style/page/Process/useKakaoSectionStyles';
-import KakaoImage from '~/asset/image/Process/Process_Kakao_Image.png';
+import KakaoImage from '~/asset/image/Process/Process_Kakao_Image.webp';
 export default function KakaoSection() {
   const { classes, theme, cx } = useKakaoSectionStyles();
   const { colors } = theme;
