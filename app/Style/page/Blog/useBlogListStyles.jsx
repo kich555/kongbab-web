@@ -2,7 +2,6 @@ import { createStyles } from '@mantine/core';
 
 const useBlogCardListStyles = createStyles((theme) => ({
   listWrapper: {
-    display: 'inline-block',
     marginLeft: '26px',
     marginRight: '26px',
   },

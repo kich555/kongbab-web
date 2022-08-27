@@ -3,7 +3,7 @@ import { createStyles } from '@mantine/core';
 const useBlogCardStyles = createStyles((theme) => ({
   card: {
     width: '344px',
-    // padding: '0px !important',
+    padding: '0px !important',
     backgroundColor: theme.colors.dark[7],
     transition: 'transform 250ms',
     '&:hover': {
