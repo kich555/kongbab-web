@@ -1,5 +1,5 @@
 import { MediaQuery, useMantineTheme } from '@mantine/core';
-import asset from '~/asset/image/FAQ_image.png';
+import asset from '~/asset/image/FAQ/FAQ_Image.webp';
 import ConsultationCard from '~/components/common/ConsultationCard';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 
