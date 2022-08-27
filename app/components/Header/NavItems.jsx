@@ -10,19 +10,18 @@ export default function NavItems({ close, active, setActive }) {
   return (
     <>
       {NewItems.map((route) => (
-        <li key={route.label}>
-          <Link
-            className={cx(link, { [linkActive]: route.link === active })}
-            prefetch='intent'
-            to={route.link}
-            onClick={() => {
-              setActive(route.link);
-              close();
-            }}
-          >
-            {route.label}
-          </Link>
-        </li>
+        <Link
+          key={route.label}
+          className={cx(link, { [linkActive]: route.link === active })}
+          prefetch='intent'
+          to={route.link}
+          onClick={() => {
+            setActive(route.link);
+            close();
+          }}
+        >
+          {route.label}
+        </Link>
       ))}
     </>
   );
