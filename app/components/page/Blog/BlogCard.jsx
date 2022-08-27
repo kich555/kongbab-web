@@ -15,14 +15,14 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
   return (
     <Card className={card}>
       <Card.Section className={cardSection}>
-        {/* <a {...linkProps}> */}
         <Image
           alt={`thumbnail-${title}`}
           src={imageSrc}
           styles={{ image }}
-          width={mobile ? 322 : 344}
+          width={mobile ? 324 : 344}
+          height={mobile ? 165 : 180}
+          withPlaceholder
         />
-        {/* </a> */}
       </Card.Section>
       <div>
         <Space h={18} />
