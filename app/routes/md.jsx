@@ -1,25 +1,27 @@
 import { redirect } from '@remix-run/node';
-import { Links } from '@remix-run/react';
+import {
+  Links,
+  Outlet,
+  useLocation,
+  useNavigate,
+  useParams,
+} from '@remix-run/react';
 
 export async function loader() {
-  return redirect('/');
+  // return redirect('/');
+  // const { location } = useLocation();
+  return null;
 }
 
-export function links() {
-  return [
-    {
-      rel: 'canonical',
-      href: 'https://congbab.com/',
-    },
-  ];
-}
+// export function links() {
+//   return [
+//     {
+//       rel: 'canonical',
+//       href: 'https://congbab.com/',
+//     },
+//   ];
+// }
 
-export default function md() {
-  return (
-    <html lang='ko'>
-      <head>
-        <Links />
-      </head>
-    </html>
-  );
+export default function MdRoute() {
+  return <Outlet />;
 }
