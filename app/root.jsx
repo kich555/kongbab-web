@@ -127,7 +127,7 @@ export function links() {
 
 export default function App() {
   const data = useLoaderData();
-  console.log('data', data);
+  console.log('data', data.kakaoKey);
 
   // useEffect(() => {
   //   const tagManagerArgs = { gtmId: 'GTM-5D3HDWM' };
@@ -207,7 +207,9 @@ export function CatchBoundary() {
       </head>
       <MantineProvider theme={BASIC_THEME} withGlobalStyles withNormalizeCSS>
         <body>
-          <NotFoundPage />
+          <Layout>
+            <NotFoundPage />
+          </Layout>
         </body>
       </MantineProvider>
     </html>
