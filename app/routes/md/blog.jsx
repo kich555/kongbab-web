@@ -1,6 +1,6 @@
 import BlogList from '~/components/page/Blog/BlogList';
 
-export default function blog() {
+export default function BlogRoute() {
   return (
     <>
       <section>

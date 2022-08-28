@@ -7,7 +7,7 @@ import ProblemSection from '~/components/page/Introduce/Problem/ProblemSection';
 import LawerProfile from '~/components/page/Introduce/LawerProfile';
 import CommonFooterSection from '~/components/common/CommonFooterSection';
 
-export default function introduce() {
+export default function IntroduceRoute() {
   const { INTRODUCE_SECTION, MIDDLE_BANNER, PROBLEMS, LAWER_PROFILE } =
     INTRODUCE_CONSTANTS;
   console.log('parse(LAWER_PROFILE.desc)', parse(LAWER_PROFILE.desc));

@@ -6,7 +6,7 @@ import FAQ_CONSTANTS from '~/constants/page/faqPageData';
 import PriceInfoListSection from '~/components/common/PriceInfo/PriceInfoListSection';
 import { Space, useMantineTheme } from '@mantine/core';
 
-export default function Pricing(params) {
+export default function PricingRoute(params) {
   const { RATE_PLANS } = PRICING_CONSTANTS;
   const { PRICE_FAQ } = FAQ_CONSTANTS;
   const theme = useMantineTheme();
