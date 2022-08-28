@@ -1,26 +1,4 @@
-import { redirect } from '@remix-run/node';
-import {
-  Links,
-  Outlet,
-  useLocation,
-  useNavigate,
-  useParams,
-} from '@remix-run/react';
-
-export async function loader() {
-  // return redirect('/');
-  // const { location } = useLocation();
-  return null;
-}
-
-// export function links() {
-//   return [
-//     {
-//       rel: 'canonical',
-//       href: 'https://congbab.com/',
-//     },
-//   ];
-// }
+import { Outlet } from '@remix-run/react';
 
 export default function MdRoute() {
   return <Outlet />;
