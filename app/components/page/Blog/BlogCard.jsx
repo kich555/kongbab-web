@@ -21,7 +21,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
           styles={{ image }}
           width={mobile ? 324 : 344}
           height={mobile ? 165 : 180}
-          withPlaceholder
+          // withPlaceholder
         />
       </Card.Section>
       <div>
