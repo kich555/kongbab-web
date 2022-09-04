@@ -13,7 +13,13 @@ export default function LitigationInfo() {
   const { mobile } = useResponsive();
 
   const items = LITIGATION_INFO.map((item) => (
-    <Container key={item.title} size={252} px={25} className={box}>
+    <Container
+      key={item.title}
+      size={252}
+      px={25}
+      className={box}
+      sx={{ width: '100%' }}
+    >
       <Text size={40} align='center' weight={700}>
         {item.icon}
       </Text>
