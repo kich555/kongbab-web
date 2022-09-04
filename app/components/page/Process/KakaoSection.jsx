@@ -26,7 +26,7 @@ export default function KakaoSection() {
         weight={700}
         align='center'
       >
-        실시간 진행사항 {mobile && <br />}
+        실시간 진행상황을 {mobile && <br />}
         카카오 알림톡으로 발송
       </Text>
       <Space h={mobile ? 40 : 60} />
