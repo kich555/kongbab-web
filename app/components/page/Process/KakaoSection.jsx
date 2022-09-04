@@ -39,7 +39,7 @@ export default function KakaoSection() {
       <Container size={920} px={mobile ? 30 : 0}>
         <Text size={mobile ? 16 : 20} className={lineHeight150} align='center'>
           매번 법률사무실에 연락드려서 {mobile && <br />}
-          진행사항 확인하기 번거롭지 않으신가요?
+          진행상황 확인하기 번거롭지 않으신가요?
           <br />
           {mobile && <br />}
           콩밥은 고객님의{' '}
