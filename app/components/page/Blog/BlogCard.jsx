@@ -1,11 +1,11 @@
-import { Card, Image, Space, Text } from '@mantine/core';
+import { Box, Space, Text } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useBlogCardStyles from '~/Style/page/Blog/useBlogCardStyles';
 
 export default function BlogCard({ imageSrc, link, category, title, desc }) {
   const { classes, theme } = useBlogCardStyles();
-  const { card, cardSection, image, descText } = classes;
-  const { colors, fn } = theme;
+  const { card, descText } = classes;
+  const { colors } = theme;
   const linkProps = {
     href: link,
     target: '_blank',
@@ -13,17 +13,14 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
   };
   const { mobile } = useResponsive();
   return (
-    <Card className={card}>
-      <Card.Section className={cardSection}>
-        <Image
-          alt={`thumbnail-${title}`}
-          src={imageSrc}
-          styles={{ image }}
-          width={mobile ? 324 : 344}
-          height={mobile ? 165 : 180}
-          // withPlaceholder
-        />
-      </Card.Section>
+    <Box className={card}>
+      <img
+        alt={`thumbnail-${title}`}
+        src={imageSrc}
+        width={mobile ? 324 : 344}
+        height='auto'
+      />
+
       <div>
         <Space h={18} />
         <Text color={colors[theme.primaryColor]} size='sm'>
@@ -43,6 +40,6 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
           {desc}
         </Text>
       </div>
-    </Card>
+    </Box>
   );
 }

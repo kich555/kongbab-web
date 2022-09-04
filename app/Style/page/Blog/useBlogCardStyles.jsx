@@ -3,6 +3,9 @@ import { createStyles } from '@mantine/core';
 const useBlogCardStyles = createStyles((theme) => ({
   card: {
     width: '344px',
+    [theme.fn.smallerThan('sm')]: {
+      width: '324px',
+    },
     padding: '0px !important',
     backgroundColor: theme.colors.dark[7],
     transition: 'transform 250ms',
@@ -12,12 +15,6 @@ const useBlogCardStyles = createStyles((theme) => ({
   },
   cardSection: { margin: '0px' },
 
-  image: {
-    // height: '180px !important',
-    // [theme.fn.smallerThan('sm')]: {
-    //   height: '180px !important',
-    // },
-  },
   descText: {
     lineHeight: '150%',
     textOverflow: 'ellipsis',
