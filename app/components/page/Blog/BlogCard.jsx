@@ -13,7 +13,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
   };
   const { mobile } = useResponsive();
   return (
-    <Box className={card}>
+    <Box component='a' {...linkProps} className={card}>
       <img
         alt={`thumbnail-${title}`}
         src={imageSrc}
@@ -27,7 +27,7 @@ export default function BlogCard({ imageSrc, link, category, title, desc }) {
           {category}
         </Text>
         <Space h={mobile ? 8 : 12} />
-        <Text size={20} {...linkProps} component='a' weight={500} lineClamp={2}>
+        <Text size={20} color='black' weight={500} lineClamp={2}>
           {title}
         </Text>
         {!mobile && <Space h={18} />}
