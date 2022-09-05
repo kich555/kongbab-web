@@ -50,9 +50,9 @@ export default function KakaoSection() {
             weight={900}
             // underline
           >
-            소송 지연을 방지하고자 모니터링을 진행
+            소송 지연을 방지하고자 모니터링을 진행하여
           </Text>{' '}
-          하여 빠르게 대응하고, 모든 과정을 알림톡으로 전달드립니다.
+          빠르게 대응하고, 모든 과정을 알림톡으로 전달드립니다.
         </Text>
       </Container>
     </Container>
