@@ -16,6 +16,7 @@ export default function ConsultationCard({ asset, children }) {
           backgroundImage: `url(${asset})`,
           background: `url(${asset}) no-repeat center/cover`,
         }}
+        px={26}
       >
         <Center className={center}>
           {children}
