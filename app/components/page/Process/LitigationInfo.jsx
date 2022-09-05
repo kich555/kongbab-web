@@ -26,6 +26,7 @@ export default function LitigationInfo() {
       {mobile ? <Space w={21} /> : <Space h={20} />}
       <div className={maxWidth}>
         <Text
+          component='div'
           size={mobile ? 20 : 24}
           align={mobile ? 'left' : 'center'}
           weight={700}
@@ -34,6 +35,7 @@ export default function LitigationInfo() {
         </Text>
         <Space h={12} />
         <Text
+          component='div'
           align={mobile ? 'left' : 'center'}
           className={lineHeight150}
           size={mobile ? 14 : 13}
