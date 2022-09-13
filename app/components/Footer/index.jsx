@@ -32,7 +32,7 @@ export default function Footer() {
                 점심: 12:00 - 13:00
               </div>
               <div>
-                메일: team@esolaw.com
+                메일: help@congbab.com
                 <br />
                 전화: 02-6713-2461
                 <br />
