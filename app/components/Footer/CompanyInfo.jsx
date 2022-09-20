@@ -1,4 +1,4 @@
-import { Text, Space, Group,  useMantineTheme } from '@mantine/core';
+import { Text, Space, Group, useMantineTheme } from '@mantine/core';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 import SNSGroup from './SNSGroup';
 
@@ -26,7 +26,7 @@ export default function CompanyInfo() {
             <Text
               component='a'
               weight={500}
-              href='https://congbab.notion.site/2022-08-01-6ba190142b8845ec9cdcc2e290941e4b'
+              href='https://congbablaw.notion.site/2022-08-01-56b78ab071a14253b4dc79eb48089fe1'
               target='_blank'
               rel='noreferrer noopener'
             >
@@ -39,7 +39,7 @@ export default function CompanyInfo() {
             <Text
               component='a'
               weight={500}
-              href='https://congbab.notion.site/2022-08-01-2dc692457f604414ae79a6076e43789e'
+              href='https://congbablaw.notion.site/2022-08-01-595fbfa7f8a84e2bab2072db545e3d48'
               target='_blank'
               rel='noreferrer noopener'
             >
