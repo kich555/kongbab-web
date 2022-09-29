@@ -18,7 +18,7 @@ export default function BlogFilter({ options, setActive, active }) {
   ));
 
   return (
-    <Group style={{ marginTop: '80px' }} className={filter} spacing={10}>
+    <Group mt={80} className={filter} spacing={10}>
       {items}
     </Group>
   );

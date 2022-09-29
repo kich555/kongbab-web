@@ -28,7 +28,7 @@ export default function LitigationProcedure() {
             <Space h={50} />
           </div>
         </MediaQuery>
-        <Container size='md' px={0} style={{ width: '100%' }}>
+        <Container size='md' px={0} sx={{ width: '100%' }}>
           <ProcedureList />
         </Container>
       </Container>

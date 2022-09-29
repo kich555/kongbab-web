@@ -3,7 +3,7 @@ import { Center, Container, Space } from '@mantine/core';
 import BLOG_CONSTANTS from '~/constants/page/blogPageData';
 import useBlogCardListStyles from '~/Style/page/Blog/useBlogListStyles';
 import Title from '~/components/common/Title';
-import BlogFilter from '~/components/page/Blog/BlogFilter';
+// import BlogFilter from '~/components/page/Blog/BlogFilter';
 import BlogCard from '~/components/page/Blog/BlogCard';
 import useResponsive from '~/hooks/useResponsive';
 
@@ -27,9 +27,9 @@ export default function BlogList(params) {
   return (
     <>
       <Center>
-        <Title title='콩밥 블로그' style={{ marginTop: '120px' }} />
+        <Title title='콩밥 블로그' />
       </Center>
-      {/* <Center style={{ overflowX: 'auto' }}>
+      {/* <Center sx={{ overflowX: 'auto' }}>
         <BlogFilter options={MENUS} active={active} setActive={setActive} />
       </Center> */}
       <Space h={mobile ? 25 : 80} />

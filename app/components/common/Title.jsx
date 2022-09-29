@@ -1,16 +1,13 @@
-import { Center, MediaQuery, Text } from '@mantine/core';
+import { Center, Text } from '@mantine/core';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function Title({ title, style }) {
+  const { mobile } = useResponsive();
   return (
-    <Center>
-      <MediaQuery
-        smallerThan='sm'
-        styles={{ fontSize: '28px', marginTop: '80px !important' }}
-      >
-        <Text size='xl' style={{ ...style, marginTop: '120px' }} weight={700}>
-          {title}
-        </Text>
-      </MediaQuery>
+    <Center mt={mobile ? 80 : 120}>
+      <Text size={mobile ? 28 : 'xl'} sx={{ ...style }} weight={700}>
+        {title}
+      </Text>
     </Center>
   );
 }

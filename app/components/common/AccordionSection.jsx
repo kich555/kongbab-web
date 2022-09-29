@@ -1,7 +1,8 @@
 import parse from 'html-react-parser';
-import { Accordion, MediaQuery, Text } from '@mantine/core';
+import { Accordion, Box, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
 import useAccordianStyles from '~/Style/components/useAccordianStyles';
+import useResponsive from '~/hooks/useResponsive';
 
 export default function AccordionSection({ title, questions }) {
   const { classes, theme } = useAccordianStyles();
@@ -14,25 +15,18 @@ export default function AccordionSection({ title, questions }) {
       <Accordion.Panel>{parse(question.desc)}</Accordion.Panel>
     </Accordion.Item>
   ));
-
+  const { mobile } = useResponsive;
   return (
-    <>
-      <MediaQuery
-        smallerThan='sm'
-        styles={{
-          margin: '60px 0 15px 0 !important',
-          fontSize: theme.fontSizes.md,
-        }}
-      >
+    <Box mt={mobile ? 60 : 100}>
+      <Box mb={mobile ? 15 : 25}>
         <Text
+          size={mobile ? theme.fontSizes.md : '20'}
           weight={700}
           color={colors[primaryColor]}
-          style={{ margin: '100px 0 25px 0', fontSize: '20px' }}
         >
           {title}
         </Text>
-      </MediaQuery>
-
+      </Box>
       <Accordion
         chevron={<ArrowRight size={14} />}
         multiple
@@ -47,6 +41,6 @@ export default function AccordionSection({ title, questions }) {
       >
         {items}
       </Accordion>
-    </>
+    </Box>
   );
 }

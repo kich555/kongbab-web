@@ -11,11 +11,11 @@ export default function ConsultationCard({ asset, children }) {
     <>
       <Space h={mobile ? 80 : 200} />
       <Container
-        className={warpper}
-        style={{
+        sx={{
           backgroundImage: `url(${asset})`,
           background: `url(${asset}) no-repeat center/cover`,
         }}
+        className={warpper}
       >
         <Center className={center}>
           {children}

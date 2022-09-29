@@ -1,4 +1,4 @@
-import { Container } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 import Arrow from '~/asset/icon/procedure/Arrow';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Procedure from '~/components/page/Process/Procedure/Procedure';
@@ -21,11 +21,12 @@ export default function ProcedureList(params) {
     EXECUTE_JUDGEMENT,
   } = DETINUE;
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <Container
         size={428}
         px={0}
-        style={{ margin: 0, width: '100%', textAlign: 'center' }}
+        m={0}
+        sx={{ width: '100%', textAlign: 'center' }}
       >
         <Procedure procedureForm={PROHIBITION_ESTATE_TRANSFER} />
         <Arrow />
@@ -38,7 +39,8 @@ export default function ProcedureList(params) {
       <Container
         size={428}
         px={0}
-        style={{ margin: 0, width: '100%', textAlign: 'center' }}
+        m={0}
+        sx={{ width: '100%', textAlign: 'center' }}
       >
         <Procedure procedureForm={LODGING_COMPLAINT} />
         <Arrow />
@@ -52,6 +54,6 @@ export default function ProcedureList(params) {
         <Arrow />
         <Procedure procedureForm={EXECUTE_JUDGEMENT} />
       </Container>
-    </div>
+    </Box>
   );
 }

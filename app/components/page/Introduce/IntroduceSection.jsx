@@ -1,4 +1,4 @@
-import { Text, Space, Container } from '@mantine/core';
+import { Text, Space, Container, Box } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import useIntroduceSectionStyles from '~/Style/page/Introduce/useIntroduceSectionStyles';
 
@@ -14,7 +14,7 @@ export default function IntroduceSection({
 
   const { mobile } = useResponsive();
   return (
-    <section style={{ backgroundColor }}>
+    <Box component='section' sx={{ backgroundColor }}>
       <Container px={26}>
         <Space h={mobile ? 64 : 186} />
         <Text size={18} color={colors[primaryColor]} weight={500}>
@@ -39,6 +39,6 @@ export default function IntroduceSection({
         </Text>
         <Space h={mobile ? 64 : 186} />
       </Container>
-    </section>
+    </Box>
   );
 }

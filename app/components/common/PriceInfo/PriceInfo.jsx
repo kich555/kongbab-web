@@ -116,12 +116,7 @@ export default function PriceInfo({ subTitle, title, price, options }) {
         </Text>
         <Space h={30} />
 
-        <Divider
-          my='sm'
-          style={{
-            borderTopColor: colors.gray[1],
-          }}
-        />
+        <Divider my='sm' sx={{ borderTopColor: colors.gray[1] }} />
         <Space h={20} />
         <ul className={list}>{optionList}</ul>
       </li>
