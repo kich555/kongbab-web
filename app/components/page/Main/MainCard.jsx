@@ -1,7 +1,7 @@
 import { Center, Image, Space, Text } from '@mantine/core';
 import { useMainCardStyles } from '~/Style/page/Main/useMainCardStyles';
-import mainCard1 from '~/asset/image/MainCard/Main_Card1.webp';
-import mainCard2 from '~/asset/image/MainCard/Main_Card2.webp';
+import mainCard1 from 'public/image/MainCard/Main_Card1.webp';
+import mainCard2 from 'public/image/MainCard/Main_Card2.webp';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function MainCard({ subTitle, title, idx }) {

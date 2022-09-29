@@ -1,9 +1,9 @@
-import Carousel_A_1 from '~/asset/image/Carousel/Carousel_A_1.webp';
-import Carousel_A_2 from '~/asset/image/Carousel/Carousel_A_2.webp';
-import Carousel_A_3 from '~/asset/image/Carousel/Carousel_A_3.webp';
-import Carousel_B_1 from '~/asset/image/Carousel/Carousel_B_1.webp';
-import Carousel_B_2 from '~/asset/image/Carousel/Carousel_B_2.webp';
-import Carousel_B_3 from '~/asset/image/Carousel/Carousel_B_3.webp';
+import Carousel_A_1 from 'public/image/Carousel/Carousel_A_1.webp';
+import Carousel_A_2 from 'public/image/Carousel/Carousel_A_2.webp';
+import Carousel_A_3 from 'public/image/Carousel/Carousel_A_3.webp';
+import Carousel_B_1 from 'public/image/Carousel/Carousel_B_1.webp';
+import Carousel_B_2 from 'public/image/Carousel/Carousel_B_2.webp';
+import Carousel_B_3 from 'public/image/Carousel/Carousel_B_3.webp';
 
 const MAIN_CONSTANTS = {
   CARD_SECTION: [

@@ -1,5 +1,5 @@
-import { MediaQuery, Container } from '@mantine/core';
-import asset from '~/asset/image/FAQ/FAQ_Image.webp';
+import { Container } from '@mantine/core';
+import asset from 'public/image/FAQ/FAQ_Image.webp';
 import ConsultationCard from '~/components/common/ConsultationCard';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 import useResponsive from '~/hooks/useResponsive';
@@ -7,7 +7,6 @@ import useResponsive from '~/hooks/useResponsive';
 export default function FAQConsultationSection() {
   const { mobile } = useResponsive();
   return (
-    // <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
     <section>
       <Container px={mobile ? 26 : 0}>
         <ConsultationCard asset={asset}>
@@ -19,6 +18,5 @@ export default function FAQConsultationSection() {
         </ConsultationCard>
       </Container>
     </section>
-    // </MediaQuery>
   );
 }

@@ -1,6 +1,7 @@
 import { Text, Image } from '@mantine/core';
 import useIntroduceBannerStyles from '~/Style/page/Introduce/useIntroduceBannerStyles';
-import bannerSrc from '~/asset/image/Introduce/Introduce_Banner_Image.webp';
+import bannerSrc from 'public/image/Introduce/Introduce_Banner_Image.webp';
+
 import useResponsive from '~/hooks/useResponsive';
 
 export default function IntroduceBanner() {
