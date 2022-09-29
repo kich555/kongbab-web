@@ -14,6 +14,7 @@ import {
 } from '~/components/page/Main/utils/validation.server';
 import { badRequest } from '~/utils/actionHandler';
 import axios from 'axios';
+import ErrorHandler from '../components/error/ErrorHandler';
 
 export async function action({ request }) {
   const formData = await request.formData();
@@ -33,11 +34,11 @@ export async function action({ request }) {
   await axios.post(
     'https://api.emailjs.com/api/v1.0/email/send',
     {
-      service_id: 'service_vqi5s6p',
-      template_id: 'template_ffvwc5c',
-      user_id: 'hgNgqPqkkAgqBYwjb',
+      service_id: process.env.EMAIL_JS_SERVICE_ID,
+      template_id: process.env.EMAIL_JS_TEMPLETE_ID,
+      user_id: process.env.EMAIL_JS_PUBLIC_KEY,
       template_params: { name: 'name', phoneNumber: 'phoneNumber' },
-      accessToken: 'YYG_7bM6IxrcOC2D7xlw-',
+      accessToken: process.env.EMAIL_JS_PRIVATE_KEY,
     },
     { headers: { 'X-Requested-With': 'XMLHttpRequest' }, withCredentials: true }
   );
@@ -51,9 +52,7 @@ export default function Home() {
   const transition = useTransition();
   let isPosting = transition.state === 'submitting';
   let isLoading = transition.state === 'loading';
-
   const { mobile } = useResponsive();
-
   return (
     <>
       <>
@@ -83,7 +82,7 @@ export function ErrorBoundary({ error }) {
     color: 'red',
     autoClose: 3000,
   });
-  return <div>An unexpected error occurred: {error.text}</div>;
+  return <ErrorHandler />;
 }
 
 export function CatchBoundary() {
@@ -98,5 +97,5 @@ export function CatchBoundary() {
     color: 'red',
     autoClose: 3000,
   });
-  throw new Error(`Unexpected caught response with status: ${caught.status}`);
+  return <ErrorHandler />;
 }
