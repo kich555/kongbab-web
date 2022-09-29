@@ -38,44 +38,16 @@ const useFormBoxStyles = createStyles((theme) => ({
     },
   },
 
-  fileInput: {
-    maxWidth: '436px',
-    width: '100%',
-    backgroundColor: theme.colors.gray[0],
-  },
-
-  submmit: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '50px',
-
-    textAlign: 'center',
-    backgroundColor: theme.colors[theme.primaryColor],
-    color: theme.white,
-    fontWeight: 700,
-  },
   button: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100px',
-    height: '50px',
-    border: '1px solid #EEEEEE',
-    backgroundColor: 'white',
-    color: theme.black,
-    '&:hover': {
-      backgroundColor: theme.colors.gray[0],
-    },
-  },
-
-  listWrapper: {
     width: '100%',
-  },
-  icon: {
-    marginRight: '16px',
-    cursor: 'pointer',
+    height: '50px',
+    textAlign: 'center',
+    backgroundColor: theme.colors[theme.primaryColor],
+    color: theme.white,
+    fontWeight: 700,
   },
 
   input: {
@@ -86,7 +58,6 @@ const useFormBoxStyles = createStyles((theme) => ({
     borderRadius: '6px',
     backgroundColor: '#FFFFFF',
     accentColor: theme.black,
-    
   },
 
   label: {
@@ -96,11 +67,6 @@ const useFormBoxStyles = createStyles((theme) => ({
   },
   anchor: {
     color: '#3787E4',
-  },
-
-  error: {
-    marginTop: '10px',
-    color: theme.colors.red[0],
   },
 }));
 
