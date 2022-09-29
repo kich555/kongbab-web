@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 import CouponClose from '~/asset/icon/CouponClose';
 import { Logo } from '~/asset/icon/Logo';
-import CouponImage from '~/asset/image/Coupon/CouponImage.png';
+import CouponImage from 'public/image/Coupon/CouponImage.png';
 import useCouponStickerStyles from '~/Style/page/Main/useCouponStickerStyles';
 import useResponsive from '~/hooks/useResponsive';
 

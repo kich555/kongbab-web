@@ -5,7 +5,7 @@ import Carousel_B_1 from 'public/image/Carousel/Carousel_B_1.webp';
 import Carousel_B_2 from 'public/image/Carousel/Carousel_B_2.webp';
 import Carousel_B_3 from 'public/image/Carousel/Carousel_B_3.webp';
 
-const MAIN_CONSTANTS = {
+const HOME_MOCK_DATA = {
   CARD_SECTION: [
     {
       subTitle: '명도소송 전문',
@@ -40,4 +40,4 @@ const MAIN_CONSTANTS = {
   ],
 };
 
-export default MAIN_CONSTANTS;
+export default HOME_MOCK_DATA;

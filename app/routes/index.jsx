@@ -3,9 +3,7 @@ import CommonFooterSection from '~/components/common/CommonFooterSection';
 import MainCardSection from '~/components/page/Main/MainCardSection';
 import MainHeader from '~/components/page/Main/MainHeader';
 import ConsultationForm from '~/components/page/Main/ConsultationForm';
-import CouponSticker, {
-  ConsultButtonSticker,
-} from '~/components/page/Main/CouponSticker';
+import { ConsultButtonSticker } from '~/components/page/Main/CouponSticker';
 import { showNotification } from '@mantine/notifications';
 import { Form } from '@remix-run/react';
 import { useState, useRef } from 'react';
@@ -13,10 +11,18 @@ import emailjs from '@emailjs/browser';
 import { Space, Text, Button, Anchor } from '@mantine/core';
 import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
 import useResponsive from '~/hooks/useResponsive';
-import { redirect } from '@remix-run/node';
+import { json, redirect } from '@remix-run/node';
 
 export async function action() {
   return redirect('/md/home');
+}
+
+export async function loader() {
+  const data = await fetch('http://localhost:3000/todos');
+
+  console.log('data---?>', data);
+
+  return json({ data });
 }
 
 export default function Home() {
@@ -106,6 +112,7 @@ export default function Home() {
     }
   };
   const { mobile } = useResponsive();
+
   return (
     <>
       <>

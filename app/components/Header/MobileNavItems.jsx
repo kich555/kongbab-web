@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react';
 import useNavStyles from '~/Style/components/useNavStyles';
-import ROUTES from '~/constants/NavData';
+import ROUTES from './constants/navData';
 
 export default function MobileNavItems({ close, active, setActive }) {
   const { classes, cx } = useNavStyles();

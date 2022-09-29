@@ -16,8 +16,9 @@ import useNavStyles from '~/Style/components/useNavStyles';
 import { HeaderLogo } from '~/asset/icon/Logo';
 import MobileNavItems from '~/components/Header/MobileNavItems';
 import NavItems from './NavItems';
-import ROUTES from '~/constants/NavData';
 import useResponsive from '~/hooks/useResponsive';
+import ROUTES from './constants/navData';
+
 
 export default function Nav() {
   const [active, setActive] = useState(ROUTES[0].link);
