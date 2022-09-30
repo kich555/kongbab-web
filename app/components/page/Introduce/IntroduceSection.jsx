@@ -1,6 +1,6 @@
 import { Text, Space, Container, Box } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
-import useIntroduceSectionStyles from '~/Style/page/Introduce/useIntroduceSectionStyles';
+import useIntroduceSectionStyles from '~/styles/page/Introduce/useIntroduceSectionStyles';
 
 export default function IntroduceSection({
   subTitle,

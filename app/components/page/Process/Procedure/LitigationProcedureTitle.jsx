@@ -8,7 +8,7 @@ import {
   Box,
 } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
-import useLitigationProcedureTitleStyles from '~/Style/page/Process/useLitigationProcedureTitleStyles';
+import useLitigationProcedureTitleStyles from '~/styles/page/Process/useLitigationProcedureTitleStyles';
 import { Logo } from '~/asset/icon/Logo';
 
 export default function LitigationProcedureTitle() {

@@ -12,13 +12,12 @@ import {
 
 import { useDisclosure } from '@mantine/hooks';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
-import useNavStyles from '~/Style/components/useNavStyles';
+import useNavStyles from '~/styles/components/useNavStyles';
 import { HeaderLogo } from '~/asset/icon/Logo';
 import MobileNavItems from '~/components/Header/MobileNavItems';
 import NavItems from './NavItems';
 import useResponsive from '~/hooks/useResponsive';
 import ROUTES from './constants/navData';
-
 
 export default function Nav() {
   const [active, setActive] = useState(ROUTES[0].link);

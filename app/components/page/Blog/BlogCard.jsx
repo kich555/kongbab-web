@@ -1,6 +1,6 @@
 import { Box, Space, Text } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
-import useBlogCardStyles from '~/Style/page/Blog/useBlogCardStyles';
+import useBlogCardStyles from '~/styles/page/Blog/useBlogCardStyles';
 
 export default function BlogCard({ imageSrc, link, category, title, desc }) {
   const { classes, theme } = useBlogCardStyles();

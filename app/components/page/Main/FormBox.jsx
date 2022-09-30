@@ -1,7 +1,7 @@
 import { Form } from '@remix-run/react';
 import { useEffect, useState } from 'react';
 import { Space, Text, Button, Anchor } from '@mantine/core';
-import useFormBoxStyles from '~/Style/page/Main/useFormBoxStyles';
+import useFormBoxStyles from '~/styles/page/Main/useFormBoxStyles';
 
 import { showNotification, updateNotification } from '@mantine/notifications';
 

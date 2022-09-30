@@ -1,5 +1,5 @@
 import { Container, Space, Text } from '@mantine/core';
-import useMiddleBannerStyles from '~/Style/components/useMiddleBannerStyles';
+import useMiddleBannerStyles from '~/styles/components/useMiddleBannerStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function MiddleBanner({ title, desc }) {

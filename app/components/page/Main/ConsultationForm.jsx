@@ -1,7 +1,7 @@
 import { Container, Space, Text } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import Title from '~/components/common/Title';
-import useConsultationFormStyles from '~/Style/page/Main/useConsultationFormStyles';
+import useConsultationFormStyles from '~/styles/page/Main/useConsultationFormStyles';
 import FormBox from './FormBox';
 export default function ConsultationForm({ actionData, isPosting, isLoading }) {
   const { tablet } = useResponsive();

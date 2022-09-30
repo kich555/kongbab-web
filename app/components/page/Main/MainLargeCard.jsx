@@ -1,5 +1,5 @@
 import { Image, Space, Text } from '@mantine/core';
-import { useMainLargeCardStyles } from '~/Style/page/Main/useMainCardStyles';
+import { useMainLargeCardStyles } from '~/styles/page/Main/useMainCardStyles';
 import mainCard3 from 'public/image/MainCard/Main_Card3.webp';
 import useResponsive from '~/hooks/useResponsive';
 

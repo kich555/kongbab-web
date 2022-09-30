@@ -1,6 +1,6 @@
 import { Container, Center, Space, MediaQuery } from '@mantine/core';
 import BranchArrow from '~/asset/icon/procedure/BranchArrow';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import useProcedureStyles from '~/styles/page/Process/useProcedureStyles';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Consultation from '~/components/page/Process/Procedure/Consultation';
 import ProcedureList from '~/components/page/Process/Procedure/Desktop/ProcedureList';

@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 import { Text, Space, Group } from '@mantine/core';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import useProcedureStyles from '~/styles/page/Process/useProcedureStyles';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 

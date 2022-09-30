@@ -2,7 +2,7 @@ import { Center, Space, Text, Group } from '@mantine/core';
 import OtherItem from '~/components/common/PriceInfo/OtherItem';
 import PRICE_INFO from '~/constants/common/priceInfoData';
 import PriceInfo from '~/components/common/PriceInfo/PriceInfo';
-import usePriceInfoListStyles from '~/Style/components/PriceInfo/usePriceInfoListStyles';
+import usePriceInfoListStyles from '~/styles/components/PriceInfo/usePriceInfoListStyles';
 
 export default function PriceInfoList() {
   const { classes, theme, cx } = usePriceInfoListStyles();

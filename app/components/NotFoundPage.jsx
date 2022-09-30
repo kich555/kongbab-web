@@ -1,6 +1,6 @@
 import { Container, Space, Text } from '@mantine/core';
 import { Link } from '@remix-run/react';
-import useNotFoundPageStyles from '~/Style/page/useNotFoundPageStyles';
+import useNotFoundPageStyles from '~/styles/page/useNotFoundPageStyles';
 import ErrorIcon from '~/asset/icon/ErrorIcon';
 
 export default function NotFoundPage(params) {

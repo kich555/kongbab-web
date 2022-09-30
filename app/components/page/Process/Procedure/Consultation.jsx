@@ -1,7 +1,7 @@
 import { Text, Space, Group } from '@mantine/core';
 import useResponsive from '~/hooks/useResponsive';
 import Arrow from '~/asset/icon/procedure/Arrow';
-import useProcedureStyles from '~/Style/page/Process/useProcedureStyles';
+import useProcedureStyles from '~/styles/page/Process/useProcedureStyles';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
 

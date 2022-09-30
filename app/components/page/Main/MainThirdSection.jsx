@@ -3,7 +3,7 @@ import { Space } from '@mantine/core';
 import FeatureList from '~/components/common/FeatureList';
 import MiddleBanner from '~/components/common/MiddleBanner';
 import PriceInfoListSection from '~/components/common/PriceInfo/PriceInfoListSection';
-import useThirdSectionStyles from '~/Style/page/Main/useThirdSectionStyles';
+import useThirdSectionStyles from '~/styles/page/Main/useThirdSectionStyles';
 import MAIN_CONSTANTS from '~/constants/page/mainPageData';
 
 export default function MainThirdSection() {

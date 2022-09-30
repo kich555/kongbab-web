@@ -1,7 +1,7 @@
 import { Space, Text, Center } from '@mantine/core';
 import parse from 'html-react-parser';
 import ProblemArrow from '~/asset/icon/ProblemArrow';
-import useProblemCardStyles from '~/Style/page/Introduce/Problem/useProblemCardStyles';
+import useProblemCardStyles from '~/styles/page/Introduce/Problem/useProblemCardStyles';
 
 import ProblemImage1 from 'public/image/Introduce/ProblemImage1';
 import ProblemImage2 from 'public/image/Introduce/ProblemImage2';

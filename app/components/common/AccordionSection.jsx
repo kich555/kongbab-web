@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 import { Accordion, Box, Text } from '@mantine/core';
 import ArrowRight from '~/asset/icon/ArrowRight';
-import useAccordianStyles from '~/Style/components/useAccordianStyles';
+import useAccordianStyles from '~/styles/components/useAccordianStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function AccordionSection({ title, questions }) {

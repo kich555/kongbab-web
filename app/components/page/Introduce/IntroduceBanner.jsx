@@ -1,5 +1,5 @@
 import { Text, Image } from '@mantine/core';
-import useIntroduceBannerStyles from '~/Style/page/Introduce/useIntroduceBannerStyles';
+import useIntroduceBannerStyles from '~/styles/page/Introduce/useIntroduceBannerStyles';
 import bannerSrc from 'public/image/Introduce/Introduce_Banner_Image.webp';
 
 import useResponsive from '~/hooks/useResponsive';

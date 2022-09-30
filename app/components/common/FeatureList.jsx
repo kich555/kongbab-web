@@ -2,7 +2,7 @@ import { Container, Group, Text, Space, MediaQuery } from '@mantine/core';
 import Title from '~/components/common/Title';
 import FEATURED_LIST from '~/constants/common/featuredListData';
 import useResponsive from '~/hooks/useResponsive';
-import useFeatureListStyles from '~/Style/components/useFeatureListStyles';
+import useFeatureListStyles from '~/styles/components/useFeatureListStyles';
 
 export default function FeatureList() {
   const { classes, theme } = useFeatureListStyles();

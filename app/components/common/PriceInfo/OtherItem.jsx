@@ -1,5 +1,5 @@
 import { Center, Space, Text } from '@mantine/core';
-import useOtherItemStyles from '~/Style/components/PriceInfo/useOtherItemStyles';
+import useOtherItemStyles from '~/styles/components/PriceInfo/useOtherItemStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function OtherItem() {

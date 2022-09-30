@@ -1,6 +1,6 @@
 import { Center, Space, Text } from '@mantine/core';
 import PriceInfo from '~/components/common/PriceInfo/PriceInfo';
-import usePriceInfoListStyles from '~/Style/components/PriceInfo/usePriceInfoListStyles';
+import usePriceInfoListStyles from '~/styles/components/PriceInfo/usePriceInfoListStyles';
 import PRICE_INFO from '~/constants/common/priceInfoData';
 import OtherItem from '~/components/common/PriceInfo/OtherItem';
 

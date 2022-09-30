@@ -2,7 +2,7 @@ import { Container, Group, Space, Text } from '@mantine/core';
 import parse from 'html-react-parser';
 import MAIN_CONSTANTS from '~/constants/page/mainPageData';
 import useResponsive from '~/hooks/useResponsive';
-import useMainCardSectionStyles from '~/Style/page/Main/useMainCardSectionStyles';
+import useMainCardSectionStyles from '~/styles/page/Main/useMainCardSectionStyles';
 import MainCard from './MainCard';
 import MainLargeCard from './MainLargeCard';
 

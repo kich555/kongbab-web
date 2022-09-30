@@ -1,7 +1,7 @@
 import { Text, Space, Center } from '@mantine/core';
 import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
-import useCommonFooterSectionStyles from '~/Style/components/useCommonFooterSectionStyles';
+import useCommonFooterSectionStyles from '~/styles/components/useCommonFooterSectionStyles';
 
 export default function CommonFooterSection(params) {
   const { classes, theme } = useCommonFooterSectionStyles();

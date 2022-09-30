@@ -1,7 +1,7 @@
 import { Container, Center, Space } from '@mantine/core';
 import AccordionSection from '~/components/common/AccordionSection';
 import Title from '~/components/common/Title';
-import useFeaturedFAQStyles from '~/Style/page/Pricing/useFeaturedFAQStyles';
+import useFeaturedFAQStyles from '~/styles/page/Pricing/useFeaturedFAQStyles';
 import DefaultButton from '~/components/common/DefaultButton';
 import useResponsive from '~/hooks/useResponsive';
 import { Link } from '@remix-run/react';

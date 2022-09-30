@@ -1,7 +1,7 @@
 import { Container, Text, Group, Space } from '@mantine/core';
 import parse from 'html-react-parser';
 import useResponsive from '~/hooks/useResponsive';
-import useLitigationInfoStyles from '~/Style/page/Process/useLitigationInfoStyles';
+import useLitigationInfoStyles from '~/styles/page/Process/useLitigationInfoStyles';
 import PROCESS_CONSTANTS from '~/constants/page/processPageData';
 import Title from '~/components/common/Title';
 

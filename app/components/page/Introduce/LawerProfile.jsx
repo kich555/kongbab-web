@@ -1,7 +1,7 @@
 import { Image, Space, Text, Center } from '@mantine/core';
 import Title from '~/components/common/Title';
 import profileImage from 'public/image/Introduce/Profile_Image.webp';
-import useLwaerProfileStyles from '~/Style/page/Introduce/useLwaerProfileStyles';
+import useLwaerProfileStyles from '~/styles/page/Introduce/useLwaerProfileStyles';
 import useResponsive from '~/hooks/useResponsive';
 
 export default function LawerProfile({ name, desc }) {

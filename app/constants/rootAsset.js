@@ -1,4 +1,4 @@
-import styles from '~/Style/reset.css';
+import styles from '~/styles/reset.css';
 
 export const rootLink = [
     {

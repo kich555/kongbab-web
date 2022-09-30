@@ -2,7 +2,7 @@ import parse from 'html-react-parser';
 import { Accordion, Group, Space, Text } from '@mantine/core';
 import StickerList from '~/components/page/Process/Procedure/Sticker/StickerList';
 import ArrowRight from '~/asset/icon/ArrowRight';
-import useMobileProcedureStyles from '~/Style/page/Process/Mobile/useMobileProcedureStyles';
+import useMobileProcedureStyles from '~/styles/page/Process/Mobile/useMobileProcedureStyles';
 import MultiLineText from '~/components/common/CustomMantine/MultiLineText';
 
 export default function MobileProcedure({ procedure, index }) {

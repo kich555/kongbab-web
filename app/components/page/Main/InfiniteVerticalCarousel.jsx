@@ -1,7 +1,7 @@
 import { Group, Image } from '@mantine/core';
 import MAIN_CONSTANTS from '~/constants/page/mainPageData';
 import useResponsive from '~/hooks/useResponsive';
-import useVerticalCarouselStyles from '~/Style/page/Main/useVerticalCarouselStyles';
+import useVerticalCarouselStyles from '~/styles/page/Main/useVerticalCarouselStyles';
 
 export default function InfiniteVerticalCarousel() {
   const { NewCarousel } = MAIN_CONSTANTS;

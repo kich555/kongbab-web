@@ -1,6 +1,6 @@
 import { Container, Space, Text } from '@mantine/core';
 import DefaultButton from '~/components/common/DefaultButton';
-import useMainHeaderStyles from '~/Style/page/Main/useMainHeaderStyles';
+import useMainHeaderStyles from '~/styles/page/Main/useMainHeaderStyles';
 import InfiniteVerticalCarousel from '~/components/page/Main/InfiniteVerticalCarousel';
 import useResponsive from '~/hooks/useResponsive';
 
