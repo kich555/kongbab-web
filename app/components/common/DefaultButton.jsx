@@ -1,6 +1,6 @@
 import { Button, Text } from '@mantine/core';
 import useAddKakaoChannel from '~/hooks/useAddKakaoChannel';
-import useDefaultButtonStyles from '~/Style/components/useDefaultButtonStyles';
+import useDefaultButtonStyles from '~/styles/components/useDefaultButtonStyles';
 
 export default function DefaultButton({ className = '', label, sx }) {
   const { addKakaoChannel } = useAddKakaoChannel();
